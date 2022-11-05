@@ -26,3 +26,11 @@ body {
 .Header p {
   text-align: left;
 }
+
+ul {
+  padding: 0;
+}
+
+#box {
+  border-style: solid;
+}
