@@ -5,3 +5,11 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.header {
+  padding: 60px;
+  text-align: center;
+  background: #89CFF0;
+  font-family: Signika Negative SC;
+  color: white;
+}
