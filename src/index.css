@@ -10,13 +10,19 @@ body {
   margin: auto;
   max-width: 38rem;
   padding: 2rem;
-  text-align: center;
   background: #89CFF0;
   font-family: Signika Negative SC;
   color: white;
 }
 
-.Header h1 
-{
-  
+.Header h1 {
+  text-align: center;
+}
+
+.Header h3 {
+  text-align: center;
+}
+
+.Header p {
+  text-align: left;
 }
