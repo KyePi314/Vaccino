@@ -12,10 +12,12 @@
           <h3>The official New Zealand Government website<br>
             for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
-        <h1>Login</h1>
-        <form action="/login" method="POST">
+        <form action="/register" method="POST">
             <fieldset>
-                    
+                <label>Username</label>
+                <input type ="text" id = 'username' name="username" placeholder="maverick" required>
+                <br><br>
+    
                 <label>Email ID</label>
                 <input type ="email" id = 'email' name="email" placeholder="abc@example.com" required>
                 <br><br>
@@ -27,8 +29,8 @@
                 <button type ="reset">Reset</button>
                 <button type ="submit" onclick="window.location.replace('home.html')">Submit</button>
             </fieldset>
-            </form>
-            <br><br>
-            <a id="mylink" href="./registration.html">Sign Up</a>
+        </form>
+        <br><br>
+            <a id="mylink" href="./login.html">login</a>
         </body>
 </html>
