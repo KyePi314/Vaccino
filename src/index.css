@@ -34,3 +34,10 @@ body {
 #box ul{
   padding: 0;
 }
+
+.circle {
+  background: #FFF87C;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
