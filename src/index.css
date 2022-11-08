@@ -5,3 +5,39 @@ body {
   max-width: 38rem;
   padding: 2rem;
 }
+
+.Header {
+  margin: auto;
+  max-width: 38rem;
+  padding: 2rem;
+  background: #89CFF0;
+  font-family: Signika Negative SC;
+  color: white;
+}
+
+.Header h1 {
+  text-align: center;
+}
+
+.Header h3 {
+  text-align: center;
+}
+
+.Header p {
+  text-align: left;
+}
+
+#box {
+  border-style: solid;
+}
+
+#box ul{
+  padding: 0;
+}
+
+.circle {
+  background: #FFF87C;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}

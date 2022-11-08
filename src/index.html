@@ -2,13 +2,45 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="my-electron-app\style.css">
+    <link rel="stylesheet" href="C:\Users\kyess\OneDrive - UP Education\Documents\testing4\my-app\src\index.css">
     <meta charset="UTF-8">
     <title>Vaccino</title>
   </head>
   <body>
-    <h1>Vaccino</h1>
-    <button type="button">"Login</button>
-    <button type="button">Sign Up</button>
+    <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
+      <p>Ministry of Health</p> <!--Align left-->
+      <h1>Vaccino</h1> <!--Align center-->
+    
+      <h3>The official New Zealand Government website<br>
+        for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
+    </div> <!--End of blue header section-->
+    <!--these two buttons go in center of screen-->
+    <button type="button" id="loginBtn" onclick="window.location.replace('login.html')">Login</button>
+    <button type="button" id="signUpBtn" onclick="window.location.replace('registration.html')">Sign Up</button>
+    <div id="box"><!--This goes to the left of the buttons-->
+      <ul>
+        <li> <!--Goes in a box to the left of the buttons-->
+          We have all your vaccine<br> 
+          information ready to go.
+        </li>
+        <li>
+          We take care of your needs<br>
+          by changing the alert level
+        </li>
+      <li>
+        We provide you with a unique QR<br>
+        Code that can be used in public
+      </li>
+      <li>
+        We show the number of new cases<br>
+        in case you need to know.
+      </li>
+        <li>
+          We offer a service to show your<br>
+          previous medical history regarding<br>
+          vaccinations.
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
