@@ -27,10 +27,17 @@ body {
   text-align: left;
 }
 
-ul {
+#box {
+  border-style: solid;
+}
+
+#box ul{
   padding: 0;
 }
 
-#box {
-  border-style: solid;
+.circle {
+  background: #FFF87C;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
 }
