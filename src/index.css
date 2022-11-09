@@ -13,6 +13,10 @@ body {
   background: #89CFF0;
   font-family: Signika Negative SC;
   color: white;
+  border-bottom-left-radius: 38px;
+  border-bottom-right-radius: 38px;
+  width: auto;
+  height: 200px;
 }
 
 .Header h1 {
@@ -25,14 +29,29 @@ body {
 
 .Header p {
   text-align: left;
+  background: #98FF98;
+  border-bottom-right-radius: 38px;
+  background-position: left;
+  
+
 }
 
 #box {
   border-style: solid;
+  width: 300px;
+  height: 270px;
+  list-style-position: inside;
+
+}
+
+.button {
+  background-color: #A6F5FF;
+  border: #89CFF0;
+  color: #FFFFFF;
 }
 
 #box ul{
-  padding: 0;
+  padding: 8px;
 }
 
 .circle {
