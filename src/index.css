@@ -13,10 +13,15 @@ body {
   background: #89CFF0;
   font-family: Signika Negative SC;
   color: white;
+  border-bottom-left-radius: 38px;
+  border-bottom-right-radius: 38px;
+  width: auto;
+  height: 200px;
 }
 
 .Header h1 {
   text-align: center;
+  font-size: 37px;
 }
 
 .Header h3 {
@@ -25,14 +30,37 @@ body {
 
 .Header p {
   text-align: left;
+  background: #98FF98;
+  width: 170px;
+  height: 40px;
+  border-bottom-right-radius: 38px;
+  background-position: top left;
+  padding: 10px;
+  color: #000000;
+  font-family: Roboto;
 }
 
 #box {
   border-style: solid;
+  width: 300px;
+  height: 270px;
+  list-style-position: inside;
+}
+
+button {
+  background-color: #A6F5FF;
+  border: 3px solid #89CFF0;
+  color: #000000;
+  font-size: 20px;
+  width: 167px;
+  height: 57px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 #box ul{
-  padding: 0;
+  padding: 8px;
 }
 
 .circle {

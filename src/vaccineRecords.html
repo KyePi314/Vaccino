@@ -1,18 +1,24 @@
-<!--THIS IS THE HOME/MAIN PAGE-->
 <!DOCTYPE html>
 <html>
     <head>
         <link rel="stylesheet" href="C:\Users\kyess\OneDrive - UP Education\Documents\testing4\my-app\src\index.css">
         <meta charset="UTF-8">
-        <title>Vaccino - Home</title>
+          <!-- https://sheetjs.com/ -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+        <script defer src="userData.js"></script>
+        <title>Vaccino - Vaccine Records</title>
+        <input type="file" id="demoA" accept=".xls,.xlsx"/>
       </head>
       <body>
-        <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
+         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
             <p>Ministry of Health</p> <!--Align left-->
             <h1>Vaccino</h1> <!--Align center-->
             <h3>The official New Zealand Government website<br>
               for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
               <button type="button" id="signOut">Sign out</button> <!--Goes to the far upper right hand side-->
+              <button type="button" id="home">Home</button>
           </div> <!--End of blue header section-->
+          <!--need to sort out the table here-->
+          
       </body>
 </html>
