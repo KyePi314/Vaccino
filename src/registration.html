@@ -11,6 +11,7 @@
         </script>
         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
           <p>Ministry of Health</p> <!--Align left-->
+<<<<<<< HEAD
           <h1>Vaccino - sign up</h1> <!--Align center-->
           <h3>The official New Zealand Government website<br>
             for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
@@ -37,6 +38,52 @@
             <br><br>
                 <a id="mylink" href="./login.html">login</a>
         </div>
+=======
+          <h1>Vaccino - Sign Up</h1> <!--Align center-->
+          <h3>The official New Zealand Government website<br>
+            for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
+        </div> <!--End of blue header section-->
+        <form action="/register" method="POST" id="register">
+            <fieldset>
+                <label for="username">*Username</label>
+                <input type ="text" id = 'username' name="username" placeholder="Maverick" required>
+                <br><br>
+
+                <label for="firstname">*First Name</label>
+                <input type ="text" id = 'firstname' name="firstname" placeholder="Izuku" required>
+                <br><br>
+
+                <label for="middlename">Middle Names</label>
+                <input type ="text" id = 'middlename' name="middlename" placeholder="Deku">
+                <br><br>
+
+                <label for="surname">*Last Name</label>
+                <input type ="text" id = 'surname' name="surname" placeholder="Midoriya" required>
+                <br><br>
+    
+                <label for="nhi">NHI Number (if known)</label>
+                <input type ="text" id = 'nhi' name="nhi" placeholder="112233445">
+                <br><br>
+
+                <label for="email">*Email</label>
+                <input type ="email" id = 'email' name="email" placeholder="abc@example.com" required>
+                <br><br>
+    
+                <label for="password">*Password</label>
+                <input type="password" id = "password" name="password" placeholder="************" required>
+                <br><br>
+
+                <label for="secondpassword">*Re-enter Password</label>
+                <input type="password" id = "secondpassword" name="secondpassword" placeholder="************" required>
+                <br><br>
+    
+                <button type ="reset">Reset</button>
+                <button type ="button" id="submit" onclick="addUser(this)">Submit</button>
+            </fieldset>
+        </form>
+        <br><br>
+            <a id="mylink" href="./login.html">Login</a>
+>>>>>>> origin/master
         </body>
         <script src="user.js"></script>
 </html>
