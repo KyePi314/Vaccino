@@ -1,22 +1,19 @@
 body {
-  font-family: -apple-system, Roboto, 'Segoe UI', Helvetica,
-    Arial, sans-serif;
-  margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
+  background-color: aliceblue;
 }
 
 .Header {
   margin: auto;
-  max-width: 38rem;
-  padding: 2rem;
   background: #89CFF0;
-  font-family: Signika Negative SC;
+  font-family: "Signika Negative SC", Verdana, sans-serif;
   color: white;
   border-bottom-left-radius: 38px;
   border-bottom-right-radius: 38px;
-  width: auto;
-  height: 200px;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin-bottom: 5%;
+  position: fixed;
 }
 
 .Header h1 {
@@ -31,13 +28,14 @@ body {
 .Header p {
   text-align: left;
   background: #98FF98;
-  width: 170px;
-  height: 40px;
   border-bottom-right-radius: 38px;
-  background-position: top left;
+  float: left;
+  left: 0;
+  top: 0;
   padding: 10px;
   color: #000000;
   font-family: Roboto;
+  
 }
 
 #box {
@@ -61,11 +59,4 @@ button {
 
 #box ul{
   padding: 8px;
-}
-
-.circle {
-  background: #FFF87C;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
 }
