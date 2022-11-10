@@ -3,7 +3,7 @@
   "productName": "my-app",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -28,9 +28,9 @@
     "express-session": "^1.17.3",
     "hbs": "^4.2.0",
     "jsdom": "^20.0.2",
-    "mysql": "^2.18.1",
     "nodemon": "^2.0.20",
     "query-selector": "^2.0.0",
+    "requirejs": "^2.3.6",
     "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
@@ -39,6 +39,7 @@
     "@electron-forge/maker-rpm": "^6.0.1",
     "@electron-forge/maker-squirrel": "^6.0.1",
     "@electron-forge/maker-zip": "^6.0.1",
+    "@electron-forge/plugin-webpack": "^6.0.1",
     "electron": "21.2.2"
   }
 }
