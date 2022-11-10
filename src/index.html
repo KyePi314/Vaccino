@@ -3,11 +3,15 @@
 <html>
   <head>
     <link rel="stylesheet" href="index.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vaccino</title>
   </head>
   <body>
+    <script>
+      const electron = require("electron")
+    </script>
     <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
       <p>Ministry of
       <br> Health</p> <!--Align left-->
@@ -17,9 +21,11 @@
         for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
     </div> <!--End of blue header section-->
     <!--these two buttons go in center of screen-->
+    <div class="buttonGroup">
     <button type="button" id="loginBtn" onclick="window.location.replace('login.html')">Log In</button>
     <br>
     <button type="button" id="signUpBtn" onclick="window.location.replace('registration.html')">Sign Up</button>
+    </div>
     <div id="box"><!--This goes to the left of the buttons-->
       <ul>
         <li> <!--Goes in a box to the left of the buttons-->

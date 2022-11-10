@@ -1,0 +1,63 @@
+body {
+    background-color: white;
+  }
+  
+  .Header { /*blue header at the top of the page*/
+    margin: auto;
+    background: #89CFF0;
+    font-family: "Signika Negative SC", Verdana, sans-serif;
+    color: white;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 14.5rem;
+    max-width: 100%;
+    margin-bottom: 5%;
+    position: fixed;
+  }
+  
+  .Header p { /*Styling the ministry of health logo*/
+    text-align: left;
+    font-size: 1em;
+    background: #98FF98;
+    border-bottom-right-radius: 38px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    margin-top: 0;
+    color: #000000;
+    font-family: Roboto;
+  }
+  .Header h1 { /*Styling the vaccino title*/
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  .Header h3 { /*styling the subtitle*/
+    text-align: center;
+    font-size: 1.25em;
+  }
+
+  .loginForm {
+    top: 16rem;
+    position: absolute;
+    left: 40%;
+  }
+
+  input {
+    margin: 0.5rem;
+    box-sizing: border-box;
+  }
+
+  input:focus{
+    background-color: #A6F5FF;
+  }
+
+  .signUp {
+    top: 16rem;
+    position: absolute;
+    left: 40%;
+  }
