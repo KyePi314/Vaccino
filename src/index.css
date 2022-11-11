@@ -42,14 +42,19 @@ body {
   font-size: 1.25em;
 }
 
+#subtitle {
+  top: 13rem;
+  text-align: center;
+}
+
 #box {
   border-style: solid;
   width: 18.75rem;
-  height: 16.875rem;
+  height: 20.875rem;
   list-style-position: inside;
   position: relative;
   left: 1em;
-  top: 18rem;
+  top: 15rem;
   margin: 1rem;
 }
 
@@ -97,17 +102,32 @@ body {
 }
 
 .images {
-
+  border-radius: 50%;
+  width: 250px;
+  height: auto;
+  position: fixed;
+  top: 11rem;
+  right: 2.5em;
 }
 
 #img1 {
+  border-radius: 50%;
+  width: 250px;
+  height: auto;
+  right: 2.5em;
 
 }
 
 #img2 {
-
+  border-radius: 50%;
+  width: 270px;
+  height: auto;
+  right: 2.5em;
 }
 
 #img3 {
-  
+  border-radius: 50%;
+  width: 250px;
+  height: auto;
+  right: 2.5em;
 }
