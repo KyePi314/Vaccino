@@ -1,1 +1,1 @@
-{"userName":"impala","email":"example@gmail.com","firstName":"Dean","middleName":"","lastName":"Winchester","NHINumber":"666420","password":"password","authLvl":"User"}
+{"userName":"hamilton","email":"merica@gerogewashington.com","firstName":"Alexander","middleName":"","lastName":"Hamilton","NHINumber":"456461651","password":"gunsandships","authLvl":"User"}
