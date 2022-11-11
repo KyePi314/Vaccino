@@ -48,7 +48,7 @@ app.on('activate', () => {
   }
 });
 
-//<!--This function will be used to change the alerts-->
+//<!--This function will be used to change the alerts for the system and home page-->
 //function alerts(){
 
 //syncReadFile('./miscsitefunctions');
@@ -59,7 +59,7 @@ app.on('activate', () => {
 //}
 //}
 
-//<!--This function will be used to change the covid numbers on the home page-->
+//<!--This function will be used to change the covid numbers in the system and on the home page-->
 //function alerts(){
 
 //syncReadFile('./miscsitefunctions');
