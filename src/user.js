@@ -50,11 +50,26 @@ function submitEvent()
     const lN = document.getElementById('lastname').value;
     const mN = document.getElementById('middlename').value;
     const num = document.getElementById('nhi').value;
-    const userD = new user(u, e, p, fN, lN, mN, num); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
+    const userData = new user(u, e, p, fN, lN, mN, num); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
+    
+    fs.readFile('./backend/savedUsers.json', 'utf-8', function(err, data){
+        if (err) {
+            console.log(err);
+        }
+        else {
+            const file = JSON.parse(data);
+            file.Users.push({userData});
+            const json =  JSON.stringify(file, null, '\t');
 
-    fs.appendFile("./backend/savedUsers.txt", JSON.stringify(userD), 'utf-8', function(err) { //Function that add the new user to the existing file in string format
-        if (err) return console.log(err);
-        console.log(userD);
+            fs.writeFile('./backend/savedUsers.json', json, 'utf-8', function(err) {
+                if(err){
+                    console.log(err);
+                }
+                else {
+                    console.log("User successfully saved to the system!");
+                }
+            })
+        }
     })
     
 }

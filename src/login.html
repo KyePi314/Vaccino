@@ -17,8 +17,8 @@
           <form action="/login" method="POST">
             <fieldset>
                     
-                <label>Email ID</label>
-                <input type ="email" id = 'email' name="email" placeholder="abc@example.com" required>
+                <label for="username">Username</label>
+                <input type ="username" id = 'username' name="username" placeholder="maverick" required>
                 <br><br>
     
                 <label>Password</label>
@@ -26,12 +26,12 @@
                 <br><br>
     
                 <button type ="reset">Reset</button>
-                <button type ="submit" onclick="window.location.replace('home.html')">Submit</button>
+                <button type ="button" id="submit" >Submit</button>
             </fieldset>
             </form>
             <br><br>
             <a id="mylink" href="./registration.html">Sign Up</a>
         </div>
-        
+        <script src="readData.js"></script>
         </body>
 </html>
