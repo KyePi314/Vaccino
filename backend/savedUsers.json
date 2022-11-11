@@ -1,0 +1,28 @@
+{
+	"Users": [
+		{
+			"userData": {
+				"userName": "A.Ham",
+				"email": "georgeWashingtonisHot@gmail.com",
+				"firstName": "Alexander",
+				"middleName": "",
+				"lastName": "Hamilton",
+				"NHINumber": "",
+				"password": "password",
+				"authLvl": "Admin"
+			}
+		},
+		{
+			"userData": {
+				"userName": "impalaRules",
+				"email": "impalaBoy@gmail.com",
+				"firstName": "Dean",
+				"middleName": "Jay",
+				"lastName": "Winchester",
+				"NHINumber": "666666",
+				"password": "winchesters",
+				"authLvl": "User"
+			}
+		}
+	]
+}
