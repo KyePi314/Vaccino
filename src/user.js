@@ -52,7 +52,7 @@ function submitEvent()
     const num = document.getElementById('nhi').value;
     const userD = new user(u, e, p, fN, lN, mN, num); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
 
-    fs.appendFile("./backend/savedUsers.txt", JSON.stringify(userD), 'utf-8', function(err) { //Function that add the new user to the existing file in string format
+    fs.appendFile("./backend/savedUsers.txt", JSON.stringify(userD, null, '\t'), 'utf-8', function(err) { //Function that add the new user to the existing file in string format
         if (err) return console.log(err);
         console.log(userD);
     })
