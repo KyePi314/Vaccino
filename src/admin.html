@@ -1,27 +1,40 @@
 <!--This will be the Admin Home Page-->
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="C:\Users\kyess\OneDrive - UP Education\Documents\testing4\my-app\src\index.css">
+  <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <title>Vaccino - Admin Home</title>
   </head>
   <body>
     <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
         <p>Ministry of Health</p> <!--Align left-->
-        <button>Sign Out</button>
-        <h1>Vaccino</h1> <!--Align center-->
+        <button id="signout">Sign Out</button>
+        <h1>Vaccino - Admin Mode</h1> <!--Align center-->
         <h3>The official New Zealand Government website<br>
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
     </div> <!--End of blue header section-->
-    <div>
-        <button type="button" id="adminButton">Manage User Profile</button> <!---->
-        <br>
-        <button type="button" id="adminButton">Resolve Bug Reports</button> <!---->
-        <br>
-        <button type="button" id="adminButton">Manage Alert Level</button> <!---->
-        <br>
-        <button type="button" id="adminButton">Manage No. of Cases</button> <!---->
-    </div>
+    <div id="adminhomedisplay">
+    <div id="adminhomebuttons">
+        <button type="button" class="adminButton">Manage User Profiles</button> <!---->
+        <br>        <br>
+        <button type="button" class="adminButton">Resolve Bug Reports</button> <!---->
+        <br>        <br>
+        <button type="button" class="adminButton">Manage Alert Levels</button> <!---->
+        <br>        <br>
+        <button type="button" class="adminButton">Manage No. of Cases</button> <!---->
+      </div>
+        <div id="adminhomemessages">
+        <table id="adminmessagestable">
+          <tbody>
+            <tr><th id="row">Your Messages</th>
+            <tr><td>Doctor</td><td>Please remember to test anyone showing symptoms.</td></tr>
+            <tr><td>System Maintenance<td>Site up to date.</td></tr>
+            <tr><td>Boss</td><td>There is a shortage of masks in Tauranga. Please send a box each if you can spare one to the practitioners there.</td></tr>
+            <tr><td>Admin B</td><td>Please check the system for bug reports so that there isn't a backlog.</td></tr>
+        </tbody>
+        </table>
+        </div>
+      </div>
   </body>
 
 </html>

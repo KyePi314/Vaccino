@@ -31,15 +31,38 @@ body {
   margin-top: 0;
   color: #000000;
   font-family: Roboto;
+  font-size: 20px;
 }
 .Header h1 { /*Styling the vaccino title*/
   text-align: center;
   font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 40px;
 }
 
 .Header h3 { /*styling the subtitle*/
   text-align: center;
   font-size: 1.25em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 120px;
+}
+
+.Header button{
+  background-color: #A6F5FF;
+  border: 3px solid #89CFF0;
+  color: #000000;
+  font-size: 20px;
+  width: 10.438rem;
+  height: 3.563rem;
+  border-radius: 10px;
+  right: 150px;
+  position: fixed;
 }
 
 #subtitle {
@@ -130,4 +153,103 @@ body {
   width: 250px;
   height: auto;
   right: 2.5em;
+}
+
+/*Bug Report sizing and positioning*/
+#bugreport{
+  margin-top: 15rem;
+  text-align: center;
+  left: 40%;
+}
+
+/*Bug Report input box sizing*/
+#bugreportinput{
+ width: 600px;
+ height: 230px; 
+ font-size: 15px;
+}
+
+#adminhomebuttons{
+  margin-top: 15rem;
+  text-align: left;
+  padding-left: 150px;
+}
+
+#adminhomemessages{
+  margin-top: 15rem;
+  padding-left: 300px;
+}
+
+#adminhomedisplay{
+  display:flex;
+}
+
+.adminButton{
+  width: 150px;
+  height: 60px;
+}
+
+.adminButton2{
+  width: 300px;
+  height: 110px;
+}
+
+#adminmessagestable{
+  border: 1px solid black;
+  width: 500px;
+  height: 270px;
+}
+
+#row{
+  text-align: center;
+}
+
+table, td {
+  border: 1px solid black;
+}
+
+#adminbugreport{
+  margin-top: 18rem;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#adminalert{
+  margin-top: 18rem;
+  text-align: center;
+}
+
+#admincases{
+  margin-top: 18rem;
+  text-align: center;
+}
+
+#adminprofile{
+  border: 1px solid black;
+  padding: 20px;
+  margin-top: 18rem;
+}
+
+#adminprofile2{
+  border: 1px solid black;
+  padding: 20px;
+}
+
+#adminrecords1{
+  margin-top: 18rem;
+  text-align: center;
+}
+
+#adminrecords2{
+  margin-top: 3rem;
+  text-align: center;
+}
+
+#testtablediv{
+  margin-top: 18rem;
+}
+
+#testtable{
+  margin-left: auto;
+  margin-right: auto;
 }
