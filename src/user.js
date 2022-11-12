@@ -58,7 +58,7 @@ function submitEvent()
         }
         else {
             const file = JSON.parse(data);
-            file.Users.push({userData});
+            file.push({userData});
             const json =  JSON.stringify(file, null, '\t');
 
             fs.writeFile('./backend/savedUsers.json', json, 'utf-8', function(err) {

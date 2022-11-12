@@ -4,6 +4,9 @@
       <link rel="stylesheet" href="forms.css">
         <meta charset="UTF-8">
         <title>Vaccino</title>
+      
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      
       </head>
       <body>
         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
@@ -14,11 +17,11 @@
         </div> <!--End of blue header section-->
         <div class="loginForm">
           <h1>Login</h1>
-          <form action="/login" method="POST">
+          <form action="/login" id="login">
             <fieldset>
                     
                 <label for="username">Username</label>
-                <input type ="username" id = 'username' name="username" placeholder="maverick" required>
+                <input type ="username" id = "username" name="username" placeholder="maverick" required>
                 <br><br>
     
                 <label>Password</label>
@@ -32,6 +35,7 @@
             <br><br>
             <a id="mylink" href="./registration.html">Sign Up</a>
         </div>
-        <script src="readData.js"></script>
+        <script>window.$ = window.jQuery = require('jquery');</script>
+        <script  src="readData.js"></script>
         </body>
 </html>
