@@ -16,7 +16,7 @@ body {
   height: 14.5rem;
   max-width: 100%;
   margin-bottom: 5%;
-  position: fixed;
+  position: absolute;
 }
 
 .Header p { /*Styling the ministry of health logo*/
