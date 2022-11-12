@@ -1,13 +1,83 @@
-.Header {
-    background-color: #89CFF0;
-    margin-bottom: auto;
+body {
+    background-color: white;
+  }
+  
+  .Header { /*blue header at the top of the page*/
+    margin: auto;
+    background: #89CFF0;
     font-family: "Signika Negative SC", Verdana, sans-serif;
-}
-.Header p {
-    float: left;
-    margin: 0px, 15px, 15px, ;
+    color: white;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 13.5rem;
+    max-width: 100%;
+    margin-bottom: 5%;
+    position: absolute;
+  }
+  
+  .Header p { /*Styling the ministry of health logo*/
+    text-align: left;
+    font-size: 1em;
+    background: #98FF98;
+    border-bottom-right-radius: 38px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    margin-top: 0;
+    color: #000000;
+    font-family: Roboto;
+  }
+  .Header h1 { /*Styling the vaccino title*/
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  .Header h3 { /*styling the subtitle*/
+    text-align: center;
+    font-size: 1.25em;
+  }
+.buttonGroupHome .button {
+    position: absolute;
+    display: block;
+    margin: 1rem;
+    top: 14rem;
+    transition-duration: 0.4s;
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 11rem;
 }
 
-body {
-    background-color: antiquewhite;
+.buttonGroupHome .button:hover {
+    background-color: aliceblue;
+    color: black;
+}
+
+.buttonGroupHome .button:not(:last-child) {
+    border-bottom: none; /* Prevent double borders */
+  }
+.circle {
+    justify-content: center;
+    top: 14rem;
+    right: 5.5rem;
+    text-align: center;
+    padding: 2em;
+    border: 0.5em solid #89CFF0;
+    color: black;
+    width: 4em;
+    height: 4em;
+    font-size: 2em;
+    font-weight: bold;
+    border-radius: 100%;
+    display: flex;
+    position: absolute;
+    margin: 33vh auto auto auto;
 }
