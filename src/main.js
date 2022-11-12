@@ -48,5 +48,27 @@ app.on('activate', () => {
   }
 });
 
+//<!--This function will be used to change the alerts for the system and home page-->
+//function alerts(){
+
+//syncReadFile('./miscsitefunctions');
+//if(){
+//var alertswitch = 0;
+
+//  return ;
+//}
+//}
+
+//<!--This function will be used to change the covid numbers in the system and on the home page-->
+//function alerts(){
+
+//syncReadFile('./miscsitefunctions');
+//if(){
+//var alertswitch = 0;
+
+//  return ;
+//}
+//}
+
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
