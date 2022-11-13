@@ -48,25 +48,32 @@ app.on('activate', () => {
   }
 });
 
-//<!--This function will be used to change the alerts for the system and home page-->
-//function alerts(){
+//<!--This function will be used to change the covid numbers for the system and home page-->
+//function covidno(){
 
 //syncReadFile('./miscsitefunctions');
 //if(){
-//var alertswitch = 0;
+//var covidswitch = 0;
 
 //  return ;
 //}
 //}
 
-//<!--This function will be used to change the covid numbers in the system and on the home page-->
+//<!--This function will be used to change the alerts in the system and on the home page-->
 //function alerts(){
 
 //syncReadFile('./miscsitefunctions');
-//if(){
-//var alertswitch = 0;
+//if(alertswitch == 0){
+//  
 
-//  return ;
+//  return <img id="alert1" src="images\yellow.svg">;
+//}
+//else if(alertswitch == 1){
+//  return <img id="alert1" src="images\red.svg">;
+//}
+
+//else if(alertswitch == 2){
+//return <img id="alert1" src="images\green.svg">;
 //}
 //}
 
