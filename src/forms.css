@@ -1,3 +1,4 @@
+/*COMPLETED*/
 body {
     background-color: white;
   }
@@ -12,10 +13,10 @@ body {
     left: 0;
     right: 0;
     top: 0;
-    height: 14.5rem;
+    height: 13.5rem;
     max-width: 100%;
     margin-bottom: 5%;
-    position: fixed;
+    position: absolute;
   }
   
   .Header p { /*Styling the ministry of health logo*/
@@ -29,7 +30,7 @@ body {
     padding: 15px;
     margin-top: 0;
     color: #000000;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
   }
   .Header h1 { /*Styling the vaccino title*/
     text-align: center;
@@ -44,20 +45,63 @@ body {
   .loginForm {
     top: 16rem;
     position: absolute;
-    left: 40%;
+    left: 30%;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
   }
 
+
   input {
-    margin: 0.5rem;
+    margin: auto;
+    width: 100%;
     box-sizing: border-box;
+    padding: 10px;
   }
 
   input:focus{
-    background-color: #A6F5FF;
+    background-color: aliceblue;
   }
 
   .signUp {
     top: 16rem;
     position: absolute;
-    left: 40%;
+    left: 30%;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #submit:hover, #reset:hover {
+    background-color: aliceblue;
+    color: black;
+    
+  }
+  #submit, #reset {
+    transition-duration: 0.4s;
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    width: 10.438rem;
+    height: 3.563rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  }
+  a {
+    text-decoration: none;
+    transition-duration: 0.4s;
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
   }
