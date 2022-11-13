@@ -219,6 +219,11 @@ table, td {
   text-align: center;
 }
 
+#alert1{
+  width: 200px;
+  height: 200px;
+}
+
 #admincases{
   margin-top: 18rem;
   text-align: center;
