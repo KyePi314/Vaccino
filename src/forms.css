@@ -30,7 +30,7 @@ body {
     padding: 15px;
     margin-top: 0;
     color: #000000;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
   }
   .Header h1 { /*Styling the vaccino title*/
     text-align: center;

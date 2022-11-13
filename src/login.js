@@ -36,6 +36,7 @@ $(document).ready(function () {
                     else if (userDB[i].userData.userName == username && userDB[i].userData.password != pass) //This statement runs if the user has entered the wrong password
                     {
                         //ADD DIALOG BOX
+                        
                         console.log("Invalid password");
                     }
                     else if (userDB[i].userData.userName != username)
@@ -53,3 +54,6 @@ $(document).ready(function () {
         
     });
  });
+
+ 
+ 
