@@ -99,12 +99,12 @@ body {
     display: flex;
    /* margin: 33vh auto auto auto;*/
     position: fixed;
-    right: 5%;
+    right: 3rem;
     top: 18rem;
 }
 
 #item1 {
-  right: 31.5%;
+  right: 10rem;
   font-size: 1.3em;
   color: #000000;
   font-family: 'Roboto', sans-serif;
