@@ -34,5 +34,17 @@
 			"password": "tekapo69",
 			"authLvl": "User"
 		}
+	},
+	{
+		"userData": {
+			"userName": "Jesus",
+			"email": "nobrain@gmail.com",
+			"firstName": "Je",
+			"middleName": "sus",
+			"lastName": "Lastname",
+			"NHINumber": "",
+			"password": "pass",
+			"authLvl": "Admin"
+		}
 	}
 ]
