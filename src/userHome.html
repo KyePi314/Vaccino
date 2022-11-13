@@ -4,6 +4,7 @@
     <head>
         <link rel="stylesheet" href="userPages.css">
         <meta charset="UTF-8">
+        <script src="user.js"></script>
         <title>Vaccino - Home</title>
       </head>
       <body>
@@ -16,19 +17,26 @@
               for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
               <button type="button" id="signOut">Sign out</button> <!--Goes to the far upper right hand side-->
           </div> <!--End of blue header section-->
+          <div class="container">
+            <h1>Welcome, </h1>
+            <h1 id="user">User!</h1>
+          </div>
           <div class="buttonGroupHome"> <!--Creating a div container to group the buttons that will allow the user to view and change documents.-->
-            <button type="button" class="button" id="vaccineRecords">View Vaccine Records</button>
-            <button type="button" class="button" id="testResults">View Test Results</button>
-            <button type="button" class="button" id="qrCode">QR Code</button>
-            <button type="button" class="button" id="details">View/Update Details</button>
+            <button type="button" class="btn" id="vaccineRecords">View Vaccine Records</button>
+            <button type="button" class="btn" id="testResults">View Test Results</button>
+            <button type="button" class="btn" id="qrCode">QR Code</button>
+            <button type="button" class="btn" id="details">View/Update Details</button>
           </div><!--End of button group-->
           <div class="rightSide"><!--Grouping all the elements on the right hand side for ease of styling (remember with class it'd be .rightSide h3 for an example of styling the h3 element specifically)-->
-            <h3>Current Traffic light level:</h3>
-          <div class="circle">None</div><!--I created the circle for the traffic light system in CSS already using this class-->
-          <p>current number of<br>
-            Covid-19 cases: </p><!--We need to figure out how we want to display the numbers in a way that an admin could change them, using JS perhaps?-->
-            <p>Found a bug?</p>
-            <p>Report it <a href="bugReport.html">here</a></p><!--If needed, in order to style all of these p elements I can give them and id for you to easily call.-->
+            <h3 id="item1">Current Traffic <br>light level:</h3>
+          <div id="circle">None</div><!--I created the circle for the traffic light system in CSS already using this class-->
+          <div class="numbers">
+            <p id="item2">current number of<br>
+              Covid-19 cases: </p><!--We need to figure out how we want to display the numbers in a way that an admin could change them, using JS perhaps?-->
+            <p id="covidNum">Number</p>
+          </div>
+            <p id="item3">Found a bug?</p>
+            <p id="item4">Report it <a href="bugReport.html">here</a></p><!--If needed, in order to style all of these p elements I can give them and id for you to easily call.-->
           </div>
       </body>
 </html>

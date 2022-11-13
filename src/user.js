@@ -52,7 +52,7 @@ function submitEvent()
     const num = document.getElementById('nhi').value;
     const userData = new user(u, e, p, fN, lN, mN, num); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
     
-    fs.readFile('savedUsers.json', 'utf-8', function(err, data){
+    fs.readFile('src/savedUsers.json', 'utf-8', function(err, data){
         if (err) {
             console.log(err);
         }
@@ -61,7 +61,7 @@ function submitEvent()
             file.push({userData});
             const json =  JSON.stringify(file, null, '\t');
 
-            fs.writeFile('savedUsers.json', json, 'utf-8', function(err) {
+            fs.writeFile('src/savedUsers.json', json, 'utf-8', function(err) {
                 if(err){
                     console.log(err);
                 }

@@ -29,7 +29,21 @@ body {
     padding: 15px;
     margin-top: 0;
     color: #000000;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
+  }
+  .Header #signout {
+    position: fixed;
+    top: 2rem;
+    right: 3rem;
+    margin-top: 0;
+    padding: 14px, 40px;
+    font-family: 'Roboto', sans-serif;
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 10px;
   }
   .Header h1 { /*Styling the vaccino title*/
     text-align: center;
@@ -40,44 +54,80 @@ body {
     text-align: center;
     font-size: 1.25em;
   }
-.buttonGroupHome .button {
+.buttonGroupHome {
     position: absolute;
-    display: block;
-    margin: 1rem;
-    top: 14rem;
-    transition-duration: 0.4s;
-    background-color: #A6F5FF;
-    border: 2px solid #89CFF0;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    width: 11rem;
-}
-
-.buttonGroupHome .button:hover {
-    background-color: aliceblue;
-    color: black;
-}
-
-.buttonGroupHome .button:not(:last-child) {
-    border-bottom: none; /* Prevent double borders */
+    display: flex;
+    flex-direction: column;
+    top: 16rem;
+    left: 10%;
   }
-.circle {
-    justify-content: center;
-    top: 14rem;
-    right: 5.5rem;
+#vaccineRecords, #testResults, #qrCode, #details {
+  background-color: #A6F5FF;
+  border: 2px solid #89CFF0;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition-duration: 0.4s;
+  width: 10.438rem;
+  height: 3.563rem;
+  border-radius: 10px;
+  margin: 0.8rem;
+  box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+}
+
+#vaccineRecords:hover, #testResults:hover, #qrCode:hover, #details:hover {
+  background-color: aliceblue;
+  color: black;
+}
+.rightSide {
+  top: 20%;
+  float: right;
+}
+
+#circle { /*ADD FILL WHEN UPDATING THE TRAFFIC LIGHT COLOUR USING PERHAPS JS?*/
     text-align: center;
+    justify-content: center;
     padding: 2em;
     border: 0.5em solid #89CFF0;
-    color: black;
+    color: #000000;
     width: 4em;
     height: 4em;
     font-size: 2em;
-    font-weight: bold;
     border-radius: 100%;
     display: flex;
-    position: absolute;
-    margin: 33vh auto auto auto;
+   /* margin: 33vh auto auto auto;*/
+    position: fixed;
+    right: 5%;
+    top: 18rem;
+}
+
+#item1 {
+  right: 33%;
+  font-size: 1.3em;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  top: 22rem;
+  position: absolute;
+}
+
+.numbers {
+  top: 35rem;
+  color:#000000;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  right: 7rem;
+  font-size: 1.2em;
+}
+
+#item3 {
+  top: 40rem;
+  color:#000000;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  right: 7rem;
+  font-size: 1.2em;
+}
+#user {
+  top: 50%;
 }
