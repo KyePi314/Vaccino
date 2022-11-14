@@ -15,7 +15,6 @@ const createWindow = () => {
     height: 1000,
     frame: false,
     webPreferences: {
-      preload: 'src/preload.js',
       nodeIntegration: true, 
       contextIsolation: false, 
       enableRemoteModule: true

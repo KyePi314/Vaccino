@@ -37,9 +37,26 @@ class user { //Created the user class
     
     
 }
+let requiredInputs = document.querySelectorAll("[required]");
+let submitButton = document.querySelector(".submit");
 
+submitButton.disabled = true;
 
-const submission = document.getElementById("submit");
+for(let i = 0; i < requiredInputs.length; i++){
+requiredInputs[i].addEventListener("input", buttonState)
+};
+
+function buttonState() {
+  if (requiredInputs.value === "") {
+    submitButton.disabled = true;
+  } else {
+    submitButton.disabled = false;
+  }
+}
+
+if (submitButton.disabled == false)
+{
+    const submission = document.getElementById("submit");
 submission.addEventListener('click', submitEvent);
 function submitEvent()
 {
@@ -99,3 +116,6 @@ function submitEvent()
     })
     
 }
+
+}
+
