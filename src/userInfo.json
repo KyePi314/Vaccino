@@ -1,0 +1,37 @@
+[
+	
+	{
+		"userProfile": {
+            "NHINumber": "666666",
+            "tests" : {
+                "covid19" : {
+                    
+                },
+                "other" : {
+
+                }
+
+            },
+            "vaccines" : {
+
+            }
+		}
+	},
+    {
+        "userProfile": {
+            "NHINumber": "4206969",
+            "tests" : {
+                "covid19" : {
+                    
+                },
+                "other" : {
+
+                }
+
+            },
+            "vaccines" : {
+                
+            }
+		}
+    }
+]

@@ -9,15 +9,17 @@ window.addEventListener('load', function(){
 });
 
 const logout = document.getElementById('signout');
-const vaxRec = document.getElementById('vaccineRecords');
-const test = document.getElementById('testResults');
-const code = document.getElementById('qrCode');
-const profile = document.getElementById('details');
+
 
 logout.addEventListener('click', () =>
 {
     window.location.replace('index.html');
 });
+
+const vaxRec = document.getElementById('vaccineRecords');
+const test = document.getElementById('testResults');
+const code = document.getElementById('qrCode');
+const profile = document.getElementById('details');
 
 vaxRec.addEventListener('click', () => {
     window.location.replace('vaccineRecords.html');
@@ -34,3 +36,4 @@ code.addEventListener('click', () => {
 profile.addEventListener('click', () => {
     window.location.replace('userProfile.html');
 });
+
