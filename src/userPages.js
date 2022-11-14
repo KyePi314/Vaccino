@@ -1,11 +1,12 @@
 //USER PAGES JS
 var fs=require('fs');
-var userID = require('./login');
 
+let tempTwo = localStorage.getItem("testing");
+let userID = JSON.parse(tempTwo);
 
 window.addEventListener('load', function(){
    
-    console.log(userID.userDB);
+    console.log(userID);
 });
 
 const signout = document.getElementById('signout');
