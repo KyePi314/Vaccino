@@ -1,18 +1,11 @@
 //USER PAGES JS
 var fs = require('fs');
+let $ = require('jquery');
 
 var tempTwo = sessionStorage.getItem("user"); //retrieves the user's data stored in the sessions storage
 var userID = JSON.parse(tempTwo); //parse's the user's information and stores it in the userID variable for later use.
 
-
-const logout = document.getElementById('signout');
-
-logout.addEventListener('click', () =>
-{
-    window.location.replace('index.html');
-});
-
-if (document.URL.includes('userHome.html')) //code specific to the home page
+if (document.URL.includes('src/userHome.html')) //code specific to the home page
 {  
     const vaxRec = document.getElementById('vaccineRecords');
     const test = document.getElementById('testResults');
@@ -35,7 +28,19 @@ if (document.URL.includes('userHome.html')) //code specific to the home page
         window.location.replace('userProfile.html');
     });
 
+} else{
+    const logout = document.getElementById('signout');
+    const home = document.getElementById('homebutton');
+
+    logout.addEventListener('click', () =>
+    {
+        window.location.replace('index.html');
+    });
+    home.addEventListener('click', () => {
+        window.location.replace('userHome.html');
+    } );
 }
+
 
 
 if (document.URL.includes('src/testResults.html')) //code specific to the test results page
@@ -43,15 +48,28 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
     nhi = userID.num; //stores the user's nhi number
     var testsArr = [];
 
-    fs.readFile('src/userInfo.json', 'utf-8', function(err, data){
-        if(err) {
-            console.log(err);
-        }
-        else 
-        {
-            const file = JSON.parse(data);
-            console.log(file);
-        }
-    })
+
+    $.getJSON('userInfo.json', function(jsdata) 
+        { 
+            
+            var users = JSON.stringify(jsdata); //first turns the data taken from the json file and turns it to a JSON string
+            var validJsonStr = users.replaceAll(`'`, `"`);
+            var userDB = JSON.parse(validJsonStr);    //parses the json data string
+        try 
+        {   
+            for (var i = 0; i < userDB.length; i++)//loops through the data that has been pulled from the json file, for the length of it, in order to be able to do login checks
+            { 
+                if (userDB[i].userProfile.NHINumber == nhi)
+                {
+                    
+                }           
+                     
+            }
+
+        } catch (err) 
+            {
+                console.log(err);
+            }   
+    });
     
 }
