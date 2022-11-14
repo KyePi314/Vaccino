@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
 const { event } = require('jquery');
 const path = require('path');
 const { electron } = require('process');
@@ -11,9 +11,11 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 1400,
+    width: 1500,
     height: 1000,
+    frame: false,
     webPreferences: {
+      preload: 'my-app/src/preload.js',
       nodeIntegration: true, 
       contextIsolation: false, 
       enableRemoteModule: true
@@ -49,6 +51,10 @@ app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
   }
+});
+
+ipcMain.handle('quit-app', () => {
+  app.quit();
 });
 
 //<!--This function will be used to change the alerts for the system and home page-->
