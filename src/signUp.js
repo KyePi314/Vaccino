@@ -54,8 +54,8 @@ function submitEvent()
     const userData = new user(u, e, p, fN, lN, mN, num); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
     const userProfile = {
         nhiNumber: userData.NHINumber,
-        tests: {test: "", date: "", locat: "", result: ""},
-        vaccines: {Manufact: "", batchNo: "", doseNo: "", date: ""}
+        tests: [{test: "", date: "", locat: "", result: ""}],
+        vaccines: [{Manufact: "", batchNo: "", doseNo: "", date: ""}]
     }
     fs.readFile('src/savedUsers.json', 'utf-8', function(err, data){ //adds all the user info to the system
         if (err) {
