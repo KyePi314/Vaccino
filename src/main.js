@@ -15,7 +15,7 @@ const createWindow = () => {
     height: 1000,
     frame: false,
     webPreferences: {
-      preload: 'src/preload.js',
+      preload: 'testingVaccino/src/preload.js',
       nodeIntegration: true, 
       contextIsolation: false, 
       enableRemoteModule: true
