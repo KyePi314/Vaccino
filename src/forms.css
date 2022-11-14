@@ -1,6 +1,7 @@
 /*COMPLETED*/
 body {
     background-color: white;
+    overflow: scroll;
   }
   
   .Header { /*blue header at the top of the page*/

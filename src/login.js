@@ -27,18 +27,22 @@ if (document.URL.includes('login.html'))
                         //these if statements check whether or not the login is valid
                         if (userDB[i].userData.userName == username && userDB[i].userData.password == pass && userDB[i].userData.authLvl == "User") //this statement will become true and run if the login details are a match to one in the system, and the user's auth level is that of a regular user - sending them to the user home page
                         {   
-                            var userP = {
-                                fname: userDB[i].userData.firstName.value,
-                                lname: userDB[i].userData.lastName,
-                                num: userDB[i].userData.NHINumber
+                            var userP = { //creating the user object which will be stored in session storage so the user can access their information
+                                fName: userDB[i].userData.firstName,
+                                lName: userDB[i].userData.lastName,
+                                mName: userDB[i].userData.middleName,
+                                num: userDB[i].userData.NHINumber,
+                                email: userDB[i].userData.email,
+                                pass: userDB[i].userData.password,
+                                userN: userDB[i].userData.userName
                             }
                             console.log("Success", userDB[i].userData.authLvl);
-                            window.location.replace('userHome.html');
+                            window.location.replace('userHome.html'); //takes the user to their home page
                         }
                         else if (userDB[i].userData.userName == username && userDB[i].userData.password == pass && userDB[i].userData.authLvl == "Admin") //this statement runs if the user's login information is correct and their auth level is set to admin, sending them to the admin pages
                         {
                             console.log("Success", userDB[i].userData.authLvl);
-                            window.location.replace('admin.html');
+                            window.location.replace('admin.html'); //takes the admin to their homepage
                         }
                         else if (userDB[i].userData.userName == username && userDB[i].userData.password != pass) //This statement runs if the user has entered the wrong password
                         {
@@ -53,13 +57,12 @@ if (document.URL.includes('login.html'))
                         
                     }
                    
-                    const tempOne =  JSON.stringify(userP);
-                    localStorage.setItem("testing", tempOne);
+                    const tempOne =  JSON.stringify(userP); //gets the user object ready to be stored
+                    sessionStorage.setItem("user", tempOne); //stores the user in sessstorage which will clear after the session is done, using the key user to be able to find it
 
                  } catch (err) {
                     console.log(err);
-                   }
-                   
+                   }   
             }
             
         });
