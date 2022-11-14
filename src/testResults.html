@@ -1,37 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="userPages.css">
+        
         <meta charset="UTF-8">
         <title>Vaccino - Test Results</title>
       </head>
       <body>
-         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
-            <p>Ministry of Health</p> <!--Align left-->
-            <br>
-            <button type="button" id="signout">Sign Out</button>
-            <br>        <br>        <br>        <br>        <br>
-            <button type="button" id="homebutton">Home</button>
-            <h1>Vaccino - Test Results</h1> <!--Align center-->
-            <h3>The official New Zealand Government website<br>
-              for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
-          </div> <!--End of blue header section-->
+        <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
+          <p>Ministry of Health</p> <!--Align left-->
+          <button type="button" id="signout">Sign Out</button>
+          <button type="button" id="homebutton">Home</button>
+          <h1>Vaccino</h1> <!--Align center-->
+          <h3>The official New Zealand Government website<br>
+            for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
+        </div> <!--End of blue header section-->
           <!--need to sort out the table here-->
           <div id="testtablediv">
-          <table id="testtable">
-            <tbody>
-              <tr><td>Test</td><td>Date</td><td>Location</td><td>Result</td></tr>
-              <tr><td>Covid-19</td><td>22.102021</td><td>Greymouth Medical Center</td><td>Negative</td></tr>
-              <tr><td>Nasel Swab</td><td>5.1.2022</td><td>Greymouth Medical Center</td><td>positive -strep</td></tr>
-              <tr><td>Covid-19</td><td>6.3.2022</td><td>Christchurch Hospital</td><td>Negative</td></tr>
-              <tr><td>Test</td><td>Date</td><td>Location</td><td>Result</td></tr>
-              <tr><td>Covid-20</td><td>23.102021</td><td>Greymouth Medical Center</td><td>Negative</td></tr>
-              <tr><td>Nasel Swab</td><td>5.1.2023</td><td>Greymouth Medical Center</td><td>positive -strep</td></tr>
-              <tr><td>Covid-20</td><td>6.3.2023</td><td>Christchurch Hospital</td><td>Negative</td></tr>
-              <tr><td>Test</td><td>Date</td><td>Location</td><td>Result</td></tr>
-              <tr><td>Covid-21</td><td>24.102021</td><td>Greymouth Medical Center</td><td>Negative</td></tr>
-            </tbody>
-          </table>
+            <table id="tests">
+                <tr>
+                  <th>Test</th>
+                  <th>Date</th>
+                  <th>location</th>
+                  <th>Result</th>
+                </tr>
+                <tr>
+                  <td>{{test}}</td>
+                  <td>{{date}}</td>
+                  <td>{{locat}}</td>
+                  <td>{{Result}}</td>
+                </tr>
+            </table>
         </div>
+        <script src="userPages.js"></script>
       </body>
 </html>

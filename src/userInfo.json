@@ -1,37 +1,44 @@
 [
-	
 	{
 		"userProfile": {
-            "NHINumber": "666666",
-            "tests" : {
-                "covid19" : {
-                    
-                },
-                "other" : {
-
-                }
-
-            },
-            "vaccines" : {
-
-            }
+			"NHINumber": "666666",
+			"tests": [
+				{
+					"test": "covid19",
+					"date": "21-02-2020",
+					"locat": "Christchurch",
+					"result": "Negative"
+				}
+			],
+			"vaccines": [
+				{
+					"Manufact": "Pfiezer",
+					"batchNo": "8654",
+					"doseNo": "1",
+					"date": "25-11-2020"
+				}
+			]
 		}
 	},
-    {
-        "userProfile": {
-            "NHINumber": "4206969",
-            "tests" : {
-                "covid19" : {
-                    
-                },
-                "other" : {
-
-                }
-
-            },
-            "vaccines" : {
-                
-            }
+	{
+		"userProfile": {
+			"NHINumber": "4206969",
+			"tests": [
+				{
+					"test": "covid19",
+					"date": "10-10-2020",
+					"locat": "Christchurch",
+					"result": "Positive"
+				}
+			],
+			"vaccines": [
+				{
+					"Manufact": "Pfiezer",
+					"batchNo": "8654",
+					"doseNo": "1",
+					"date": "02-06-2021"
+				}
+			]
 		}
-    }
+	}
 ]
