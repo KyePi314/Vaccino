@@ -1,6 +1,7 @@
 /*COMPLETED*/
 body {
     background-color: white;
+    overflow: scroll;
   }
   
   .Header { /*blue header at the top of the page*/
@@ -17,6 +18,7 @@ body {
     max-width: 100%;
     margin-bottom: 5%;
     position: absolute;
+    -webkit-app-region: drag;
   }
   
   .Header p { /*Styling the ministry of health logo*/
@@ -41,6 +43,7 @@ body {
     text-align: center;
     font-size: 1.25em;
   }
+  
 
   .loginForm {
     top: 16rem;

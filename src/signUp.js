@@ -35,6 +35,7 @@ class user { //Created the user class
         }
     }
     
+    
 }
 
 
@@ -51,8 +52,12 @@ function submitEvent()
     const mN = document.getElementById('middlename').value;
     const num = document.getElementById('nhi').value;
     const userData = new user(u, e, p, fN, lN, mN, num); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
-    
-    fs.readFile('src/savedUsers.json', 'utf-8', function(err, data){
+    const userProfile = {
+        nhiNumber: userData.NHINumber,
+        tests: {test: "", date: "", locat: "", result: ""},
+        vaccines: {Manufact: "", batchNo: "", doseNo: "", date: ""}
+    }
+    fs.readFile('src/savedUsers.json', 'utf-8', function(err, data){ //adds all the user info to the system
         if (err) {
             console.log(err);
         }
@@ -61,6 +66,7 @@ function submitEvent()
             file.push({userData});
             const json =  JSON.stringify(file, null, '\t');
 
+
             fs.writeFile('src/savedUsers.json', json, 'utf-8', function(err) {
                 if(err){
                     console.log(err);
@@ -68,7 +74,27 @@ function submitEvent()
                 else {
                     console.log("User successfully saved to the system!");
                 }
-            })
+            });
+        }
+    })
+    fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){//adds the user's NHI number to the info system that handles their test results, vaccine records etc
+        if (err) {
+            console.log(err);
+        }
+        else {
+            const file = JSON.parse(userD);
+            file.push({userProfile});
+            const json =  JSON.stringify(file, null, '\t');
+
+
+            fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) {
+                if(err){
+                    console.log(err);
+                }
+                else {
+                    console.log("User successfully saved to the system!");
+                }
+            });
         }
     })
     
