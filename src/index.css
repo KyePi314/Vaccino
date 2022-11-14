@@ -12,7 +12,7 @@ body {
   left: 0;
   right: 0;
   top: 0;
-  height: 14.5rem;
+  height: 13.5rem;
   max-width: 100%;
   margin-bottom: 5%;
   position: absolute;
@@ -21,17 +21,17 @@ body {
 
 .Header p { /*Styling the ministry of health logo*/
   text-align: left;
-  font-size: 1em;
+  font-size: 20px;
   background: #98FF98;
   border-bottom-right-radius: 38px;
   position: fixed;
   top: 0;
   left: 0;
+  width: 180px;
   padding: 15px;
   margin-top: 0;
   color: #000000;
-  font-family: Roboto;
-  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
 }
 .Header h1 { /*Styling the vaccino title*/
   text-align: center;
