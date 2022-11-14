@@ -58,5 +58,29 @@
 			"password": "werrwe",
 			"authLvl": "User"
 		}
+	},
+	{
+		"userData": {
+			"userName": "",
+			"email": "",
+			"firstName": "",
+			"middleName": "",
+			"lastName": "",
+			"NHINumber": "",
+			"password": "",
+			"authLvl": "Admin"
+		}
+	},
+	{
+		"userData": {
+			"userName": "",
+			"email": "",
+			"firstName": "",
+			"middleName": "",
+			"lastName": "",
+			"NHINumber": "",
+			"password": "",
+			"authLvl": "Admin"
+		}
 	}
 ]
