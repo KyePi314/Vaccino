@@ -1,78 +1,86 @@
 [
 	{
-		"userProfile": {
+		"userData": {
+			"userName": "A.Ham",
+			"email": "georgeWashingtonisHot@gmail.com",
+			"firstName": "Alexander",
+			"middleName": "",
+			"lastName": "Hamilton",
+			"NHINumber": "",
+			"password": "password",
+			"authLvl": "Admin"
+		}
+	},
+	{
+		"userData": {
+			"userName": "impala67",
+			"email": "impalaBoy@gmail.com",
+			"firstName": "Dean",
+			"middleName": "Jay",
+			"lastName": "Winchester",
 			"NHINumber": "666666",
-			"tests": [
-				{
-					"test": "covid19",
-					"date": "21-02-2020",
-					"locat": "Christchurch",
-					"result": "Negative"
-				}
-			],
-			"vaccines": [
-				{
-					"Manufact": "Pfiezer",
-					"batchNo": "8654",
-					"doseNo": "1",
-					"date": "25-11-2020"
-				}
-			]
+			"password": "winchesters",
+			"authLvl": "User"
 		}
 	},
 	{
-		"userProfile": {
+		"userData": {
+			"userName": "kota",
+			"email": "letmeout@gmail.com",
+			"firstName": "Dakota",
+			"middleName": "",
+			"lastName": "Mathews",
 			"NHINumber": "4206969",
-			"tests": [
-				{
-					"test": "covid19",
-					"date": "10-10-2020",
-					"locat": "Christchurch",
-					"result": "Positive"
-				}
-			],
-			"vaccines": [
-				{
-					"Manufact": "Pfiezer",
-					"batchNo": "8654",
-					"doseNo": "1",
-					"date": "02-06-2021"
-				}
-			]
+			"password": "tekapo69",
+			"authLvl": "User"
 		}
 	},
 	{
-		"userProfile": {
-			"nhiNumber": "",
-			"tests": {
-				"test": "",
-				"date": "",
-				"locat": "",
-				"result": ""
-			},
-			"vaccines": {
-				"Manufact": "",
-				"batchNo": "",
-				"doseNo": "",
-				"date": ""
-			}
+		"userData": {
+			"userName": "Jesus",
+			"email": "nobrain@gmail.com",
+			"firstName": "Je",
+			"middleName": "sus",
+			"lastName": "Lastname",
+			"NHINumber": "",
+			"password": "pass",
+			"authLvl": "Admin"
 		}
 	},
 	{
-		"userProfile": {
-			"nhiNumber": "",
-			"tests": {
-				"test": "",
-				"date": "",
-				"locat": "",
-				"result": ""
-			},
-			"vaccines": {
-				"Manufact": "",
-				"batchNo": "",
-				"doseNo": "",
-				"date": ""
-			}
+		"userData": {
+			"userName": "rwrew",
+			"email": "rwerwe",
+			"firstName": "rewrwe",
+			"middleName": "rerwe",
+			"lastName": "rwerew",
+			"NHINumber": "3242432",
+			"password": "werrwe",
+			"authLvl": "User"
+		}
+	},
+	{
+		"userData": {
+			"userName": "",
+			"email": "",
+			"firstName": "",
+			"middleName": "",
+			"lastName": "",
+			"NHINumber": "",
+			"password": "",
+			"authLvl": "Admin"
+		}
+	},
+	{
+		"userData": {
+			"userName": "",
+			"email": "",
+			"firstName": "",
+			"middleName": "",
+			"lastName": "",
+			"NHINumber": "",
+			"password": "",
+			"authLvl": "Admin"
 		}
 	}
 ]

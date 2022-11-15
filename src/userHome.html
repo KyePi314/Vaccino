@@ -22,12 +22,32 @@
             <button type="button" class="btn" id="details">View/Update Details</button>
           </div><!--End of button group-->
           <div class="rightSide"><!--Grouping all the elements on the right hand side for ease of styling (remember with class it'd be .rightSide h3 for an example of styling the h3 element specifically)-->
-            <h3 id="item1">Current Traffic <br>light level:</h3>
+            <h3 id="item1">Current Traffic <br>Light Level:</h3>
           <div id="circle">None</div><!--I created the circle for the traffic light system in CSS already using this class-->
           <div class="numbers">
-            <p id="item2">current number of<br>
+            <p id="item2">Current number of<br>
               Covid-19 cases: </p><!--We need to figure out how we want to display the numbers in a way that an admin could change them, using JS perhaps?-->
-            <p id="covidNum">Number</p>
+              <div id="CurrentCases2"></div>
+              <script>
+                fetch('covidnodata.json')
+                    .then(function (response) {
+                        return response.json();
+                    })
+                    .then(function (data) {
+                        appendData(data);
+                    })
+                    .catch(function (err) {
+                        console.log('error: ' + err);
+                    });
+                function appendData(data) {
+                    var mainContainer = document.getElementById("CurrentCases2");
+                    for (var i = 0; i < data.length; i++) {
+                        var div = document.createElement("div");
+                        div.innerHTML = data[i].covidNo;
+                        mainContainer.appendChild(div);
+                    }
+                }
+            </script>
           </div>
             <p id="item3">Found a bug?</p>
             <p id="item4">Report it <a href="bugReport.html">here</a></p><!--If needed, in order to style all of these p elements I can give them and id for you to easily call.-->

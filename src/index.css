@@ -241,6 +241,7 @@ table, td {
 #admincases{
   margin-top: 18rem;
   text-align: center;
+  position: flex;
 }
 
 #adminprofile{
