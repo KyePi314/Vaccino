@@ -8,6 +8,12 @@
 					"date": "21-02-2020",
 					"locat": "Christchurch",
 					"result": "Negative"
+				},
+				{
+					"test" : "covid19",
+					"date": "15-10-2021",
+					"locat": "Christchurch",
+					"result": "Positive"
 				}
 			],
 			"vaccines": [

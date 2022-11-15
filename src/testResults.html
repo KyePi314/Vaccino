@@ -2,13 +2,13 @@
 <html>
     <head>
         <link rel="stylesheet" href="userPages.css">
-        
         <meta charset="UTF-8">
         <title>Vaccino - Test Results</title>
       </head>
       <body>
         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
-          <p>Ministry of Health</p> <!--Align left-->
+          <p>Ministry of
+            <br> Health</p>
           <button type="button" id="signout">Sign Out</button>
           <button type="button" id="homebutton">Home</button>
           <h1>Vaccino</h1> <!--Align center-->
@@ -16,22 +16,7 @@
             for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
           <!--need to sort out the table here-->
-          <div id="testtablediv">
-            <table id="tests">
-                <tr>
-                  <th>Test</th>
-                  <th>Date</th>
-                  <th>location</th>
-                  <th>Result</th>
-                </tr>
-                <tr>
-                  <td>{{test}}</td>
-                  <td>{{date}}</td>
-                  <td>{{locat}}</td>
-                  <td>{{Result}}</td>
-                </tr>
-            </table>
-        </div>
+         <div id ="table"></div>
         <script src="userPages.js"></script>
       </body>
 </html>
