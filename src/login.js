@@ -54,8 +54,8 @@ if (document.URL.includes('login.html'))
                         
                     }
                    
-                    const tempOne =  JSON.stringify(userP); //gets the user object ready to be stored
-                    sessionStorage.setItem("user", tempOne); //stores the user in sessstorage which will clear after the session is done, using the key user to be able to find it
+                    const tempUD =  JSON.stringify(userP); //gets the user object ready to be stored (temp userdata)
+                    sessionStorage.setItem("user", tempUD); //stores the user in sessstorage which will clear after the session is done, using the key user to be able to find it
 
                  } catch (err) {
                     console.log(err);
