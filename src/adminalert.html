@@ -20,6 +20,39 @@
         <div id="adminalert">
             <button type="button" id="changeAlert">Change Alert Level</button> <!---->
             <l>Current alert level: </l> <!--Will show the system's current default alert level via image-->
+            <div id="TrafficChange"></div>
+            <!--These functions are used to help display the current alert level-->
+          <script>
+                fetch('alertleveldata.json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    appendData2(data);
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+            function appendData2(data) {
+                var mainContainer = document.getElementById("TrafficChange");
+                var trafficdata = data[0].trafficLight;
+                for (var i = 0; i < data.length; i++) {
+                    var div = document.createElement("div");
+                if(trafficdata == 0){
+                  div.innerHTML = "<img src=\"images/green.svg\">";
+                  mainContainer.appendChild(div);
+                }
+                else if(trafficdata == 1){
+                  div.innerHTML = "<img src=\"images/yellow.svg\">";
+                  mainContainer.appendChild(div);
+                }
+                else if(trafficdata == 2){
+                  div.innerHTML = "<img src=\"images/red.svg\">";
+                  mainContainer.appendChild(div);
+                }
+              }
+            }
+          </script>
           </div>
     </body>
 
