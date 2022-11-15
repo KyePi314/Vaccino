@@ -32,6 +32,23 @@ body {
     color: #000000;
     font-family: 'Roboto', sans-serif;
   }
+  .Header #homebutton {
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    width: 10.438rem;
+    height: 3.563rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    right: 0.5rem;
+    top: 5rem;
+    position: fixed;
+    -webkit-app-region: no-drag; 
+  }
+
  .Header #signout {
     background-color: #A6F5FF;
     border: 2px solid #89CFF0;
@@ -158,4 +175,11 @@ a {
 
 a:hover {
   color:#98FF98;
+}
+
+#table {
+  top: 25rem;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  right: 40%;
 }
