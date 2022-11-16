@@ -23,12 +23,13 @@ body {
   
   .Header p { /*Styling the ministry of health logo*/
     text-align: left;
-    font-size: 1em;
+    font-size: 20px;
     background: #98FF98;
     border-bottom-right-radius: 38px;
     position: fixed;
     top: 0;
     left: 0;
+    width: 180px;
     padding: 15px;
     margin-top: 0;
     color: #000000;
@@ -46,9 +47,10 @@ body {
   
 
   .loginForm {
-    top: 16rem;
+    top: 13rem;
     position: absolute;
-    left: 30%;
+    left: 33.5%;
+    right: 33.5%;
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;
@@ -60,6 +62,7 @@ body {
     width: 100%;
     box-sizing: border-box;
     padding: 10px;
+    font-size: 20px;
   }
 
   input:focus{
@@ -67,9 +70,10 @@ body {
   }
 
   .signUp {
-    top: 16rem;
+    top: 15rem;
     position: absolute;
-    left: 30%;
+    left: 33.5%;
+    right: 33.5%;
     font-size: 1.3em;
     font-weight: bold;
     text-align: center;

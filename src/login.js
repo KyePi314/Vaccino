@@ -67,5 +67,11 @@ if (document.URL.includes('login.html'))
 }
 
 
- 
- 
+var input = document.getElementById("password");
+
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("submit").click();
+  }
+});

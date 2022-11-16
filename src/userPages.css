@@ -142,11 +142,11 @@ body {
 }
 
 #covidNum {
-  top: 38.2rem;
+  top: 37.65rem;
   color:#000000;
   font-family: 'Roboto', sans-serif;
   position: absolute;
-  right: 9.5rem;
+  right: 5.5rem;
   font-size: 1.1em;
 }
 
@@ -182,4 +182,17 @@ a:hover {
   font-family: 'Roboto', sans-serif;
   position: absolute;
   right: 40%;
+}
+
+#TrafficChange{
+  text-align: center;
+  justify-content: center;
+  padding: 2em;
+  width: 3em;
+  height: 3em;
+  font-size: 2em;
+  display: flex;
+  position: fixed;
+  right: 8rem;
+  top: 10rem;
 }
