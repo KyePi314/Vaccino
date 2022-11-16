@@ -5,7 +5,23 @@ var userID = JSON.parse(tempTwo); //parse's the user's information and stores it
 
 if (document.URL.includes('admin.html'))
 {
+    const profile = document.getElementById('profile');
+    const reports = document.getElementById('bugReports');
+    const alerts = document.getElementById('alert');
+    const cases = document.getElementById('cases');
 
+    profile.addEventListener('click', () => {
+        window.location.replace('admineditprofile.html')
+    });
+    reports.addEventListener('click', () => {
+        window.location.replace('adminbugreports.html')
+    });
+    alerts.addEventListener('click', () => {
+        window.location.replace('adminalert.html')
+    });
+    cases.addEventListener('click', () => {
+        window.location.replace('admincases.html')
+    });
 }
 else{
     
