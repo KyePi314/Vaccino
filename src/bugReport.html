@@ -18,12 +18,13 @@
             for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
         <div id="bugreport">
-          <p>Please enter the issue you are having and then submit.</p>
-          <textarea style="resize: none;" id="bugreportinput" placeholder="I am having an issue..." ></textarea>
+          <p>Please enter your name and the issue you are having and then submit.</p>
+          <textarea style="resize: none;" id="bugreportinput" placeholder="I am having an issue..." required></textarea>
           <br>
-          <button>Submit</button>
+          <button id="BugSubmit">Submit</button>
+          <button id="Temporary" onclick="window.location.replace('userHome.html')">Temporary Button</button>
         </div> 
-        <script src="userPages.js"></script>
+        <script src="bugreport.js"></script>
         </body>
 </html>
 
