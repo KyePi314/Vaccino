@@ -10,7 +10,7 @@
 					"result": "Negative"
 				},
 				{
-					"test" : "covid19",
+					"test": "covid19",
 					"date": "15-10-2021",
 					"locat": "Christchurch",
 					"result": "Positive"
@@ -80,5 +80,11 @@
 				"date": ""
 			}
 		}
+	},
+	{
+		"userID": null
+	},
+	{
+		"userID": null
 	}
 ]

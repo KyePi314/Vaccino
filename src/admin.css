@@ -1,0 +1,76 @@
+body {
+    background-color: white;
+  }
+  
+  .Header { /*blue header at the top of the page*/
+    margin: auto;
+    background: #89CFF0;
+    font-family: "Signika Negative SC", Verdana, sans-serif;
+    color: white;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 13.5rem;
+    max-width: 100%;
+    margin-bottom: 5%;
+    position: absolute;
+    -webkit-app-region: drag; /*allows the user to draw the app window around*/
+  }
+  
+  .Header p { /*Styling the ministry of health logo*/
+    text-align: left;
+    font-size: 1em;
+    background: #98FF98;
+    border-bottom-right-radius: 38px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    margin-top: 0;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+  }
+  .Header #homebutton {
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    width: 10.438rem;
+    height: 3.563rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    right: 0.5rem;
+    top: 5rem;
+    position: fixed;
+    -webkit-app-region: no-drag; 
+  }
+
+ .Header #signout {
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    width: 10.438rem;
+    height: 3.563rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    right: 0.5rem;
+    top: 0.5rem;
+    position: fixed;
+    -webkit-app-region: no-drag;
+  }
+  .Header h1 { /*Styling the vaccino title*/
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  .Header h3 { /*styling the subtitle*/
+    text-align: center;
+    font-size: 1.25em;
+  }
