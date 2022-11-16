@@ -27,68 +27,26 @@ function buttonState() {
 
 if (submitButton.disabled == false)
 {
-const submission = document.getElementById("changeCases");
-submission.addEventListener('click', submitEvent1);
-function submitEvent1()
+const submission = document.getElementById("submit");
+submission.addEventListener('click', submitEvent);
+function submitEvent()
 {
     //setting the covid data on the click event
-    const c = document.getElementById('covidno').value;
+    const c = document.getElementById('casesInput').value;
     const covidCases = new covidNo(c); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
-    const CovidCasesCurrent = {
-        CovidNo: covidCases.covidno
-    }
-    fs.readFile('src/admincases.json', 'utf-8', function(err, Covidnocases){ //adds all the user info to the system
+
+    const fs = require('fs');
+    fs.writeFile('./covidnodata.json', JSON.stringify(covidCases), err =>{
         if (err) {
             console.log(err);
         }
-        else {
-            const file = JSON.parse(Covidnocases);
-            file.push({covidCases});
-            const json =  JSON.stringify(file, null, '\t');
+        const jsonString = JSON.stringify(covidCases);
+        console.log(jsonString);
 
-
-            fs.writeFile('src/admincases.json', json, 'utf-8', function(err) {
-                if(err){
-                    console.log(err);
-                }
-                else {
-                    console.log("You have successfully changed the covid numbers.");
-                }
-            });
-        }
-    })
-    
+    });
 }
 
 }
-
-// var mydata = JSON.parse(covidnodata);
-// alert(mydata[0].covidno);
-
-fetch(covidnodata.json)
-  .then(function (response) {
-    // The JSON data will arrive here
-  })
-  .catch(function (err) {
-    // If an error occured, you will catch it here
-  });
-
-  fetch('covidnodata.json')
-  .then(function (response) {
-    return response.json();
-  })
-  .then(function (data) {
-    appendData(data);
-  })
-  .catch(function (err) {
-    console.log(err);
-  });
-
-  var mainContainer = document.getElementById("CurrentCases");
-
-  for (var i = 0; i < data.length; i++) {
-  }
-  
 
 //<!--This function will be used to change the covid numbers for the system and home page-->
 //function covidno(){
