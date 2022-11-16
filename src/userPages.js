@@ -8,6 +8,8 @@ var userID = JSON.parse(tempTwo); //parse's the user's information and stores it
 
 if (document.URL.includes('src/userHome.html')) //code specific to the home page
 {  
+    
+    
     const vaxRec = document.getElementById('vaccineRecords');
     const test = document.getElementById('testResults');
     const code = document.getElementById('qrCode');
@@ -96,6 +98,15 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
                 }           
                      
             }
+            const submission = document.getElementById("submitResult");
+            submission.addEventListener('click', submitEvent);
+            function submitEvent()
+            {
+                const d = document.getElementById('date').value;
+                const l = document.getElementById('location').value;
+                const r = document.getElementById('result').value;
+                
+            }
 
         } catch (err) 
             {
@@ -103,5 +114,7 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
             }   
     });
     
-    
+
+
 }
+
