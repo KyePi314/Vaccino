@@ -20,26 +20,6 @@
         <div id="admincases">
           <p>Current number of cases: </p> <!--Number of cases goes here from system file-->
           <div id="CurrentCases"></div>
-          <script>
-            fetch('covidnodata.json')
-                .then(function (response) {
-                    return response.json();
-                })
-                .then(function (data) {
-                    appendData(data);
-                })
-                .catch(function (err) {
-                    console.log('error: ' + err);
-                });
-            function appendData(data) {
-                var mainContainer = document.getElementById("CurrentCases");
-                for (var i = 0; i < data.length; i++) {
-                    var div = document.createElement("div");
-                    div.innerHTML = data[i].covidNo;
-                    mainContainer.appendChild(div);
-                }
-            }
-        </script>
         <br>
           <input placeholder="1000" id="casesInput" required></input> <br><br>
           <button type="button" id="changeCases">Submit</button> <!--Needs to link to the system file to change-->
