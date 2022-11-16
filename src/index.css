@@ -273,3 +273,7 @@ table, td {
   margin-left: auto;
   margin-right: auto;
 }
+
+#generatedbugreport{
+  border: 1px solid black;
+}
