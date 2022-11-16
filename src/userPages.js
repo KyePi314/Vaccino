@@ -47,8 +47,6 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
 {
     nhi = userID.num; //stores the user's nhi number
     
-
-
     $.getJSON('userInfo.json', function(jsdata) 
         { 
             
@@ -104,5 +102,6 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
                 console.log(err);
             }   
     });
+    
     
 }

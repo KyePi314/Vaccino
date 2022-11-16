@@ -41,5 +41,5 @@ logout.addEventListener('click', () =>
             }
         });
     }
-}) */
+})  */
 
