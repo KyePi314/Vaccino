@@ -25,7 +25,9 @@ function submitEvent1()
             const file = JSON.parse(data); //So here I parsed the data from the json file
             file.covidNo = covidCases.covidno; //Here I change the covidNo that currently exists in the file (file.covidNo accesses that), to the value you get from the html that's saved to your covid number object
             const validJson = JSON.stringify(file); //making the data back into a json string ready to be written back to the file
-
+            var covidNum = {
+              number: validJson.covidNo
+            }
 
             fs.writeFile('src/covidnodata.json', validJson, 'utf-8', function(err) { //sends the data back to the file with the new, updated number
                 if(err){
@@ -35,9 +37,12 @@ function submitEvent1()
                     console.log("You have successfully changed the covid numbers."); //message just for testing purposes, you should look at making this a pop up dialog box though so the admin knows the new number has been saved
                 }
             });
+            const tempNum = JSON.stringify(covidNum);
+            sessionStorage.setItem("newNum", tempNum);
         }
     })
-    
+   
+
 }
 
 //Dunno what this is but you don't need it if its for changing the covid number
