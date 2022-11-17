@@ -160,3 +160,58 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
     
 }
 
+if (document.URL.includes('vaccineRecords.html')) //code specific to vaccine records page
+{
+    nhi = userID.num; //stores the user's nhi number
+    $.getJSON('userInfo.json', function(jsdata) 
+    { 
+        
+        var users = JSON.stringify(jsdata); //first turns the data taken from the json file and turns it to a JSON string
+        var validJsonStr = users.replaceAll(`'`, `"`);
+        var userDB = JSON.parse(validJsonStr);    //parses the json data string
+    try 
+    {   
+        
+        for (var i = 0; i < userDB.length; i++)//loops through the data that has been pulled from the json file, for the length of it, in order to be able to do login checks
+        { 
+            if (userDB[i].userProfile.nhiNumber == nhi)
+            {
+                
+                var vax = userDB[i].userProfile.vaccines;
+                
+                //creating a table that will be dynamic and grow if need be
+                var html = "<table border='1'>";
+                html+="<tr>";
+                html+="<th>"+"Type"+"</th>";
+                html+="<th>"+"Manufacturer"+"</th>";
+                html+="<th>"+"Batch No"+"</th>";
+                html+="<th>"+"Dose No"+"</th>";
+                html+="<th>"+"Date"+"</th>";
+                html+="</tr>";
+                for (var j = 0; j < vax.length; j++) //table loops through the data taken from the json file and stores it in the table
+                {
+                   
+                    html+="<tr>";
+                    html+="<td>"+vax[j].type+"</td>";
+                    html+="<td>"+vax[j].Manufacturer+"</td>";
+                    html+="<td>"+vax[j].BatchNo+"</td>";
+                    html+="<td>"+vax[j].DoseNo+"</td>";
+                    html+="<td>"+vax[j].date+"</td>";
+                    html+="</tr>";
+                
+                    
+                }
+                html+="</table>";
+                document.getElementById("table").innerHTML = html; //table code finishes here
+        
+            }           
+                 
+        }
+        
+
+    } catch (err) 
+        {
+            console.log(err);
+        }   
+});
+}
