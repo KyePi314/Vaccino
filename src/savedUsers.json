@@ -46,17 +46,5 @@
 			"password": "pass",
 			"authLvl": "Admin"
 		}
-	},
-	{
-		"userData": {
-			"userName": "Johnson50",
-			"email": "starwars55@abc.com",
-			"firstName": "Johnson",
-			"middleName": "J",
-			"lastName": "Johnson",
-			"NHINumber": "3452152123",
-			"password": "darthvader",
-			"authLvl": "User"
-		}
 	}
 ]
