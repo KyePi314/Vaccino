@@ -20,9 +20,10 @@
         </div> <!--End of blue header section-->
         <div id="adminalert">
             <button type="button" id="changeAlert">Change Alert Level</button> <!---->
-            <l>Current alert level: </l> <!--Will show the system's current default alert level via image-->
+            <l>Current Alert Level: </l> <!--Will show the system's current default alert level via image-->
             <div id="TrafficChange"></div>
             <!--These functions are used to help display the current alert level-->
+            <div id="testing"></div>
           <script>
                 fetch('alertleveldata.json')
                 .then(function (response) {
@@ -56,7 +57,6 @@
           </script>
           </div>
           <script src="adminPages.js"></script>
+          <script src="adminalert.js"></script>
     </body>
-
-    <script src="adminalert.js"></script>
 </html>

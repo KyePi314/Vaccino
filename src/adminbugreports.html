@@ -17,8 +17,31 @@
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
         <div id="adminbugreport">
-          <input type="checkbox"></input> <!--JavaScript based-->
-            <button type="button" id="resolveButton">Resolve</button> <!--This needs to only occur if a user has submitted a bug report.-->
+          <div id="generatedbugreport"></div>
+
+          <script>
+            fetch('bugreports.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData2(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData2(data) {
+            var mainContainer = document.getElementById("generatedbugreport");
+            var bugdata = data[0].BugReport;
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = 'Report ' + (i + 1) + ': ' + data[i].BugReport
+                 + '<input type="checkbox" id="checkbox"></input>'
+                 + '<button type="button" id="resolveButton">Resolve</button>';
+                mainContainer.appendChild(div);
+            }
+          }
+      </script>
         </div>
         <script src="adminPages.js"></script>
     </body>
