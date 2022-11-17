@@ -46,41 +46,5 @@
 			"password": "pass",
 			"authLvl": "Admin"
 		}
-	},
-	{
-		"userData": {
-			"userName": "rwrew",
-			"email": "rwerwe",
-			"firstName": "rewrwe",
-			"middleName": "rerwe",
-			"lastName": "rwerew",
-			"NHINumber": "3242432",
-			"password": "werrwe",
-			"authLvl": "User"
-		}
-	},
-	{
-		"userData": {
-			"userName": "",
-			"email": "",
-			"firstName": "",
-			"middleName": "",
-			"lastName": "",
-			"NHINumber": "",
-			"password": "",
-			"authLvl": "Admin"
-		}
-	},
-	{
-		"userData": {
-			"userName": "",
-			"email": "",
-			"firstName": "",
-			"middleName": "",
-			"lastName": "",
-			"NHINumber": "",
-			"password": "",
-			"authLvl": "Admin"
-		}
 	}
 ]
