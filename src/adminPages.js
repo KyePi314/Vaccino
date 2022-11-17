@@ -1,5 +1,5 @@
 var fs = require('fs');
-//KYE IS USING THIS FILE TO TEST OUT ADMIN FUNCTIONS FOR THE JAVASCRIPT I AM ARE WORKING ON SO THAT I DO ACCIDENTALLY CORRUPT THE OTHER ONHE IF ANYONE ELSE IS WORKING ON IT
+
 var tempTwo = sessionStorage.getItem("tests"); //retrieves the user's data stored in the sessions storage
 var userID = JSON.parse(tempTwo); //parse's the user's information and stores it in the userID variable for later use.
 

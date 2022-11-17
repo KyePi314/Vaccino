@@ -1,7 +1,7 @@
 [
 	{
 		"userProfile": {
-			"NHINumber": "666666",
+			"nhiNumber": "666666",
 			"tests": [
 				{
 					"test": "covid19",
@@ -28,7 +28,7 @@
 	},
 	{
 		"userProfile": {
-			"NHINumber": "4206969",
+			"nhiNumber": "4206969",
 			"tests": [
 				{
 					"test": "covid19",
@@ -49,23 +49,16 @@
 	},
 	{
 		"userProfile": {
-			"nhiNumber": "3452152123",
+			"nhiNumber": "432423",
 			"tests": [
 				{
-					"test": "No data",
-					"date": "No data",
-					"locat": "No data",
-					"result": "No data"
+					"test": "RAT",
+					"date": "2022-11-17",
+					"locat": "Christchurch",
+					"result": "Positive"
 				}
 			],
-			"vaccines": [
-				{
-					"Manufact": "No data",
-					"batchNo": "No data",
-					"doseNo": "No data",
-					"date": "No data"
-				}
-			]
+			"vaccines": []
 		}
 	}
 ]
