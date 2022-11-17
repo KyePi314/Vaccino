@@ -38,20 +38,14 @@ class user { //Created the user class
     
 }
 let requiredInputs = document.querySelectorAll("[required]");
-let submitButton = document.querySelector(".submit");
-
-submitButton.disabled = true;
+let submitButton = document.querySelector(".sub");
 
 for(let i = 0; i < requiredInputs.length; i++){
 requiredInputs[i].addEventListener("input", buttonState)
 };
 
 function buttonState() {
-  if (requiredInputs.value === "") {
-    submitButton.disabled = true;
-  } else {
-    submitButton.disabled = false;
-  }
+    submitButton.disabled = Array.from(requiredInputs).some(x => x.value === '');
 }
 
 if (submitButton.disabled == false)
@@ -114,7 +108,6 @@ function submitEvent()
             });
         }
     })
-    
 }
 
 }
