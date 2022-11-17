@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <!--<link rel="stylesheet" href="index.css">-->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="admin.css">
+    <meta charset="UTF-8">
+    <title>Vaccino - Admin Manage Alerts</title>
+    <style>
+        #uploadResult {
+  background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+  right: 35rem;
+  font-size: 1.3em;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  top: 22rem;
+  position: absolute;
+}
+.addTest {
+    position: fixed;
+  top: 15rem;
+  left: 33.5%;
+  right: 33.5%;
+  border: 3px solid #f1f1f1;
+}
+.addTest input {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.addTest button {
+  background-color: #A6F5FF;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+    </style>
+  </head>
+  <body>
+    <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
+        <p>Ministry of Health</p> <!--Align left-->
+        <br>
+        <button type="button" id="signout">Sign Out</button>
+        <br>        <br>        <br>        <br>        <br>
+        <button type="button" id="homebutton">Home</button>
+        <h1>Vaccino - Alert Levels</h1> <!--Align center-->
+        <h3>The official New Zealand Government website<br>
+          for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
+        </div> <!--End of blue header section-->
+        <form class="addTest">
+            <label for="test">Test type</label>
+            <input id="test" type="text" name="test" placeholder="Covid-19" required>
+            <label for="date">Date of test</label>
+            <input id="date" type="date" name="date" placeholder="20-20-2022" required>
+            <label for="location">Location at time of test</label>
+            <input id="location" type="text" name="location" placeholder="Christchurch" required>
+            <label for="Result">RAT Result</label>
+            <input id="result" type="text" name="text" placeholder="negative" required>
+            <br>
+            <button type="button" id="close">close</button>
+            <button type="button" id="uploadResult">Submit test</button>
+        </form>
+    </body>
+</html>

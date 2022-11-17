@@ -46,5 +46,17 @@
 			"password": "pass",
 			"authLvl": "Admin"
 		}
+	},
+	{
+		"userData": {
+			"userName": "bones",
+			"email": "hayloft2@gmail.com",
+			"firstName": "Noah",
+			"middleName": "",
+			"lastName": "Kohan",
+			"NHINumber": "432423",
+			"password": "boom",
+			"authLvl": "User"
+		}
 	}
 ]
