@@ -183,86 +183,9 @@ body {
  font-size: 15px;
 }
 
-#adminhomebuttons{
-  margin-top: 15rem;
-  text-align: left;
-  padding-left: 150px;
-}
-
-#adminhomemessages{
-  margin-top: 15rem;
-  padding-left: 300px;
-}
-
-#adminhomedisplay{
-  display:flex;
-}
-
-.adminButton{
-  width: 150px;
-  height: 60px;
-}
-
-.adminButton2{
-  width: 300px;
-  height: 110px;
-}
-
-#adminmessagestable{
-  border: 1px solid black;
-  width: 500px;
-  height: 270px;
-}
-
-#row{
-  text-align: center;
-}
-
 table, td {
   border: 1px solid black;
-}
-
-#adminbugreport{
-  margin-top: 18rem;
-  text-align: center;
-  border: 1px solid black;
-}
-
-#adminalert{
-  margin-top: 18rem;
-  text-align: center;
-}
-
-#alert1{
-  width: 200px;
-  height: 200px;
-}
-
-#admincases{
-  margin-top: 18rem;
-  text-align: center;
-  position: flex;
-}
-
-#adminprofile{
-  border: 1px solid black;
-  padding: 20px;
-  margin-top: 18rem;
-}
-
-#adminprofile2{
-  border: 1px solid black;
-  padding: 20px;
-}
-
-#adminrecords1{
-  margin-top: 18rem;
-  text-align: center;
-}
-
-#adminrecords2{
-  margin-top: 3rem;
-  text-align: center;
+  padding: 6px;
 }
 
 #testtablediv{
