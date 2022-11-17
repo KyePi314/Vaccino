@@ -24,9 +24,10 @@
 			],
 			"vaccines": [
 				{
-					"Manufact": "Pfiezer",
-					"batchNo": "8654",
-					"doseNo": "1",
+					"type" : "Covid-19",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "8654",
+					"DoseNo": "1",
 					"date": "25-11-2020"
 				}
 			]
@@ -45,9 +46,10 @@
 			],
 			"vaccines": [
 				{
-					"Manufact": "Pfiezer",
-					"batchNo": "8654",
-					"doseNo": "1",
+					"type" : "Covid-19",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "8654",
+					"DoseNo": "1",
 					"date": "02-06-2021"
 				}
 			]
