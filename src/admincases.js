@@ -7,14 +7,13 @@ function submitEvent1()
       
       //setting the bug report data on the click event
       const CovidNo = document.getElementById('casesInput').value;
-      
       fs.readFile('src/covidnodata.json', 'utf-8', function(err, data){ //adds bug report data.
           if (err) {
               console.log(err);
           }
           else {
               const file = JSON.parse(data);
-              file.covidNo = CovidNo;
+              file[0].covidNo = CovidNo;
               const json =  JSON.stringify(file, null, '\t');
   
               fs.writeFile('src/covidnodata.json', json, 'utf-8', function(err) {
@@ -27,5 +26,8 @@ function submitEvent1()
               });
           }
       })
+
+      location.reload();
+      return false;
       
   }

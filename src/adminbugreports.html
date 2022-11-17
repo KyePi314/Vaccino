@@ -16,7 +16,7 @@
         <h3>The official New Zealand Government website<br>
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
-        <div id="adminbugreport">
+        <div id="adminbugreport" style="overflow-y:scroll;">
           <div id="generatedbugreport"></div>
 
           <script>
@@ -35,13 +35,13 @@
             var bugdata = data[0].BugReport;
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = 'Report ' + (i + 1) + ': ' + data[i].BugReport
-                 + '<input type="checkbox" id="checkbox"></input>'
-                 + '<button type="button" id="resolveButton">Resolve</button>';
+                div.innerHTML = '<div id = "newReport">' + 'Report ' + (i + 1) + ': ' + data[i].BugReport
+                 + '<br>' + '<button type="button" id="resolveButton">Resolve</button>' + '<br><br>' + '</div>';
                 mainContainer.appendChild(div);
             }
           }
       </script>
+
         </div>
         <script src="adminPages.js"></script>
     </body>

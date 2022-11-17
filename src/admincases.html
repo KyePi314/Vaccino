@@ -20,9 +20,9 @@
         <div id="admincases">
           <p>Current number of cases: </p> <!--Number of cases goes here from system file-->
         <div id="CurrentCases"></div>
-        <div id="testing"></div>
+        <!--Script used below to display the number of cases.-->
         <script>
-            fetch('src/covidnodata.json')
+            fetch('covidnodata.json')
             .then(function (response) {
                 return response.json();
             })
@@ -36,14 +36,15 @@
             var mainContainer = document.getElementById("CurrentCases");
             for (var i = 0; i < data.length; i++) {
                 var div = document.createElement("div");
-                div.innerHTML = data[i].covidNo;
+                div.innerHTML = data[0].covidNo;
                 mainContainer.appendChild(div);
             }
           }
+          
         </script>
         <br>
-          <input placeholder="1000" id="casesInput" required></input> <br><br>
-          <button type="button" id="changeCases">Submit</button> <!--Needs to link to the system file to change-->
+          <input placeholder="1000" type="number" id="casesInput" required></input> <br><br>
+          <button type="button" id="changeCases">Submit</button> <!--Links to the system file to change-->
         </div>
     </body>
     <script src="adminPages.js"></script>
