@@ -4,27 +4,25 @@
         <link rel="stylesheet" href="forms.css">
         <meta charset="UTF-8">
         <title>Vaccino</title>
+        
       </head>
       <body>
-        <script>
-            const electron = require("electron")
-        </script>
         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
-          <p>Ministry of Health</p> <!--Align left-->
-
-          <h1>Vaccino - sign up</h1> <!--Align center-->
+            <p>Ministry of
+                <br> Health</p>
+          <h1>Vaccino - Sign Up</h1> <!--Align center-->
           <h3>The official New Zealand Government website<br>
             for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
         <div class="signUp">
             <form  method="POST" id="register">
                 <fieldset>
-                    <label for="username">Username</label>
-                    <input type ="text" id = "username" name="username" placeholder="maverick" required>
+                    <label for="username">*Username</label>
+                    <input type ="text" class="r" id = "username" name="username" placeholder="maverick" required>
                     <br><br>
                     
                     <label for="firstname">*First Name</label>
-                    <input type ="text" id = 'firstname' name="firstname" placeholder="Izuku" required>
+                    <input type ="text" class="r" id = 'firstname' name="firstname" placeholder="Izuku" required>
                     <br><br>
     
                     <label for="middlename">Middle Names</label>
@@ -32,28 +30,31 @@
                     <br><br>
     
                     <label for="surname">*Last Name</label>
-                    <input type ="text" id = 'lastname' name="lastname" placeholder="Midoriya" required>
+                    <input type ="text" class="r" id = 'lastname' name="lastname" placeholder="Midoriya" required>
                     <br><br>
 
-                    <label for="email">Email ID</label>
-                    <input type ="email" id = 'email' name="email" placeholder="abc@example.com" required>
+                    <label for="email">*Email ID</label>
+                    <input type ="email" class="r" id = 'email' name="email" placeholder="abc@example.com" required>
                     <br><br>
         
-                    <label for="password">Password</label>
-                    <input type="password" id = "password" name="password" required>
+                    <label for="password">*Password</label>
+                    <input type="password" class="r" id = "password" name="password" required>
                     <br><br>
                     
                     <label for="nhi">NHI Number (if known)</label>
                     <input type ="text" id = 'nhi' name="nhi" placeholder="112233445">
                     <br><br>
 
-                    <button type ="reset">Reset</button>
-                    <button type ="button" id="submit">Submit</button>
+                    <button type ="reset" id="reset">Reset</button>
+                    <button type ="button" class="sub" id="submit">Submit</button>
+                    <p id="code"></p>
                 </fieldset>
             </form>
             <br><br>
-                <a id="mylink" href="./login.html">login</a>
+                
+                <a id="mylink" href="./login.html">Login</a>
         </div>
         </body>
-        <script src="user.js"></script>
+       
+        <script src="signUp.js"></script>
 </html>

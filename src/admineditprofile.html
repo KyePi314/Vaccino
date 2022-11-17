@@ -1,43 +1,49 @@
 <!--This will be the Admin Home Page-->
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="C:\Users\kyess\OneDrive - UP Education\Documents\testing4\my-app\src\index.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="admin.css">
     <meta charset="UTF-8">
-    <title>Vaccino - Admin Manage Profile</title>
+    <title>Vaccino - Manage Profile</title>
   </head>
   <body>
     <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
         <p>Ministry of Health</p> <!--Align left-->
-        <button>Sign Out</button>
         <br>
-        <button>Home</button>
-        <h1>Vaccino</h1> <!--Align center-->
+        <button type="button" id="signout">Sign Out</button>
+        <br>        <br>        <br>        <br>        <br>
+        <button type="button" id="homebutton">Home</button>
+        <h1>Vaccino - Manage Profile</h1> <!--Align center-->
         <h3>The official New Zealand Government website<br>
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
-        <div>
+        <div id="adminprofile">
           <l>Please enter user's NHI number: </l>
           <input placeholder="1122334" ></input> <!---->
-          <button type="button" id="issueQR">Search</button> <!---->
-          <button type="button" id="issueQR">Issue QR Code</button> <!---->
-        </div>
-        <div>
-          <p></p> <!--Name of person goes here-->
-          <p></p> <!--NHI number of person goes here-->
-        </div>
+          <button type="button" id="editProfileButton">Search</button> <!---->
+          <button type="button" id="editProfileButton">Issue QR Code</button> <!---->
+          <br><br>
+        <div id="adminprofile2">
+          <div>
+            <p></p> <!--Name of person goes here-->
+            <p></p> <!--NHI number of person goes here-->
+          </div>
         <div>
           <p>User QR Code: </p> <!--Has to be across the page-->
-          <p>Address: </p>
+          <p>Address: </p> <!--Should retrieve user information below from search-->
           <p>Date of Birth: </p>
           <p>Mobile Number: </p>
           <p>Email: </p>
-          <p>Update Health Documents.</p>
-          <p>Update Vaccination/Test Records.</p>
+          <a href="adminrecords.html">Update Test Results and Vaccine Records</a><!--If needed, in order to style all of these p elements I can give them and id for you to easily call.-->
+        </div>
         </div>
         <div>
-          <button type="button" id="editProfile">Edit</button> <!---->
-          <button type="button" id="approveChanges">Approve Changes</button> <!---->
-          <button type="button" id="deleteUser">Delete User</button> <!---->
+          <button type="button" id="editProfileButton">Edit</button> <!---->
+          <button type="button" id="editProfileButton">Approve Changes</button> <!---->
+          <button type="button" id="editProfileButton">Delete User</button> <!---->
+        </div>
       </div>
+      </div>
+      <script src="adminPages.js"></script>
     </body>
 </html>

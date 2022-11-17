@@ -1,13 +1,202 @@
-.Header {
-    background-color: #89CFF0;
-    margin-bottom: auto;
+body {
+    background-color: white;
+  }
+  
+  .Header { /*blue header at the top of the page*/
+    margin: auto;
+    background: #89CFF0;
     font-family: "Signika Negative SC", Verdana, sans-serif;
-}
-.Header p {
-    float: left;
-    margin: 0px, 15px, 15px, ;
+    color: white;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 13.5rem;
+    max-width: 100%;
+    margin-bottom: 5%;
+    position: absolute;
+    -webkit-app-region: drag; /*allows the user to draw the app window around*/
+  }
+  
+  .Header p { /*Styling the ministry of health logo*/
+    text-align: left;
+    font-size: 1em;
+    background: #98FF98;
+    border-bottom-right-radius: 38px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 15px;
+    margin-top: 0;
+    color: #000000;
+    font-family: 'Roboto', sans-serif;
+  }
+  .Header #homebutton {
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    width: 10.438rem;
+    height: 3.563rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    right: 0.5rem;
+    top: 5rem;
+    position: fixed;
+    -webkit-app-region: no-drag; 
+  }
+
+ .Header #signout {
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    width: 10.438rem;
+    height: 3.563rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    right: 0.5rem;
+    top: 0.5rem;
+    position: fixed;
+    -webkit-app-region: no-drag;
+  }
+  .Header h1 { /*Styling the vaccino title*/
+    text-align: center;
+    font-size: 3em;
+  }
+  
+  .Header h3 { /*styling the subtitle*/
+    text-align: center;
+    font-size: 1.25em;
+  }
+.buttonGroupHome {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 16rem;
+    left: 10%;
+  }
+#vaccineRecords, #testResults, #qrCode, #details {
+  background-color: #A6F5FF;
+  border: 2px solid #89CFF0;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition-duration: 0.4s;
+  width: 10.438rem;
+  height: 3.563rem;
+  border-radius: 10px;
+  margin: 0.8rem;
+  box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
 }
 
-body {
-    background-color: antiquewhite;
+#vaccineRecords:hover, #testResults:hover, #qrCode:hover, #details:hover {
+  background-color: aliceblue;
+  color: black;
 }
+.rightSide {
+  top: 20%;
+  float: right;
+}
+/*
+#circle {
+    text-align: center;
+    justify-content: center;
+    padding: 2em;
+    border: 0.5em solid #89CFF0;
+    color: #000000;
+    width: 4em;
+    height: 4em;
+    font-size: 2em;
+    border-radius: 100%;
+    display: flex;
+    
+    position: fixed;
+    right: 3rem;
+    top: 18rem;
+}*/
+
+#item1 {
+  right: 28rem;
+  font-size: 1.3em;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  top: 22rem;
+  position: absolute;
+}
+
+#item2 {
+  top: 38rem;
+  color:#000000;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  right: 10rem;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+#covidNum {
+  top: 41.5rem;
+  color:#000000;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  font-weight: bold;
+  right: 12rem;
+  font-size: 1.1em;
+}
+
+#item3 {
+  top:44rem;
+  color:#000000;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  right: 10rem;
+  font-size: 1.2em;
+}
+
+#item4 {
+  top: 45.5rem;
+  color:#000000;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  right: 10rem;
+  font-size: 1.2em;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#98FF98;
+}
+
+#table {
+  top: 15rem;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  right: 40%;
+}
+
+#TrafficChange{
+  text-align: center;
+  justify-content: center;
+  padding: 2em;
+  color: #000000;
+  width: 4em;
+  height: 4em;
+  font-size: 2em;
+  border-radius: 100%;
+  display: flex;
+  position: fixed;
+  right: 7.5rem;
+  top: 12.5rem;
+} 
+

@@ -1,23 +1,62 @@
 <!--This will be the Admin Home Page-->
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="C:\Users\kyess\OneDrive - UP Education\Documents\testing4\my-app\src\index.css">
+  <!--<link rel="stylesheet" href="index.css">-->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="admin.css">
     <meta charset="UTF-8">
     <title>Vaccino - Admin Manage Alerts</title>
   </head>
   <body>
     <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
         <p>Ministry of Health</p> <!--Align left-->
-        <button>Sign Out</button>
         <br>
-        <button>Home</button>
-        <h1>Vaccino</h1> <!--Align center-->
+        <button type="button" id="signout">Sign Out</button>
+        <br>        <br>        <br>        <br>        <br>
+        <button type="button" id="homebutton">Home</button>
+        <h1>Vaccino - Alert Levels</h1> <!--Align center-->
         <h3>The official New Zealand Government website<br>
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
-        <div>
-            <button type="button" id="changeAlert">Change Alert Level</button> <!---->
-            <l>Current alert level: </l>
-        </div>
+        <div id="adminalert">
+            <button type="button" id="changeAlert">Change Alert Level</button> <!----> <br>
+            <p id="alertleveltext">Current Alert Level: </p> <!--Will show the system's current default alert level via image-->
+            <div id="TrafficChange"></div>
+            <!--These functions are used to help display the current alert level-->
+            <div id="testing"></div>
+          <script>
+                fetch('alertleveldata.json')
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    appendData2(data);
+                })
+                .catch(function (err) {
+                    console.log('error: ' + err);
+                });
+            function appendData2(data) {
+                var mainContainer = document.getElementById("TrafficChange");
+                var trafficdata = data[0].trafficLight;
+                for (var i = 0; i < data.length; i++) {
+                    var div = document.createElement("div");
+                if(trafficdata == 0){
+                  div.innerHTML = "<img src=\"images/green.svg\">";
+                  mainContainer.appendChild(div);
+                }
+                else if(trafficdata == 1){
+                  div.innerHTML = "<img src=\"images/yellow.svg\">";
+                  mainContainer.appendChild(div);
+                }
+                else if(trafficdata == 2){
+                  div.innerHTML = "<img src=\"images/red.svg\">";
+                  mainContainer.appendChild(div);
+                }
+              }
+            }
+          </script>
+          </div>
+          <script src="adminPages.js"></script>
+          <script src="adminalert.js"></script>
     </body>
 </html>

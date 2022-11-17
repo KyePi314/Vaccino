@@ -1,0 +1,62 @@
+[
+	{
+		"userData": {
+			"userName": "A.Ham",
+			"email": "georgeWashingtonisHot@gmail.com",
+			"firstName": "Alexander",
+			"middleName": "",
+			"lastName": "Hamilton",
+			"NHINumber": "",
+			"password": "password",
+			"authLvl": "Admin"
+		}
+	},
+	{
+		"userData": {
+			"userName": "impala67",
+			"email": "impalaBoy@gmail.com",
+			"firstName": "Dean",
+			"middleName": "Jay",
+			"lastName": "Winchester",
+			"NHINumber": "666666",
+			"password": "winchesters",
+			"authLvl": "User"
+		}
+	},
+	{
+		"userData": {
+			"userName": "kota",
+			"email": "letmeout@gmail.com",
+			"firstName": "Dakota",
+			"middleName": "",
+			"lastName": "Mathews",
+			"NHINumber": "4206969",
+			"password": "tekapo69",
+			"authLvl": "User"
+		}
+	},
+	{
+		"userData": {
+			"userName": "Jesus",
+			"email": "nobrain@gmail.com",
+			"firstName": "Je",
+			"middleName": "sus",
+			"lastName": "Lastname",
+			"NHINumber": "",
+			"password": "pass",
+			"authLvl": "Admin"
+		}
+	},
+	{
+		"userData": {
+			"userName": "bones",
+			"email": "hayloft2@gmail.com",
+			"firstName": "Noah",
+			"middleName": "",
+			"lastName": "Kohan",
+			"NHINumber": "432423",
+			"password": "boom",
+			"authLvl": "User"
+		}
+	}
+]

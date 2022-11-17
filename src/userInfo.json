@@ -1,0 +1,80 @@
+[
+	{
+		"userProfile": {
+			"nhiNumber": "666666",
+			"tests": [
+				{
+					"test": "covid19",
+					"date": "21-02-2020",
+					"locat": "Christchurch",
+					"result": "Negative"
+				},
+				{
+					"test": "covid19",
+					"date": "15-10-2021",
+					"locat": "Christchurch",
+					"result": "Positive"
+				},
+				{
+					"test": "Covid-19",
+					"date": "2022-11-04",
+					"locat": "Christchurch",
+					"result": "Positive"
+				}
+			],
+			"vaccines": [
+				{
+					"type" : "Covid-19",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "8654",
+					"DoseNo": "1",
+					"date": "25-11-2020"
+				}
+			]
+		}
+	},
+	{
+		"userProfile": {
+			"nhiNumber": "4206969",
+			"tests": [
+				{
+					"test": "covid19",
+					"date": "10-10-2020",
+					"locat": "Christchurch",
+					"result": "Positive"
+				}
+			],
+			"vaccines": [
+				{
+					"type" : "Covid-19",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "8654",
+					"DoseNo": "1",
+					"date": "02-06-2021"
+				}
+			]
+		}
+	},
+	{
+		"userProfile": {
+			"nhiNumber": "432423",
+			"tests": [
+				{
+					"test": "RAT",
+					"date": "2022-11-17",
+					"locat": "Christchurch",
+					"result": "Positive"
+				}
+			],
+			"vaccines": [
+				{
+					"type": "Covid-19",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "0512",
+					"DoseNo": "1",
+					"date": "2021-04-17"
+				}
+			]
+		}
+	}
+]

@@ -1,5 +1,7 @@
+/*COMPLETED*/
 body {
     background-color: white;
+    overflow: scroll;
   }
   
   .Header { /*blue header at the top of the page*/
@@ -12,24 +14,26 @@ body {
     left: 0;
     right: 0;
     top: 0;
-    height: 14.5rem;
+    height: 13.5rem;
     max-width: 100%;
     margin-bottom: 5%;
-    position: fixed;
+    position: absolute;
+    -webkit-app-region: drag;
   }
   
   .Header p { /*Styling the ministry of health logo*/
     text-align: left;
-    font-size: 1em;
+    font-size: 20px;
     background: #98FF98;
     border-bottom-right-radius: 38px;
     position: fixed;
     top: 0;
     left: 0;
+    width: 180px;
     padding: 15px;
     margin-top: 0;
     color: #000000;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
   }
   .Header h1 { /*Styling the vaccino title*/
     text-align: center;
@@ -40,24 +44,71 @@ body {
     text-align: center;
     font-size: 1.25em;
   }
+  
 
   .loginForm {
-    top: 16rem;
+    top: 13rem;
     position: absolute;
-    left: 40%;
+    left: 33.5%;
+    right: 33.5%;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
   }
 
+
   input {
-    margin: 0.5rem;
+    margin: auto;
+    width: 100%;
     box-sizing: border-box;
+    padding: 10px;
+    font-size: 20px;
   }
 
   input:focus{
-    background-color: #A6F5FF;
+    background-color: aliceblue;
   }
 
   .signUp {
-    top: 16rem;
+    top: 15rem;
     position: absolute;
-    left: 40%;
+    left: 33.5%;
+    right: 33.5%;
+    font-size: 1.3em;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  #submit:hover, #reset:hover {
+    background-color: aliceblue;
+    color: black;
+    
+  }
+  #submit, #reset {
+    transition-duration: 0.4s;
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    width: 10.438rem;
+    height: 3.563rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  }
+  a {
+    text-decoration: none;
+    transition-duration: 0.4s;
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
   }

@@ -1,5 +1,4 @@
 body {
-  overflow: scroll;
   background-color: white;
 }
 
@@ -13,33 +12,58 @@ body {
   left: 0;
   right: 0;
   top: 0;
-  height: 14.5rem;
+  height: 13.5rem;
   max-width: 100%;
   margin-bottom: 5%;
-  position: fixed;
+  position: absolute;
+  -webkit-app-region: drag; /*allows the user to draw the app window around*/
 }
 
 .Header p { /*Styling the ministry of health logo*/
   text-align: left;
-  font-size: 1em;
+  font-size: 20px;
   background: #98FF98;
   border-bottom-right-radius: 38px;
   position: fixed;
   top: 0;
   left: 0;
+  width: 180px;
   padding: 15px;
   margin-top: 0;
   color: #000000;
-  font-family: Roboto;
+  font-family: 'Roboto', sans-serif;
 }
 .Header h1 { /*Styling the vaccino title*/
   text-align: center;
   font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 40px;
 }
 
 .Header h3 { /*styling the subtitle*/
   text-align: center;
   font-size: 1.25em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 120px;
+}
+
+.Header button{
+  background-color: #A6F5FF;
+  border: 3px solid #89CFF0;
+  color: #000000;
+  font-size: 20px;
+  width: 10.438rem;
+  height: 3.563rem;
+  border-radius: 10px;
+  right: 150px;
+  position: fixed;
+ 
 }
 
 #subtitle {
@@ -101,6 +125,19 @@ body {
   margin: 1rem;
 }
 
+#exit {
+  background-color: #A6F5FF;
+  border: 3px solid #89CFF0;
+  color: #000000;
+  font-size: 20px;
+  width: 10.438rem;
+  height: 3.563rem;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+}
+
 .images {
   border-radius: 50%;
   width: 250px;
@@ -130,4 +167,36 @@ body {
   width: 250px;
   height: auto;
   right: 2.5em;
+}
+
+/*Bug Report sizing and positioning*/
+#bugreport{
+  margin-top: 15rem;
+  text-align: center;
+  left: 40%;
+}
+
+/*Bug Report input box sizing*/
+#bugreportinput{
+ width: 600px;
+ height: 230px; 
+ font-size: 15px;
+}
+
+table, td {
+  border: 1px solid black;
+  padding: 6px;
+}
+
+#testtablediv{
+  margin-top: 18rem;
+}
+
+#testtable{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#generatedbugreport{
+  border: 1px solid black;
 }

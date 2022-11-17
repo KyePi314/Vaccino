@@ -1,32 +1,101 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="userPages.css">
         <meta charset="UTF-8">
         <title>Vaccino - Test Results</title>
+        <style>
+
+/* The popup form - hidden by default */
+.container {
+  display: none;
+  position: fixed;
+  top: 15rem;
+  left: 33.5%;
+  right: 33.5%;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+#upload {
+  background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+  right: 35rem;
+  font-size: 1.3em;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+  top: 22rem;
+  position: absolute;
+}
+
+/* Add styles to the form container */
+.popup {
+  max-width: 400px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.popup input {
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+/* Set a style for the submit/login button */
+.popup button {
+  background-color: #A6F5FF;
+  color: black;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+
+        </style>
       </head>
       <body>
-         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
-            <p>Ministry of Health</p> <!--Align left-->
-            <button type="button" id="signOut">Sign Out</button> <!--Goes to the far upper right hand side-->
-            <h1>Vaccino</h1> <!--Align center-->
-            <h3>The official New Zealand Government website<br>
-              for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
-          </div> <!--End of blue header section-->
+        <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
+          <p>Ministry of
+            <br> Health</p>
+          <button type="button" id="signout">Sign Out</button>
+          <button type="button" id="homebutton">Home</button>
+          <h1>Vaccino</h1> <!--Align center-->
+          <h3>The official New Zealand Government website<br>
+            for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
+        </div> <!--End of blue header section-->
           <!--need to sort out the table here-->
-          <table>
-            <tbody>
-              <tr><td>Test</td><td>Date</td><td>Location</td><td>Result</td></tr>
-              <tr><td>Covid-19</td><td>22.102021</td><td>Greymouth Medical Center</td><td>Negative</td></tr>
-              <tr><td>Nasel Swab</td><td>5.1.2022</td><td>Greymouth Medical Center</td><td>positive -strep</td></tr>
-              <tr><td>Covid-19</td><td>6.3.2022</td><td>Christchurch Hospital</td><td>Negative</td></tr>
-              <tr><td>Test</td><td>Date</td><td>Location</td><td>Result</td></tr>
-              <tr><td>Covid-20</td><td>23.102021</td><td>Greymouth Medical Center</td><td>Negative</td></tr>
-              <tr><td>Nasel Swab</td><td>5.1.2023</td><td>Greymouth Medical Center</td><td>positive -strep</td></tr>
-              <tr><td>Covid-20</td><td>6.3.2023</td><td>Christchurch Hospital</td><td>Negative</td></tr>
-              <tr><td>Test</td><td>Date</td><td>Location</td><td>Result</td></tr>
-              <tr><td>Covid-21</td><td>24.102021</td><td>Greymouth Medical Center</td><td>Negative</td></tr>
-            </tbody>
-          </table>
+         <div id ="table"></div>
+         <button type="button" id="upload" onclick="openForm()">Upload RAT Result</button>
+         <div class="container" id="myForm">
+          
+          <form class="popup">
+          <label for="date">Date of test</label>
+          <input id="date" type="date" name="date" placeholder="20-20-2022" required>
+          <label for="location">Location at time of test</label>
+          <input id="location" type="text" name="location" placeholder="Christchurch" required>
+          <label for="Result">RAT Result</label>
+          <input id="result" type="text" name="text" placeholder="negative" required>
+          <br>
+          <button type="button" id="close" onclick="closeForm()">close</button>
+          <button type="button" id="submitResult" onclick="closeForm()">Submit result</button>
+          </form>
+        </div>
+        <script>
+          function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+        </script>
+        <script src="userPages.js"></script>
       </body>
 </html>

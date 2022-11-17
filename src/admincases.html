@@ -1,26 +1,52 @@
 <!--This will be the Admin Home Page-->
 <!DOCTYPE html>
 <html>
-    <link rel="stylesheet" href="C:\Users\kyess\OneDrive - UP Education\Documents\testing4\my-app\src\index.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="admin.css">
     <meta charset="UTF-8">
     <title>Vaccino - Admin Manage Cases</title>
   </head>
   <body>
     <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
         <p>Ministry of Health</p> <!--Align left-->
-        <button>Sign Out</button>
         <br>
-        <button>Home</button>
-        <h1>Vaccino</h1> <!--Align center-->
+        <button type="button" id="signout">Sign Out</button>
+        <br>        <br>        <br>        <br>        <br>
+        <button type="button" id="homebutton">Home</button>
+        <h1>Vaccino - Cases</h1> <!--Align center-->
         <h3>The official New Zealand Government website<br>
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
-        <div>
-          <p>Current number of cases: </p>
-          <input placeholder="1000"></input>
-        </div>
-        <div>
-          <button type="button" id="changeCases">Submit</button> <!---->
+        <div id="admincases">
+          <p>Current number of cases: </p> <!--Number of cases goes here from system file-->
+        <div id="CurrentCases"></div>
+        <!--Script used below to display the number of cases.-->
+        <script>
+            fetch('covidnodata.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                appendData2(data);
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+        function appendData2(data) {
+            var mainContainer = document.getElementById("CurrentCases");
+            for (var i = 0; i < data.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = data[0].covidNo;
+                mainContainer.appendChild(div);
+            }
+          }
+          
+        </script>
+        <br>
+          <input placeholder="1000" type="number" id="casesInput" required></input> <br><br>
+          <button type="button" id="changeCases">Submit</button> <!--Links to the system file to change-->
         </div>
     </body>
+    <script src="adminPages.js"></script>
+    <script src="admincases.js"></script>
 </html>

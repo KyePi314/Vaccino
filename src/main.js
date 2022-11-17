@@ -1,5 +1,7 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, ipcMain } = require('electron');
+const { event } = require('jquery');
 const path = require('path');
+const { electron } = require('process');
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -9,14 +11,16 @@ if (require('electron-squirrel-startup')) {
 const createWindow = () => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1500,
+    height: 1000,
+    frame: false,
     webPreferences: {
       nodeIntegration: true, 
       contextIsolation: false, 
       enableRemoteModule: true
     }
   });
+  mainWindow.setMenu(null); //removed the menu bar at the top that wasn't a part of the application
 
   // and load the index.html of the app.
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
@@ -47,6 +51,39 @@ app.on('activate', () => {
     createWindow();
   }
 });
+
+ipcMain.handle('quit-app', () => {
+  app.quit();
+});
+
+//<!--This function will be used to change the alerts for the system and home page-->
+//function alerts(){
+
+//syncReadFile('./miscsitefunctions');
+//if(){
+//var covidswitch = 0;
+
+//  return ;
+//}
+//}
+
+//<!--This function will be used to change the alerts in the system and on the home page-->
+//function alerts(){
+
+//syncReadFile('./miscsitefunctions');
+//if(alertswitch == 0){
+//  
+
+//  return <img id="alert1" src="images\yellow.svg">;
+//}
+//else if(alertswitch == 1){
+//  return <img id="alert1" src="images\red.svg">;
+//}
+
+//else if(alertswitch == 2){
+//return <img id="alert1" src="images\green.svg">;
+//}
+//}
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
