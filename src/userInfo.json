@@ -64,7 +64,15 @@
 					"result": "Positive"
 				}
 			],
-			"vaccines": []
+			"vaccines": [
+				{
+					"type": "Covid-19",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "0512",
+					"DoseNo": "1",
+					"date": "2021-04-17"
+				}
+			]
 		}
 	}
 ]
