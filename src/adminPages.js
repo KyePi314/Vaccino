@@ -47,68 +47,84 @@ if (document.URL.includes('adminAddTests.html'))
             const l = document.getElementById('location').value;
             const r = document.getElementById('result').value;
             
-                fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){//adds the user's NHI number to the info system that handles their test results, vaccine records etc
+                fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){ //this function will add new rat test to user profile
                     if (err) {
                         console.log(err);
                         }
                         else {
                             const file = JSON.parse(userD);
                             for (var k = 0; k < file.length; k++)
+                            {    
+                                if (file[k].userProfile.nhiNumber == nhi) //finds the correct user profile depending on whos logged in
                                 {
-                                            
-                                    if (file[k].userProfile.nhiNumber == nhi)
+                                    console.log(file[k].userProfile);
+                                    var testData = file[k].userProfile.tests;
+                                    testData.push({test: t, date: d, locat: l, result: r}); //adds the new rat test result
+                                    const json =  JSON.stringify(file, null, '\t');
+                                
+                                    fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) 
                                     {
-                                        console.log(file[k].userProfile);
-                                        var testData = file[k].userProfile.tests;
-                                        testData.push({test: t, date: d, locat: l, result: r});
-                                        const json =  JSON.stringify(file, null, '\t');
-                                
-                                        fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) {
-                                           if(err){
-                                                console.log(err);
-                                            }
-                                            else {
-                                                console.log("Results added!");
-                                                }
-                                            });
-                                            }
-                                           /*  tests.push({testsData});
-                                            const json =  JSON.stringify(file, null, '\t');
-                                
-                                
-                                            fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) {
-                                                if(err){
-                                                    console.log(err);
-                                                }
-                                                else {
-                                                    console.log("User successfully saved to the system!");
-                                                }
-                                            }); */
+                                        if(err)
+                                        {
+                                            console.log(err);
                                         }
+                                        else 
+                                        {
+                                            console.log("Results added!");
+                                        }
+                                    });
+                                }
                                         
+                            }
                                         
-                                    }
-                                })
                         }
+                })
+        }
 }
-/* fs.readFile('src/userInfo.json', 'utf-8', function(err, data){//adds the user's NHI number to the info system that handles their test results, vaccine records etc
-    if (err) {
-        console.log(err);
-    }
-    else {
-        const file = JSON.parse(data);
-        file.push({userID});
-        const json =  JSON.stringify(file, null, '\t');
-
-        
-        fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) {
-            if(err){
-                console.log(err);
-            }
-            else {
-                console.log("User successfully saved to the system!");
-            }
-        });
-    }
-})  */
-
+if (document.URL.includes('adminAddVaccine.html'))
+{
+    const submission = document.getElementById("upload");
+    submission.addEventListener('click', submitEvent);
+    function submitEvent()
+        {
+            const nhi = document.getElementById('nhiNum').value;
+            const t = document.getElementById('type').value;
+            const da = document.getElementById('date').value;
+            const d = document.getElementById('dose').value;
+            const b = document.getElementById('batch').value;
+            const m = document.getElementById('manufact').value;
+            
+                fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){ //this function will add new rat test to user profile
+                    if (err) {
+                        console.log(err);
+                        }
+                        else {
+                            const file = JSON.parse(userD);
+                            for (var k = 0; k < file.length; k++)
+                            {    
+                                if (file[k].userProfile.nhiNumber == nhi) //finds the correct user profile depending on whos logged in
+                                {
+                                    console.log(file[k].userProfile);
+                                    var vaxData = file[k].userProfile.vaccines;
+                                    vaxData.push({type: t, Manufacturer: m, BatchNo : b, DoseNo : d, date : da}); //adds the new rat test result
+                                    const json =  JSON.stringify(file, null, '\t');
+                                
+                                    fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) 
+                                    {
+                                        if(err)
+                                        {
+                                            console.log(err);
+                                        }
+                                        else 
+                                        {
+                                            console.log("Results added!");
+                                        }
+                                    });
+                                }
+                                        
+                            }
+                                        
+                        }
+                })
+        }
+}
