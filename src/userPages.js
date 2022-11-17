@@ -49,9 +49,6 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
 {
     nhi = userID.num; //stores the user's nhi number
    
-   
-   
-    
     $.getJSON('userInfo.json', function(jsdata) 
         { 
             
@@ -94,10 +91,7 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
                         
                     }
                     html+="</table>";
-                        document.getElementById("table").innerHTML = html; //table code finishes here
-
-
-                        
+                    document.getElementById("table").innerHTML = html; //table code finishes here
             
                 }           
                      
@@ -110,7 +104,7 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
             }   
     });
     const submission = document.getElementById("submitResult");
-                        submission.addEventListener('click', submitEvent);
+    submission.addEventListener('click', submitEvent);
                         function submitEvent()
                         {
                             const d = document.getElementById('date').value;

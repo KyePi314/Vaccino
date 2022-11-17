@@ -6,16 +6,6 @@
     <meta charset="UTF-8">
     <title>Vaccino - Admin Manage Alerts</title>
     <style>
-        #uploadResult {
-  background-color: #A6F5FF;
-    border: 2px solid #89CFF0;
-  right: 35rem;
-  font-size: 1.3em;
-  color: #000000;
-  font-family: 'Roboto', sans-serif;
-  top: 22rem;
-  position: absolute;
-}
 .addTest {
     position: fixed;
   top: 15rem;
@@ -55,6 +45,8 @@
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
         <form class="addTest">
+            <label for="nhi">User NHI number</label>
+            <input id="nhiNum" type="text" name="nhiNum" placeholder="000000" required>
             <label for="test">Test type</label>
             <input id="test" type="text" name="test" placeholder="Covid-19" required>
             <label for="date">Date of test</label>
@@ -67,5 +59,6 @@
             <button type="button" id="close">close</button>
             <button type="button" id="uploadResult">Submit test</button>
         </form>
+        <script src="adminPages.js"></script>
     </body>
 </html>
