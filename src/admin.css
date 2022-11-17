@@ -1,6 +1,12 @@
 body {
     background-color: white;
   }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
   
   .Header { /*blue header at the top of the page*/
     margin: auto;
@@ -49,6 +55,11 @@ body {
     -webkit-app-region: no-drag; 
   }
 
+  .Header #homebutton:hover {
+    background-color: aliceblue;
+    color: black;
+  }
+
  .Header #signout {
     background-color: #A6F5FF;
     border: 2px solid #89CFF0;
@@ -65,6 +76,12 @@ body {
     position: fixed;
     -webkit-app-region: no-drag;
   }
+
+  .Header #signout:hover {
+    background-color: aliceblue;
+    color: black;
+  }
+
   .Header h1 { /*Styling the vaccino title*/
     text-align: center;
     font-size: 3em;
@@ -73,4 +90,223 @@ body {
   .Header h3 { /*styling the subtitle*/
     text-align: center;
     font-size: 1.25em;
+  }
+
+  #adminhomebuttons{
+    margin-top: 15rem;
+    text-align: left;
+    padding-left: 150px;
+  }
+  
+  #adminhomemessages{
+    margin-top: 15rem;
+    padding-left: 300px;
+    width: 20.438rem;
+    height: 10.563rem;
+  }
+
+  #newReport{
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  #generatedbugreport{
+    padding: 20px;
+  }
+  
+  #adminhomedisplay{
+    display:flex;
+    position: absolute;
+    left: 13.5%;
+    right: 33.5%;
+  }
+  
+  .adminButton{
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6em;
+    transition-duration: 0.4s;
+    width: 15.438rem;
+    height: 5.563rem;
+    border-radius: 10px;
+    margin: 0.8rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .adminButton:hover{
+
+    background-color: aliceblue;
+    color: black;
+  }
+
+  .adminButton2{
+    width: 300px;
+    height: 110px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  #adminmessagestable{
+    border: 1px solid black;
+    width: 600px;
+    height: 470px;
+    font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #resolveButton{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: 35%;
+    margin-right: 50%;
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.0em;
+    width: 10.438rem;
+    height: 3.563rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  
+  #resolveButton:hover{
+
+    background-color: aliceblue;
+    color: black;
+  }
+
+  #adminbugreport{
+    margin-top: 18rem;
+    text-align: left;
+    font-size: 23px;
+    width: 900px;
+    height: 600px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  #adminalert{
+    margin-top: 18rem;
+    text-align: center;
+  }
+  
+  #alertleveltext{
+    font-family: 'Roboto', sans-serif;
+    font-size: 33px;
+  }
+
+  #changeAlert{
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.6em;
+    transition-duration: 0.4s;
+    width: 15.438rem;
+    height: 5.563rem;
+    border-radius: 10px;
+    margin: 0.8rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #changeAlert:hover{
+    background-color: aliceblue;
+    color: black;
+  }
+  
+  #alert1{
+    width: 200px;
+    height: 200px;
+  }
+  
+  #admincases{
+    margin-top: 18rem;
+    text-align: center;
+    position: flex;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #changeCases{
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4em;
+    transition-duration: 0.4s;
+    width: 13.438rem;
+    height: 4.563rem;
+    border-radius: 10px;
+    margin: 0.8rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #changeCases:hover{
+    background-color: aliceblue;
+    color: black;
+  }
+
+  #casesInput{
+    width: 140px;
+    height: 40px;
+    font-size: 0.9em;
+  }
+  
+  #adminprofile{
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 18rem;
+  }
+  
+  #adminprofile2{
+    border: 1px solid black;
+    padding: 20px;
+  }
+  
+  #adminrecords1{
+    margin-top: 18rem;
+    text-align: center;
+  }
+  
+  #adminrecords2{
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  #editProfileButton{
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4em;
+    transition-duration: 0.4s;
+    width: 11.438rem;
+    height: 4.563rem;
+    border-radius: 10px;
+    margin: 0.8rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #editProfileButton:hover{
+    background-color: aliceblue;
+    color: black;
   }
