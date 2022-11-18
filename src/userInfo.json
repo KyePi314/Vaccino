@@ -82,6 +82,12 @@
 					"date": "2022-11-17",
 					"locat": "Christchurch",
 					"result": "Positive"
+				},
+				{
+					"test": "RAT",
+					"date": "2022-08-04",
+					"locat": "Dunedin",
+					"result": "Negative"
 				}
 			],
 			"vaccines": [
