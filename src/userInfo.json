@@ -69,6 +69,13 @@
 					"BatchNo": "8654",
 					"DoseNo": "1",
 					"date": "02-06-2021"
+				},
+				{
+					"type": "Covid-19",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "2421",
+					"DoseNo": "2",
+					"date": "2022-07-23"
 				}
 			]
 		}
