@@ -15,7 +15,8 @@ class user { //Created the user class
     city;
     phone;
     authLvl;
-    constructor(userName, email, password, firstName, lastName, middleName, NHINumber, city, street, phone) { //constructor sets all the variables data
+    QRcode;
+    constructor(userName, email, password, firstName, lastName, middleName, NHINumber, city, street, phone, qrcode) { //constructor sets all the variables data
         this.userName = userName;
         this.email = email;
         this.password = password;
@@ -27,6 +28,7 @@ class user { //Created the user class
         this.street = street;
         this.phone = phone;
         this.userLevel(this.authLvl);   
+        this.qrcode = qrcode;
     }
     userLevel() //set if user or admin
     {
@@ -69,7 +71,8 @@ function submitEvent()
     const lN = document.getElementById('lastname').value;
     const mN = document.getElementById('middlename').value;
     const num = document.getElementById('nhi').value;
-    const userData = new user(u, e, p, fN, lN, mN, num, "", "", ""); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
+    const qr = 0;
+    const userData = new user(u, e, p, fN, lN, mN, num, "", "", "", qr); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
     const userProfile = {
         nhiNumber: num,
         tests: [{}],

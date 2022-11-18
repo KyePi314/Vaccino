@@ -12,6 +12,11 @@ class Log {
     }
 }
 
+const Common = require('electron/common');
+var fs=require('fs');
+let $ = require('jquery');
+const { Module } = require('module');
+
 if (document.URL.includes('admin.html'))
 {
     const profile = document.getElementById('profile');
@@ -171,5 +176,165 @@ if (document.URL.includes('adminAddVaccine.html'))
     })
     window.alert("Thank you for submitting a Vaccine for a User.");
 
+    }
+}
+
+//Declare global variable for preventing loops.
+var preventloop;
+
+//Declare global variable to ensure screen is wiped.
+var counter = 0;
+
+if (document.URL.includes('admineditprofile.html'))
+{
+    const submission = document.getElementById("issueqrcodebutton");
+    submission.addEventListener('click', submitEvent);
+    function submitEvent(){
+
+    const usernhi = document.getElementById("nhiinput").value;
+    fs.readFile('src/savedUsers.json', 'utf-8', function(err, userD){ //this function will add new rat test to user profile
+        if (err) {
+            console.log(err);
+            }
+            else {
+                const file = JSON.parse(userD);
+                for (var x = 0; x < file.length; x++)
+                {    
+                    if (file[x].userData.NHINumber == usernhi) //finds the correct user profile.
+                    {
+                        console.log(file[x].userData);
+                        //Assigns new QR code.
+                        
+                        window.alert("New QR Code given to User:" + usernhi);
+                        file[x].userData.QRcode = Math.floor((Math.random() *10) +1);;
+                        
+                        const json = JSON.stringify(file, null, '\t');
+                    
+                        fs.writeFile('src/savedUsers.json', json, 'utf-8', function(err) 
+                        {
+                            if(err)
+                            {
+                                console.log(err);
+                            }
+                            else 
+                            {
+                                window.location.replace('admineditprofile.html');
+                            }
+                        })
+                    
+                    }
+                            
+                }
+                            
+            }
+        })
+    }
+
+
+}
+
+if(document.URL.includes('admineditprofile.html')){
+    const submission2 = document.getElementById("searchbutton");
+    submission2.addEventListener('click', submitEvent);
+    function submitEvent(){
+
+        function updateDiv()
+        { 
+            $( "#detailsBox" ).load(window.location.href + " #detailsBox" );
+            $( "#QRcodeBox2" ).load(window.location.href + " #QRcodeBox2" );
+        }
+
+        setTimeout(updateDiv(), 3000);
+
+    const usernhi = document.getElementById("nhiinput").value;
+    fs.readFile('src/savedUsers.json', 'utf-8', function(err, userD){ //this function will add new rat test to user profile
+        if(usernhi != preventloop){
+
+        if (err) {
+            console.log(err);
+            }   
+            else {
+                const file = JSON.parse(userD);
+                for (var i = 0; i < file.length; i++)
+                {    
+                    if (file[i].userData.NHINumber == usernhi) //finds the correct user profile.
+                    {
+                        //Prevents looping the output for the user.
+                        preventloop = file[i].userData.NHINumber
+                        counter++;
+                        document.getElementById('emailTxt').innerHTML =  file[i].userData.email;
+                        document.getElementById('cellNumTxt').innerHTML = file[i].userData.phone;
+                        document.getElementById('streetTxt').innerHTML = file[i].userData.street;
+                        document.getElementById('cityTxt').innerHTML = file[i].userData.City;
+                        document.getElementById('country').innerHTML = file[i].userData.country;
+                        document.getElementById('cNhi').innerHTML = file[i].userData.NHINumber;
+                        //displaying the user's details on the page
+                        const UserQR = file[i].userData.QRcode;
+                        var mainContainer = document.getElementById("QRcodeBox2");
+                        var div = document.createElement("div");
+                        if(UserQR == 0){
+                            div.innerHTML = "There is no QR code assigned to this person.";
+                        }
+                        //Prints QR code
+                        else if(UserQR == 1){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR1.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 2){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR2.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 3){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR3.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 4){
+                            div.innerHTMLL = "<img id='qrcodeimage' src=\"images/QRcodes/QR4.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 5){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR5.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 6){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR6.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 7){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR7.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 8){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR8.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 9){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR9.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else if(UserQR == 10){
+                            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR10.png\">";
+                            mainContainer.appendChild(div);
+                        }
+                        else {
+                            div.innerHTML = "Error.";
+                        }
+                
+                        }
+                
+                        else {
+                            console.log("Fail");
+                        }
+                    
+                    }
+                }
+
+            }
+            else if(usernhi == preventloop){
+                window.alert("You have already loaded this profile.");
+            }              
+            })
+            
+        
     }
 }

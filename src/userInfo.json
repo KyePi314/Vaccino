@@ -107,5 +107,16 @@
 				}
 			]
 		}
+	},
+	{
+		"userProfile": {
+			"nhiNumber": "10101010",
+			"tests": [
+				{}
+			],
+			"vaccines": [
+				{}
+			]
+		}
 	}
 ]

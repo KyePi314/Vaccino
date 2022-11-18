@@ -18,31 +18,29 @@
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
         <div id="adminprofile">
-          <l>Please enter user's NHI number: </l>
-          <input placeholder="1122334" ></input> <!---->
-          <button type="button" id="editProfileButton">Search</button> <!---->
-          <button type="button" id="editProfileButton">Issue QR Code</button> <!---->
+          <a id="pleaseenter">Please enter the user's NHI number: </a>
+          <input placeholder="1122334" id="nhiinput"></input> <!---->
+          <button type="button" id="searchbutton">Search</button> <!---->
+          <button type="button" id="issueqrcodebutton">Issue QR Code</button> <!---->
+          <button type="button" onclick="window.location.replace('adminrecords.html')" id="editProfileButton">Manage Certificates</button><!--If needed, in order to style all of these p elements I can give them and id for you to easily call.-->
           <br><br>
         <div id="adminprofile2">
-          <div>
-            <p></p> <!--Name of person goes here-->
-            <p></p> <!--NHI number of person goes here-->
-          </div>
-        <div>
-          <p>User QR Code: </p> <!--Has to be across the page-->
-          <p>Address: </p> <!--Should retrieve user information below from search-->
-          <p>Date of Birth: </p>
-          <p>Mobile Number: </p>
-          <p>Email: </p>
-          <a href="adminrecords.html">Update Test Results and Vaccine Records</a><!--If needed, in order to style all of these p elements I can give them and id for you to easily call.-->
+          <div id="detailsBox">
+            <h2>Their Details</h2>
+            <div id="detailContent">
+                <P id="cName"></P>
+                <p id="emailTxt">email</p>
+                <p id="cellNumTxt">cell</p>
+                <p id="streetTxt">street</p>
+                <p id="cityTxt">city</p>
+                <p id="country">New Zealand</p>
+                <p id="cNhi">NHI</p>
+            </div>
+        </div>
+        <div id="QRcodeBox2">
+          <h2 id="qrtitle">QR Code</h2>
         </div>
         </div>
-        <div>
-          <button type="button" id="editProfileButton">Edit</button> <!---->
-          <button type="button" id="editProfileButton">Approve Changes</button> <!---->
-          <button type="button" id="editProfileButton">Delete User</button> <!---->
-        </div>
-      </div>
       </div>
       <script src="adminPages.js"></script>
     </body>
