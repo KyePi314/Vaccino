@@ -11,8 +11,11 @@ class user { //Created the user class
     lastName;
     NHINumber
     password;
+    street;
+    city;
+    phone;
     authLvl;
-    constructor(userName, email, password, firstName, lastName, middleName, NHINumber) { //constructor sets all the variables data
+    constructor(userName, email, password, firstName, lastName, middleName, NHINumber, city, street, phone) { //constructor sets all the variables data
         this.userName = userName;
         this.email = email;
         this.password = password;
@@ -20,6 +23,9 @@ class user { //Created the user class
         this.lastName = lastName;
         this.middleName = middleName;
         this.NHINumber = NHINumber;
+        this.city = city;
+        this.street = street;
+        this.phone = phone;
         this.userLevel(this.authLvl);   
     }
     userLevel() //set if user or admin
@@ -63,9 +69,9 @@ function submitEvent()
     const lN = document.getElementById('lastname').value;
     const mN = document.getElementById('middlename').value;
     const num = document.getElementById('nhi').value;
-    const userData = new user(u, e, p, fN, lN, mN, num); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
+    const userData = new user(u, e, p, fN, lN, mN, num, "", "", ""); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
     const userProfile = {
-        nhiNumber: userID.num,
+        nhiNumber: num,
         tests: [{}],
         vaccines: [{}]
     }
@@ -114,4 +120,3 @@ function submitEvent()
 }
 
 }
-
