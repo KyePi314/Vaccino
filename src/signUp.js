@@ -46,20 +46,8 @@ class user { //Created the user class
     
     
 }
-let requiredInputs = document.querySelectorAll("[required]");
-let submitButton = document.querySelector(".sub");
 
-for(let i = 0; i < requiredInputs.length; i++){
-requiredInputs[i].addEventListener("input", buttonState)
-};
-
-function buttonState() {
-    submitButton.disabled = Array.from(requiredInputs).some(x => x.value === '');
-}
-
-if (submitButton.disabled == false)
-{
-    const submission = document.getElementById("submit");
+const submission = document.getElementById("submit");
 submission.addEventListener('click', submitEvent);
 function submitEvent()
 {
@@ -98,7 +86,7 @@ function submitEvent()
                 }
             });
         }
-    })
+    });
     fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){//adds the user's NHI number to the info system that handles their test results, vaccine records etc
         if (err) {
             console.log(err);
@@ -107,7 +95,6 @@ function submitEvent()
             const file = JSON.parse(userD);
             file.push({userProfile});
             const json =  JSON.stringify(file, null, '\t');
-
 
             fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) {
                 if(err){
@@ -118,8 +105,7 @@ function submitEvent()
                 }
             });
         }
-    })
+    });
     window.location.replace('index.html');
 }
 
-}
