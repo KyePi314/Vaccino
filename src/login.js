@@ -37,7 +37,8 @@ if (document.URL.includes('login.html'))
                                 city: userDB[i].userData.City,
                                 street: userDB[i].userData.street,
                                 phone: userDB[i].userData.phone,
-                                country: userDB[i].userData.country
+                                country: userDB[i].userData.country,
+                                QR: userDB[i].userData.QRcode
                             }
                             console.log("Success", userDB[i].userData.authLvl);
                             
