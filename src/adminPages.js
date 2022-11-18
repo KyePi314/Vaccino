@@ -1,6 +1,16 @@
 var fs = require('fs');
 
+class Log {
+    Date;
+    Time;
+    Type;
 
+    constructor(date, time, type){
+        this.Date = date;
+        this.Time = time;
+        this.Type = type;
+    }
+}
 
 if (document.URL.includes('admin.html'))
 {
@@ -126,5 +136,40 @@ if (document.URL.includes('adminAddVaccine.html'))
                                         
                         }
                 })
+
+                    //Logging the time of the submission and type.
+
+    var today = new Date();
+
+    var time = today.getHours() + ":" + today.getMinutes();
+
+    var date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+
+    const Type = "Vaccine Upload";
+
+    const BugLog = new Log(date, time, Type)
+
+
+    fs.readFile('src/vaclogger.json', 'utf-8', function(err, data){
+        if (err) {
+            console.log(err);
         }
+        else {
+            const file = JSON.parse(data);
+            file.push({BugLog});
+            const json =  JSON.stringify(file, null, '\t');
+
+            fs.writeFile('src/vaclogger.json', json, 'utf-8', function(err) {
+                if(err){
+                    console.log(err);
+                }
+                else {
+                    console.log("Vaccine log saved.");
+                }
+            });
+        }
+    })
+    window.alert("Thank you for submitting a Vaccine for a User.");
+
+    }
 }
