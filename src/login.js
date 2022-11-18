@@ -33,7 +33,11 @@ if (document.URL.includes('login.html'))
                                 mName: userDB[i].userData.middleName,
                                 num: userDB[i].userData.NHINumber,
                                 email: userDB[i].userData.email,
-                                userN: userDB[i].userData.userName
+                                userN: userDB[i].userData.userName,
+                                city: userDB[i].userData.City,
+                                street: userDB[i].userData.street,
+                                phone: userDB[i].userData.phone,
+                                country: userDB[i].userData.country
                             }
                             console.log("Success", userDB[i].userData.authLvl);
                             

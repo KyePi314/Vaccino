@@ -8,7 +8,11 @@
 			"lastName": "Hamilton",
 			"NHINumber": "",
 			"password": "password",
-			"authLvl": "Admin"
+			"authLvl": "Admin",
+			"street": "45 Main street",
+			"City": "Auckland",
+			"phone": "02045615",
+			"country": "New Zealand"
 		}
 	},
 	{
@@ -20,7 +24,11 @@
 			"lastName": "Winchester",
 			"NHINumber": "666666",
 			"password": "winchesters",
-			"authLvl": "User"
+			"authLvl": "User",
+			"street": "48 Colon Ave",
+			"City": "Christchurch",
+			"phone": "020555444",
+			"country": "New Zealand"
 		}
 	},
 	{
@@ -32,7 +40,11 @@
 			"lastName": "Mathews",
 			"NHINumber": "4206969",
 			"password": "tekapo69",
-			"authLvl": "User"
+			"authLvl": "User",
+			"street": "1 Brookland Drive",
+			"City": "Gore",
+			"phone": "027448990",
+			"country": "New Zealand"
 		}
 	},
 	{
@@ -44,19 +56,27 @@
 			"lastName": "Lastname",
 			"NHINumber": "32513514",
 			"password": "pass",
-			"authLvl": "Admin"
+			"authLvl": "Admin",
+			"street": "55 Main street",
+			"City": "Auckland",
+			"phone": "021087559",
+			"country": "New Zealand"
 		}
 	},
 	{
 		"userData": {
 			"userName": "bones",
-			"email": "hayloft2@gmail.com",
+			"email": "hayloftTwo@gmail.com",
 			"firstName": "Noah",
 			"middleName": "",
 			"lastName": "Kohan",
 			"NHINumber": "432423",
 			"password": "boom",
-			"authLvl": "User"
+			"authLvl": "User",
+			"street": "21 Green Street",
+			"City": "Gore",
+			"phone": "021558609",
+			"country": "New Zealand"
 		}
 	}
 ]

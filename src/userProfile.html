@@ -8,13 +8,36 @@
     </head>
     <body>
         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
-            <p>Ministry of Health</p>
-            <button type="button" id="signout">Sign Out</button>
-            <button type="button" id="homebutton">Home</button>
+            <p>Ministry of<br>
+                 Health</p>
+                <button type="button" id="signout">Sign Out</button>
+                <button type="button" id="homebutton">Home</button>
             <h1>Vaccino</h1> <!--Align center-->
-            <h3>The official New Zealand Government website<br>
-              for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
+            <h3>Profile</h3> <!--Align Under Vaccino-->
           </div> <!--End of blue header section-->
+          <div class="profileBox">
+            <div id="top">
+                <h1 id="cName">name</h1>
+                <h1 id="cNhi">NHI</h1>
+            </div>
+            <div id="innerBox">
+                <div id="QRcodeBox">
+                    <!--QR STUFF GOES IN HERE-->
+                </div>
+                <div id="detailsBox">
+                    <h2>Your Details</h2>
+                    <a href="editProfile.html"><h3>Edit</h3></a>
+                    <div id="detailContent">
+                        <P id="nTxt">name</P>
+                        <p id="emailTxt">email</p>
+                        <p id="cellNumTxt">cell</p>
+                        <p id="streetTxt">street</p>
+                        <p id="cityTxt">city</p>
+                        <p id="country">New Zealand</p>
+                    </div>
+                </div>
+            </div>
+          </div>
           <script src="userPages.js"></script>
     </body>
 </html>

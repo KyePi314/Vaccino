@@ -74,3 +74,14 @@ function submitEvent()
     location.reload();
     return false;
 }
+
+const home = document.getElementById('homebutton'); //handles the home button
+home.addEventListener('click', () => {
+    window.location.replace('userHome.html');
+} );
+
+const logout = document.getElementById('signout'); //handles the signout button
+logout.addEventListener('click', () =>
+{
+    window.location.replace('index.html');
+});
