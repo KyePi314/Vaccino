@@ -65,6 +65,17 @@ body {
     position: fixed;
     -webkit-app-region: no-drag;
   }
+
+  .Header #homebutton:hover {
+    background-color: aliceblue;
+    color: black;
+  }
+
+  .Header #signout:hover {
+    background-color: aliceblue;
+    color: black;
+  }
+
   .Header h1 { /*Styling the vaccino title*/
     text-align: center;
     font-size: 3em;
@@ -74,26 +85,29 @@ body {
     text-align: center;
     font-size: 1.25em;
   }
+  
 .buttonGroupHome {
     position: absolute;
     display: flex;
     flex-direction: column;
     top: 16rem;
-    left: 10%;
+    left: 15%;
   }
+
 #vaccineRecords, #testResults, #qrCode, #details {
   background-color: #A6F5FF;
   border: 2px solid #89CFF0;
   color: black;
   text-align: center;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.6em;
   transition-duration: 0.4s;
-  width: 10.438rem;
-  height: 3.563rem;
+  width: 15.938rem;
+  height: 5.563rem;
   border-radius: 10px;
   margin: 0.8rem;
   box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  font-family: 'Roboto', sans-serif;
 }
 
 #vaccineRecords:hover, #testResults:hover, #qrCode:hover, #details:hover {
@@ -258,12 +272,36 @@ table, td {
   background-color: #89CFF0;
   width: 32rem;
   height: 30rem;
+  margin-left: 33%;
+  margin-top: 15rem; 
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+}
+
+#QRcodeBox2 {
+  float: left;
+  position: relative;
+  left: 5rem;
+  background-color: #89CFF0;
+  width: 32rem;
+  height: 30rem;
   margin-left: 1rem;
   margin-top: 5rem; 
   border-style: solid;
   border-color: #000000;
   border-width: 1px;
 }
+
+#qrcodeimage{
+  position: fixed;
+  padding: 30px;
+  margin-top: 5px;
+  margin-left: 25px;
+  width: 25rem;
+  height: 25rem;
+}
+
 #detailsBox {
   position: relative;
   float: right;
@@ -334,4 +372,35 @@ cursor: pointer;
 width: 100%;
 margin-bottom:10px;
 opacity: 0.8;
+}
+
+#bugreporttext {
+  font-size: 1.7em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#bugreportinput {
+  font-size: 1.8em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#BugSubmit {
+  background-color: #A6F5FF;
+  border: 2px solid #89CFF0;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4em;
+  transition-duration: 0.4s;
+  width: 11.438rem;
+  height: 4.563rem;
+  border-radius: 10px;
+  margin: 0.8rem;
+  box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  font-family: 'Roboto', sans-serif;
+}
+
+#BugSubmit:hover {
+  background-color: aliceblue;
+  color: black;
 }

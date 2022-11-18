@@ -267,10 +267,67 @@ if (document.URL.includes('vaccineRecords.html')) //code specific to vaccine rec
 });
 }
 
+if (document.URL.includes('src/userQrCode.html'))
+{
+    //displaying the user's QR code on the page
+    const UserQR = userID.QR;
+    var mainContainer = document.getElementById("QRcodeBox");
+    var div = document.createElement("div");
+    if(UserQR == "0"){
+        div.innerHTML = "There is no QR code assigned to you.";
+    }
+    //Prints QR code
+    else if(UserQR == 1){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR1.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 2){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR2.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 3){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR3.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 4){
+        div.innerHTMLL = "<img id='qrcodeimage' src=\"images/QRcodes/QR4.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 5){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR5.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 6){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR6.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 7){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR7.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 8){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR8.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 9){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR9.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 10){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR10.png\">";
+        mainContainer.appendChild(div);yy
+    }
+    else {
+        div.innerHTML = "Error.";
+    }
+
+} 
+
 if (document.URL.includes('src/userProfile.html'))
 {
     console.log(userID);
-    //displaying the user's details on the page
+    
+    //displaying the user's info on the page
     const fullName = userID.fName + " " + userID.lName;
     document.getElementById('cName').innerHTML = fullName;
     document.getElementById('cNhi').innerHTML = userID.num;
@@ -281,6 +338,56 @@ if (document.URL.includes('src/userProfile.html'))
     document.getElementById('country').innerHTML = userID.country;
     //Profile details code
     document.getElementById('nTxt').innerHTML = fullName;
+        //displaying the user's details on the page
+        var mainContainer = document.getElementById("QRcodeBox2");
+        var div = document.createElement("div");
+        if(userID.QR == 0){
+            div.innerHTML = "There is no QR code assigned to you.";
+        }
+        //Prints QR code
+        else if(userID.QR == 1){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR1.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 2){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR2.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 3){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR3.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 4){
+            div.innerHTMLL = "<img id='qrcodeimage' src=\"images/QRcodes/QR4.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 5){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR5.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 6){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR6.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 7){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR7.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 8){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR8.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 9){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR9.png\">";
+            mainContainer.appendChild(div);
+        }
+        else if(userID.QR == 10){
+            div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR10.png\">";
+            mainContainer.appendChild(div);yy
+        }
+        else {
+            div.innerHTML = "Error.";
+        }
 } 
 if (document.URL.includes('src/editProfile.html'))
 {

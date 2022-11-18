@@ -12,7 +12,8 @@
 			"street": "45 Main street",
 			"City": "Auckland",
 			"phone": "02045615",
-			"country": "New Zealand"
+			"country": "New Zealand",
+			"QRcode": 4
 		}
 	},
 	{
@@ -28,7 +29,8 @@
 			"street": "48 Colon Ave",
 			"City": "Christchurch",
 			"phone": "020555444",
-			"country": "New Zealand"
+			"country": "New Zealand",
+			"QRcode": 2
 		}
 	},
 	{
@@ -44,7 +46,8 @@
 			"street": "1 Brookland Drive",
 			"City": "Gore",
 			"phone": "027448990",
-			"country": "New Zealand"
+			"country": "New Zealand",
+			"QRcode": 5
 		}
 	},
 	{
@@ -60,7 +63,8 @@
 			"street": "55 Main street",
 			"City": "Auckland",
 			"phone": "021087559",
-			"country": "New Zealand"
+			"country": "New Zealand",
+			"QRcode": 20
 		}
 	},
 	{
@@ -76,7 +80,40 @@
 			"street": "21 Green Street",
 			"City": "Gore",
 			"phone": "021558609",
-			"country": "New Zealand"
+			"country": "New Zealand",
+			"QRcode": 0
+		}
+	},
+	{
+		"userData": {
+			"userName": "FieryOne",
+			"email": "johnsmith@testing.com",
+			"firstName": "John",
+			"middleName": "",
+			"lastName": "Smith",
+			"NHINumber": "5555555",
+			"password": "Johnistheman1",
+			"street": "",
+			"city": "",
+			"phone": "",
+			"authLvl": "User",
+			"QRcode": 0
+		}
+	},
+	{
+		"userData": {
+			"userName": "Jacob",
+			"email": "jana@jorah.jj.jj",
+			"firstName": "Jenny",
+			"middleName": "Johnson",
+			"lastName": "Jessica",
+			"NHINumber": "10101010",
+			"password": "jj",
+			"street": "",
+			"city": "",
+			"phone": "",
+			"authLvl": "User",
+			"qrcode": 0
 		}
 	}
 ]

@@ -12,6 +12,17 @@ class Log {
     }
 }
 
+let requiredInputs = document.querySelectorAll("[required]");
+let submitButton = document.querySelector("BugSubmit");
+
+for(let i = 0; i < requiredInputs.length; i++){
+requiredInputs[i].addEventListener("input", buttonState)
+};
+
+function buttonState() {
+    submitButton.disabled = Array.from(requiredInputs).some(x => x.value === '');
+}
+
 const submission = document.getElementById("BugSubmit");
 submission.addEventListener('click', submitEvent);
 function submitEvent()

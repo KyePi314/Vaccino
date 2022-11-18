@@ -136,6 +136,8 @@ input::-webkit-inner-spin-button {
     margin-top: 18rem;
     text-align: left;
     font-size: 23px;
+    border: 1px solid black;
+    padding: 6px;
     min-width: 400px;
     min-height: 400px;
     padding: 10px;
@@ -286,11 +288,6 @@ input::-webkit-inner-spin-button {
     margin-top: 18rem;
   }
   
-  #adminprofile2{
-    border: 1px solid black;
-    padding: 20px;
-  }
-  
   #adminrecords1{
     margin-top: 18rem;
     text-align: center;
@@ -309,12 +306,97 @@ input::-webkit-inner-spin-button {
     text-decoration: none;
     font-size: 1.4em;
     transition-duration: 0.4s;
+    width: 14.438rem;
+    height: 4.563rem;
+    border-radius: 10px;
+    margin: 0.8rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+    font-family: 'Roboto', sans-serif;
+  }
+
+#detailContent{
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#detailsBox{
+  font-family: 'Roboto', sans-serif;
+}
+
+#adminprofile2{
+  border: 1px solid black;
+  padding: 20px;
+  display:flex;
+}
+
+#qrtitle{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5em;
+  margin-left: 205px;
+}
+
+#qrcodeimage{
+  padding: 30px;
+  margin-left: 25px;
+  width: 25rem;
+  height: 25rem;
+}
+
+#pleaseenter {
+  font-size: 1.5em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#nhiinput {
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+}
+
+  #issueqrcodebutton{
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4em;
+    transition-duration: 0.4s;
     width: 11.438rem;
     height: 4.563rem;
     border-radius: 10px;
     margin: 0.8rem;
     box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
     font-family: 'Roboto', sans-serif;
+  }
+
+  #searchbutton{
+    background-color: #A6F5FF;
+    border: 2px solid #89CFF0;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.4em;
+    transition-duration: 0.4s;
+    width: 11.438rem;
+    height: 4.563rem;
+    border-radius: 10px;
+    margin: 0.8rem;
+    box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+    font-family: 'Roboto', sans-serif;
+  }
+
+  table, td {
+    border: 1px solid black;
+    padding: 6px;
+  }
+
+  #searchbutton:hover{
+    background-color: aliceblue;
+    color: black;
+  }
+
+  #issueqrcodebutton:hover{
+    background-color: aliceblue;
+    color: black;
   }
 
   #editProfileButton:hover{
