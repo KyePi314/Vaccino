@@ -76,6 +76,13 @@
 					"BatchNo": "2421",
 					"DoseNo": "2",
 					"date": "2022-07-23"
+				},
+				{
+					"type": "Covid-19 (Booster)",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "1125",
+					"DoseNo": "3",
+					"date": "2022-11-02"
 				}
 			]
 		}
