@@ -269,14 +269,15 @@ if (document.URL.includes('vaccineRecords.html')) //code specific to vaccine rec
 
 if (document.URL.includes('src/userProfile.html'))
 {
+    console.log(userID);
     //displaying the user's details on the page
     const fullName = userID.fName + " " + userID.lName;
     document.getElementById('cName').innerHTML = fullName;
     document.getElementById('cNhi').innerHTML = userID.num;
     document.getElementById('emailTxt').innerHTML =  userID.email;
-    document.getElementById('CellNumTxt').innerHTML = userID.phone;
+    document.getElementById('cellNumTxt').innerHTML = userID.phone;
     document.getElementById('streetTxt').innerHTML = userID.street;
-    document.getElementById('cityTxt').innerHTML = userID.City;
+    document.getElementById('cityTxt').innerHTML = userID.city;
     document.getElementById('country').innerHTML = userID.country;
     //Profile details code
     document.getElementById('nTxt').innerHTML = fullName;
