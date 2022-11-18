@@ -94,7 +94,7 @@ body {
 
 .buttonGroup {
   position: fixed;
-  left: 40%;
+  left: 45%;
   top: 18rem;
   margin: auto;
 }
@@ -112,6 +112,11 @@ body {
   margin: 1rem;
 }
 
+#loginBtn:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
 #signUpBtn {
   background-color: #A6F5FF;
   border: 3px solid #89CFF0;
@@ -125,6 +130,11 @@ body {
   margin: 1rem;
 }
 
+#signUpBtn:hover {
+  background-color: aliceblue;
+  color: black;
+}
+
 #exit {
   background-color: #A6F5FF;
   border: 3px solid #89CFF0;
@@ -136,6 +146,11 @@ body {
   align-items: center;
   justify-content: center;
   margin: 1rem;
+}
+
+#exit:hover {
+  background-color: aliceblue;
+  color: black;
 }
 
 .images {

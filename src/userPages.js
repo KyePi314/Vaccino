@@ -3,6 +3,18 @@ const { captureRejectionSymbol } = require('events');
 var fs = require('fs');
 let $ = require('jquery');
 
+class Log {
+    Date;
+    Time;
+    Type;
+
+    constructor(date, time, type){
+        this.Date = date;
+        this.Time = time;
+        this.Type = type;
+    }
+}
+
 var tempTwo = sessionStorage.getItem("user"); //retrieves the user's data stored in the sessions storage
 var userID = JSON.parse(tempTwo); //parse's the user's information and stores it in the userID variable for later use.
 
@@ -156,7 +168,47 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
                                         
                                     }
                                 })
-                        }
+
+    //Logging the time of the submission and type into testlogger.json
+
+    var today = new Date();
+    var minutes = today.getMinutes();
+    if (today.getMinutes() < 10){
+        minutes = "0" + minutes;
+    }
+    var time = today.getHours() + ":" + minutes;
+
+    var date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+
+    const Type = "Test Update";
+
+    const BugLog = new Log(date, time, Type)
+
+    //First read the file.
+    fs.readFile('src/testlogger.json', 'utf-8', function(err, data){
+        if (err) {
+            console.log(err);
+        }
+        else {
+            const file = JSON.parse(data);
+            file.push({BugLog});
+            const json =  JSON.stringify(file, null, '\t');
+            //Then we wriet to it.
+            fs.writeFile('src/testlogger.json', json, 'utf-8', function(err) {
+                if(err){
+                    console.log(err);
+                }
+                else {
+                    console.log("Test update log saved.");
+                }
+            });
+        }
+    })
+    //A message pops up to let the user know the upload was successful.
+    window.alert("Thank you for submitting a test update.");
+                                
+    }
+
     
 }
 
