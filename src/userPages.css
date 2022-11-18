@@ -142,12 +142,12 @@ body {
 }
 
 #covidNum {
-  top: 41.5rem;
+  top: 40.6rem;
   color:#000000;
   font-family: 'Roboto', sans-serif;
   position: absolute;
   font-weight: bold;
-  right: 12rem;
+  right: 8rem;
   font-size: 1.1em;
 }
 

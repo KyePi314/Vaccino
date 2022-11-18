@@ -16,9 +16,10 @@
         <h3>The official New Zealand Government website<br>
           for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
-        <div id="adminbugreport" style="overflow-y:scroll;">
-          <div id="generatedbugreport"></div>
-
+        <div id="bugsection">
+          <div id="adminbugreport" style="overflow-y:scroll;">
+            <div id="generatedbugreport"></div>
+            <!--Display the bug report information.-->
           <script>
             fetch('bugreports.json')
             .then(function (response) {
@@ -40,9 +41,24 @@
                 mainContainer.appendChild(div);
             }
           }
+          
       </script>
+        </div>
+        <div id="logTable">
+          <table id="logmessagestable">
+            <tbody>
+            <!--This section is where the system log should be. It should display the last five logs and the timestamps.-->
+              <tr><th id="row">System Log</th>
+              <tr><td>25.05.2022</td><td>3:56</td><td>Bug Report</td></tr>
+              <tr><td>13.11.2022</td><td>12:12</td><td>Bug Report</td></tr>
+              <tr><td>13.11.2022</td><td>12:23</td><td>Test Report</td></tr>
+              <tr><td>13.11.2022</td><td>21:55</td><td>Bug Report</td></tr>
+              <tr><td>15.11.2022</td><td>4:37</td><td>Covid Report</td></tr>
+          </tbody>
+          </table>
 
         </div>
+      </div>
         <script src="adminPages.js"></script>
     </body>
 </html>

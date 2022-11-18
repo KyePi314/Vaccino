@@ -36,6 +36,7 @@ if (document.URL.includes('login.html'))
                                 userN: userDB[i].userData.userName
                             }
                             console.log("Success", userDB[i].userData.authLvl);
+                            
                             window.location.replace('userHome.html'); //takes the user to their home page
                         }
                         else if (userDB[i].userData.userName == username && userDB[i].userData.password == pass && userDB[i].userData.authLvl == "Admin") //this statement runs if the user's login information is correct and their auth level is set to admin, sending them to the admin pages
@@ -46,6 +47,7 @@ if (document.URL.includes('login.html'))
                         else if (userDB[i].userData.userName == username && userDB[i].userData.password != pass) //This statement runs if the user has entered the wrong password
                         {
                             console.log("Invalid password");
+                            
                         }
                         else if (userDB[i].userData.userName != username && userDB[i].userData.password == pass)
                          {
