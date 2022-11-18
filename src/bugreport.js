@@ -38,7 +38,7 @@ function submitEvent()
             });
         }
     })
-    //Logging the time of the submission, type and user.
+    //Logging the time of the submission and type.
 
     var today = new Date();
 
@@ -51,7 +51,7 @@ function submitEvent()
     const BugLog = new Log(date, time, Type)
 
 
-    fs.readFile('src/buglogger.json', 'utf-8', function(err, data){ //adds bug report data.
+    fs.readFile('src/buglogger.json', 'utf-8', function(err, data){
         if (err) {
             console.log(err);
         }

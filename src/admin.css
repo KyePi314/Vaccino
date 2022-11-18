@@ -136,8 +136,8 @@ input::-webkit-inner-spin-button {
     margin-top: 18rem;
     text-align: left;
     font-size: 23px;
-    min-width: 800px;
-    min-height: 600px;
+    min-width: 400px;
+    min-height: 400px;
     padding: 10px;
     font-family: 'Roboto', sans-serif;
   }
