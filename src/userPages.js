@@ -21,7 +21,6 @@ var userID = JSON.parse(tempTwo); //parse's the user's information and stores it
 if (document.URL.includes('src/userHome.html')) //code specific to the home page
 {  
     
-    
     const vaxRec = document.getElementById('vaccineRecords');
     const test = document.getElementById('testResults');
     const code = document.getElementById('qrCode');
@@ -268,3 +267,84 @@ if (document.URL.includes('vaccineRecords.html')) //code specific to vaccine rec
 });
 }
 
+if (document.URL.includes('src/userProfile.html'))
+{
+    //displaying the user's details on the page
+    const fullName = userID.fName + " " + userID.lName;
+    document.getElementById('cName').innerHTML = fullName;
+    document.getElementById('cNhi').innerHTML = userID.num;
+    document.getElementById('emailTxt').innerHTML =  userID.email;
+    document.getElementById('CellNumTxt').innerHTML = userID.phone;
+    document.getElementById('streetTxt').innerHTML = userID.street;
+    document.getElementById('cityTxt').innerHTML = userID.City;
+    document.getElementById('country').innerHTML = userID.country;
+    //Profile details code
+    document.getElementById('nTxt').innerHTML = fullName;
+} 
+if (document.URL.includes('src/editProfile.html'))
+{
+    nhi = userID.num; //stores the user's nhi number
+    const update = document.getElementById('update');
+    update.addEventListener('click', () =>
+    {
+        const street = document.getElementById('street').value;
+        const e = document.getElementById('email').value;
+        const city = document.getElementById('town').value;
+        const phone = document.getElementById('cell').value;
+        const country =  document.getElementById('country').value;
+        fs.readFile('src/savedUsers.json', 'utf-8', function(err, userD){ //this function will add new rat test to user profile
+            if (err) {
+                console.log(err);
+                }
+                else {
+                    const file = JSON.parse(userD);
+                    for (var x = 0; x < file.length; x++)
+                    {    
+                        if (file[x].userData.NHINumber == nhi) //finds the correct user profile depending on whos logged in
+                        {
+                            console.log(file[x].userData);
+                            //Updates the user's data based on what they entered in the form, the if statements check to make sure the value isn't null before replacing the data
+                            if (e != "")
+                            {
+                                file[x].userData.email = e;
+                            }
+                            if (street != "")
+                            {
+                                file[x].userData.street = street;
+                            }
+                            if (city != "")
+                            {   
+                                file[x].userData.City = city;
+                            }
+                            if (phone != "")
+                            {
+                                file[x].userData.phone = phone;
+                            }
+                            if(country != "")
+                            {
+                                file[x].userData.country = country;
+                            }
+                            const json =  JSON.stringify(file, null, '\t');
+                        
+                            fs.writeFile('src/savedUsers.json', json, 'utf-8', function(err) 
+                            {
+                                if(err)
+                                {
+                                    console.log(err);
+                                }
+                                else 
+                                {
+                                    window.location.replace('userProfile.html');
+                                }
+                            });
+                        }
+                                
+                    }
+                                
+                }
+        })
+    });
+
+
+    
+}
