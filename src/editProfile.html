@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="userPages.css">
+        <meta charset="UTF-8">
+        <title>Vaccino - Edit Profile</title>
+      </head>
+      <body>
+        <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
+          <p>Ministry of<br>
+             Health</p>
+          <button type="button" id="signout">Sign Out</button>
+          <button type="button" id="homebutton">Home</button>
+          <h1>Vaccino</h1> <!--Align center-->
+          <h3>Vaccine Records</h3> <!--Align Under Vaccino-->
+        </div> <!--End of blue header section-->
+        <form class="editProfile">
+            <label for="email">Enter your new email</label>
+            <input id="email" type="text" name="email" placeholder="example@gmail.com" required>
+            <label for="cell">Enter a cell number</label>
+            <input id="cell" type="text" name="cell" placeholder="02088833" required>
+            <label for="street">Add your street name and number</label>
+            <input id="street" type="text" name="street" placeholder="13 Arnold St" required>
+            <label for="town">Enter Your Town/City</label>
+            <input id="town" type="text" name="town" placeholder="Gore" required>
+            <label for="country">Enter Your Country</label>
+            <input id="country" type="text" name="country" placeholder="New Zealand" required>
+            <br>
+            <button type="button" id="update">Update details</button>
+        </form>
+          <script src="userPages.js"></script>
+      </body>
+</html>
