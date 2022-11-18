@@ -267,3 +267,4 @@ if (document.URL.includes('vaccineRecords.html')) //code specific to vaccine rec
         }   
 });
 }
+
