@@ -20,11 +20,23 @@
 					"date": "2022-11-04",
 					"locat": "Christchurch",
 					"result": "Positive"
+				},
+				{
+					"test": "RAT",
+					"date": "2021-03-31",
+					"locat": "Auckland",
+					"result": "Positive"
+				},
+				{
+					"test": "RAT",
+					"date": "2022-02-03",
+					"locat": "Wellington",
+					"result": "Negative"
 				}
 			],
 			"vaccines": [
 				{
-					"type" : "Covid-19",
+					"type": "Covid-19",
 					"Manufacturer": "Pfiezer",
 					"BatchNo": "8654",
 					"DoseNo": "1",
@@ -42,15 +54,34 @@
 					"date": "10-10-2020",
 					"locat": "Christchurch",
 					"result": "Positive"
+				},
+				{
+					"test": "RAT",
+					"date": "2021-03-02",
+					"locat": "Christchurch",
+					"result": "Negative"
+				},
+				{
+					"test": "RAT",
+					"date": "2022-11-19",
+					"locat": "Christchurch",
+					"result": "Positive"
 				}
 			],
 			"vaccines": [
 				{
-					"type" : "Covid-19",
+					"type": "Covid-19",
 					"Manufacturer": "Pfiezer",
 					"BatchNo": "8654",
 					"DoseNo": "1",
 					"date": "02-06-2021"
+				},
+				{
+					"type": "Covid-19",
+					"Manufacturer": "Pfiezer",
+					"BatchNo": "2421",
+					"DoseNo": "2",
+					"date": "2022-07-23"
 				}
 			]
 		}
@@ -64,6 +95,12 @@
 					"date": "2022-11-17",
 					"locat": "Christchurch",
 					"result": "Positive"
+				},
+				{
+					"test": "RAT",
+					"date": "2022-08-04",
+					"locat": "Dunedin",
+					"result": "Negative"
 				}
 			],
 			"vaccines": [
@@ -75,6 +112,27 @@
 					"date": "2021-04-17"
 				}
 			]
+		}
+	},
+	{
+		"userProfile": {
+			"nhiNumber": "10101010",
+			"tests": [],
+			"vaccines": []
+		}
+	},
+	{
+		"userProfile": {
+			"nhiNumber": "5435344",
+			"tests": [
+				{
+					"test": "RAT",
+					"date": "2022-11-06",
+					"locat": "Dunedin",
+					"result": "Positive"
+				}
+			],
+			"vaccines": []
 		}
 	}
 ]

@@ -8,7 +8,12 @@
 			"lastName": "Hamilton",
 			"NHINumber": "",
 			"password": "password",
-			"authLvl": "Admin"
+			"authLvl": "Admin",
+			"street": "45 Main street",
+			"City": "Auckland",
+			"phone": "02045615",
+			"country": "New Zealand",
+			"QRcode": 4
 		}
 	},
 	{
@@ -20,7 +25,12 @@
 			"lastName": "Winchester",
 			"NHINumber": "666666",
 			"password": "winchesters",
-			"authLvl": "User"
+			"authLvl": "User",
+			"street": "48 Colon Ave",
+			"City": "Christchurch",
+			"phone": "020555444",
+			"country": "New Zealand",
+			"QRcode": 2
 		}
 	},
 	{
@@ -32,7 +42,12 @@
 			"lastName": "Mathews",
 			"NHINumber": "4206969",
 			"password": "tekapo69",
-			"authLvl": "User"
+			"authLvl": "User",
+			"street": "1 Brookland Drive",
+			"City": "Gore",
+			"phone": "027448990",
+			"country": "New Zealand",
+			"QRcode": 5
 		}
 	},
 	{
@@ -42,21 +57,83 @@
 			"firstName": "Je",
 			"middleName": "sus",
 			"lastName": "Lastname",
-			"NHINumber": "",
+			"NHINumber": "32513514",
 			"password": "pass",
-			"authLvl": "Admin"
+			"authLvl": "Admin",
+			"street": "55 Main street",
+			"City": "Auckland",
+			"phone": "021087559",
+			"country": "New Zealand",
+			"QRcode": 20
 		}
 	},
 	{
 		"userData": {
 			"userName": "bones",
-			"email": "hayloft2@gmail.com",
+			"email": "hayloftTwo@gmail.com",
 			"firstName": "Noah",
 			"middleName": "",
 			"lastName": "Kohan",
 			"NHINumber": "432423",
 			"password": "boom",
-			"authLvl": "User"
+			"authLvl": "User",
+			"street": "21 Green Street",
+			"City": "Gore",
+			"phone": "021558609",
+			"country": "New Zealand",
+			"QRcode": 9
+		}
+	},
+	{
+		"userData": {
+			"userName": "FieryOne",
+			"email": "johnsmith@testing.com",
+			"firstName": "John",
+			"middleName": "",
+			"lastName": "Smith",
+			"NHINumber": "5555555",
+			"password": "Johnistheman1",
+			"street": "",
+			"City": "",
+			"phone": "",
+			"country": "New Zealand",
+			"authLvl": "User",
+			"QRcode": 7
+		}
+	},
+	{
+		"userData": {
+			"userName": "Jacob",
+			"email": "jana@jorah.jj.jj",
+			"firstName": "Jenny",
+			"middleName": "Johnson",
+			"lastName": "Jessica",
+			"NHINumber": "10101010",
+			"password": "jj",
+			"street": "",
+			"City": "",
+			"phone": "",
+			"country": "New Zealand",
+			"authLvl": "User",
+			"QRcode": 8
+		}
+	},
+	{
+		"userData": {
+			"userName": "Nox",
+			"email": "musicMan@gmail.com",
+			"firstName": "Sam",
+			"middleName": "Nox",
+			"lastName": "Tamer",
+			"NHINumber": "5435344",
+			"password": "music",
+			"street": "34 Black Street",
+			"city": "",
+			"phone": "021445809",
+			"country": "New Zealand",
+			"authLvl": "User",
+			"qrcode": 0,
+			"City": "Dunedin"
 		}
 	}
 ]

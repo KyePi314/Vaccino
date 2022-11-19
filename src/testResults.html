@@ -19,11 +19,11 @@
 #upload {
   background-color: #A6F5FF;
     border: 2px solid #89CFF0;
-  right: 35rem;
+  right: 50%;
   font-size: 1.3em;
   color: #000000;
   font-family: 'Roboto', sans-serif;
-  top: 22rem;
+  top: 15rem;
   position: absolute;
 }
 
@@ -62,29 +62,28 @@
       </head>
       <body>
         <div class="Header"> <!--This is the blue header section with the Vaccino title and text about the government-->
-          <p>Ministry of
-            <br> Health</p>
+          <p>Ministry of <br>
+            Health</p>
           <button type="button" id="signout">Sign Out</button>
           <button type="button" id="homebutton">Home</button>
           <h1>Vaccino</h1> <!--Align center-->
-          <h3>The official New Zealand Government website<br>
-            for vaccine and innoculation information</h3> <!--Align Under Vaccino-->
+          <h3>Test Results</h3> <!--Align Under Vaccino-->
         </div> <!--End of blue header section-->
           <!--need to sort out the table here-->
-         <div id ="table"></div>
+         <div id ="table" style="width: 46.87rem; left: 30%;"></div>
          <button type="button" id="upload" onclick="openForm()">Upload RAT Result</button>
          <div class="container" id="myForm">
           
           <form class="popup">
-          <label for="date">Date of test</label>
+          <label for="date">Date of Test</label>
           <input id="date" type="date" name="date" placeholder="20-20-2022" required>
           <label for="location">Location at time of test</label>
           <input id="location" type="text" name="location" placeholder="Christchurch" required>
           <label for="Result">RAT Result</label>
           <input id="result" type="text" name="text" placeholder="negative" required>
           <br>
-          <button type="button" id="close" onclick="closeForm()">close</button>
-          <button type="button" id="submitResult" onclick="closeForm()">Submit result</button>
+          <button type="button" id="close" onclick="closeForm()">Close</button>
+          <button type="button" id="submitResult" onclick="closeForm()">Submit Result</button>
           </form>
         </div>
         <script>

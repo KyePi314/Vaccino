@@ -11,8 +11,13 @@ class user { //Created the user class
     lastName;
     NHINumber
     password;
+    street;
+    city;
+    phone;
+    country;
     authLvl;
-    constructor(userName, email, password, firstName, lastName, middleName, NHINumber) { //constructor sets all the variables data
+    QRcode;
+    constructor(userName, email, password, firstName, lastName, middleName, NHINumber, city, street, phone, country, qrcode) { //constructor sets all the variables data
         this.userName = userName;
         this.email = email;
         this.password = password;
@@ -20,7 +25,12 @@ class user { //Created the user class
         this.lastName = lastName;
         this.middleName = middleName;
         this.NHINumber = NHINumber;
+        this.city = city;
+        this.street = street;
+        this.phone = phone;
+        this.country = country;
         this.userLevel(this.authLvl);   
+        this.qrcode = qrcode;
     }
     userLevel() //set if user or admin
     {
@@ -38,20 +48,8 @@ class user { //Created the user class
     
     
 }
-let requiredInputs = document.querySelectorAll("[required]");
-let submitButton = document.querySelector(".sub");
 
-for(let i = 0; i < requiredInputs.length; i++){
-requiredInputs[i].addEventListener("input", buttonState)
-};
-
-function buttonState() {
-    submitButton.disabled = Array.from(requiredInputs).some(x => x.value === '');
-}
-
-if (submitButton.disabled == false)
-{
-    const submission = document.getElementById("submit");
+const submission = document.getElementById("submit");
 submission.addEventListener('click', submitEvent);
 function submitEvent()
 {
@@ -63,55 +61,60 @@ function submitEvent()
     const lN = document.getElementById('lastname').value;
     const mN = document.getElementById('middlename').value;
     const num = document.getElementById('nhi').value;
-    const userData = new user(u, e, p, fN, lN, mN, num); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
-    const userProfile = {
-        nhiNumber: userID.num,
-        tests: [{}],
-        vaccines: [{}]
+    const checker = { //This stores the required fields
+        checkData: u + e + p + fN + lN
     }
-    fs.readFile('src/savedUsers.json', 'utf-8', function(err, data){ //adds all the user info to the system
-        if (err) {
-            console.log(err);
-        }
-        else {
-            const file = JSON.parse(data);
-            
-            file.push({userData});
-            const json =  JSON.stringify(file, null, '\t');
-
-
-            fs.writeFile('src/savedUsers.json', json, 'utf-8', function(err) {
-                if(err){
-                    console.log(err);
-                }
-                else {
-                    console.log("User successfully saved to the system!");
-                }
-            });
-        }
-    })
-    fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){//adds the user's NHI number to the info system that handles their test results, vaccine records etc
-        if (err) {
-            console.log(err);
-        }
-        else {
-            const file = JSON.parse(userD);
-            file.push({userProfile});
-            const json =  JSON.stringify(file, null, '\t');
-
-
-            fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) {
-                if(err){
-                    console.log(err);
-                }
-                else {
-                    console.log("User successfully saved to the system!");
-                }
-            });
-        }
-    })
+    const qr = 0;
+    const userData = new user(u, e, p, fN, lN, mN, num, "", "", "", "", qr); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
+    const userProfile = {
+        nhiNumber: num,
+        tests: [],
+        vaccines: []
+    }
+    if (checker.checkData != "") //uses the checker in order to prevent the user from submitting a blank user
+    {
+        fs.readFile('src/savedUsers.json', 'utf-8', function(err, data){ //adds all the user info to the system
+            if (err) {
+                console.log(err);
+            }
+            else {
+                const file = JSON.parse(data);
+                
+                file.push({userData});
+                const json =  JSON.stringify(file, null, '\t');
+    
+    
+                fs.writeFile('src/savedUsers.json', json, 'utf-8', function(err) {
+                    if(err){
+                        console.log(err);
+                    }
+                    else {
+                        console.log("User successfully saved to the system!");
+                    }
+                });
+            }
+        })
+        fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){//adds the user's NHI number to the info system that handles their test results, vaccine records etc
+            if (err) {
+                console.log(err);
+            }
+            else {
+                const file = JSON.parse(userD);
+                file.push({userProfile});
+                const json =  JSON.stringify(file, null, '\t');
+    
+                fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) {
+                    if(err){
+                        console.log(err);
+                    }
+                    else {
+                        console.log("User successfully saved to the system!");
+                    }
+                });
+            }
+        });
+    }
+    
     window.location.replace('index.html');
-}
-
 }
 

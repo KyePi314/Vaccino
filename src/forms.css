@@ -112,3 +112,28 @@ body {
     margin: 1rem;
     box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
   }
+
+  #mylink{
+    background-color: #A6F5FF;
+    border: 3px solid #89CFF0;
+    color: #000000;
+    font-size: 20px;
+    width: 10.438rem;
+    height: 3.563rem;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+  }
+
+  #commontext1{
+    font-size: 33px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #commontext2{
+    font-size: 23px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+  }

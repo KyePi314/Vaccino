@@ -21,7 +21,7 @@ function submitEvent1()
                       console.log(err);
                   }
                   else {
-                      console.log("Bug report successfully saved to the system.");
+                      console.log("Covid Number Changes successfully saved to the system.");
                   }
               });
           }

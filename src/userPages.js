@@ -3,12 +3,24 @@ const { captureRejectionSymbol } = require('events');
 var fs = require('fs');
 let $ = require('jquery');
 
+//Create the testLog class for use with test logging.
+class testLog {
+    Date;
+    Time;
+    Type;
+
+    constructor(date, time, type){
+        this.Date = date;
+        this.Time = time;
+        this.Type = type;
+    }
+}
+
 var tempTwo = sessionStorage.getItem("user"); //retrieves the user's data stored in the sessions storage
 var userID = JSON.parse(tempTwo); //parse's the user's information and stores it in the userID variable for later use.
 
 if (document.URL.includes('src/userHome.html')) //code specific to the home page
 {  
-    
     
     const vaxRec = document.getElementById('vaccineRecords');
     const test = document.getElementById('testResults');
@@ -44,7 +56,138 @@ logout.addEventListener('click', () =>
     {
         window.location.replace('index.html');
     });
-
+    if (document.URL.includes('src/userProfile.html'))
+    {
+        
+        //displaying the user's info on the page
+        const fullName = userID.fName + " " + userID.lName;
+        document.getElementById('cName').innerHTML = fullName;
+        document.getElementById('cNhi').innerHTML = userID.num;
+        document.getElementById('emailTxt').innerHTML =  userID.email;
+        document.getElementById('cellNumTxt').innerHTML = userID.phone;
+        document.getElementById('streetTxt').innerHTML = userID.street;
+        document.getElementById('cityTxt').innerHTML = userID.city;
+        document.getElementById('country').innerHTML = userID.country;
+        //Profile details code
+        document.getElementById('nTxt').innerHTML = fullName;
+            //displaying the user's details on the page
+            var mainContainer = document.getElementById("QRcodeBox2");
+            var div = document.createElement("div");
+            if(userID.QR == 0){
+                div.innerHTML = "There is no QR code assigned to you.";
+            }
+            //Prints QR code
+            else if(userID.QR == 1){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR1.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 2){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR2.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 3){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR3.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 4){
+                div.innerHTMLL = "<img id='qrcodeimage' src=\"images/QRcodes/QR4.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 5){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR5.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 6){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR6.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 7){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR7.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 8){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR8.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 9){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR9.png\">";
+                mainContainer.appendChild(div);
+            }
+            else if(userID.QR == 10){
+                div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR10.png\">";
+                mainContainer.appendChild(div);yy
+            }
+            else {
+                div.innerHTML = "Error.";
+            }
+    } 
+    if (document.URL.includes('src/editProfile.html'))
+    {
+        nhi = userID.num; //stores the user's nhi number
+        const update = document.getElementById('update');
+        update.addEventListener('click', () =>
+        {
+            const street = document.getElementById('street').value;
+            const e = document.getElementById('email').value;
+            const city = document.getElementById('town').value;
+            const phone = document.getElementById('cell').value;
+            const country =  document.getElementById('country').value;
+            fs.readFile('src/savedUsers.json', 'utf-8', function(err, userD){ //this function will add new rat test to user profile
+                if (err) {
+                    console.log(err);
+                    }
+                    else {
+                        const file = JSON.parse(userD);
+                        for (var x = 0; x < file.length; x++)
+                        {    
+                            if (file[x].userData.NHINumber == nhi) //finds the correct user profile depending on whos logged in
+                            {
+                                console.log(file[x].userData);
+                                //Updates the user's data based on what they entered in the form, the if statements check to make sure the value isn't null before replacing the data
+                                if (e != "")
+                                {
+                                    file[x].userData.email = e;
+                                }
+                                if (street != "")
+                                {
+                                    file[x].userData.street = street;
+                                }
+                                if (city != "")
+                                {   
+                                    file[x].userData.City = city;
+                                }
+                                if (phone != "")
+                                {
+                                    file[x].userData.phone = phone;
+                                }
+                                if(country != "")
+                                {
+                                    file[x].userData.country = country;
+                                }
+                                const json =  JSON.stringify(file, null, '\t');
+                            
+                                fs.writeFile('src/savedUsers.json', json, 'utf-8', function(err) 
+                                {
+                                    if(err)
+                                    {
+                                        console.log(err);
+                                    }
+                                    else 
+                                    {
+                                        window.location.replace('userProfile.html');
+                                    }
+                                });
+                            }
+                                    
+                        }
+                                    
+                    }
+            })
+        });
+    
+    
+        
+    }
 if (document.URL.includes('src/testResults.html')) //code specific to the test results page
 {
     nhi = userID.num; //stores the user's nhi number
@@ -156,7 +299,47 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
                                         
                                     }
                                 })
-                        }
+
+    //Logging the time of the submission and type into testlogger.json
+
+    var today = new Date();
+    var minutes = today.getMinutes();
+    if (today.getMinutes() < 10){
+        minutes = "0" + minutes;
+    }
+    var time = today.getHours() + ":" + minutes;
+
+    var date = today.getDate()+'.'+(today.getMonth()+1)+'.'+today.getFullYear();
+
+    const Type = "Test Update";
+
+    const TestLog = new testLog(date, time, Type)
+
+    //First read the file.
+    fs.readFile('src/testlogger.json', 'utf-8', function(err, data){
+        if (err) {
+            console.log(err);
+        }
+        else {
+            const file = JSON.parse(data);
+            file.push({TestLog});
+            const json =  JSON.stringify(file, null, '\t');
+            //Then we wriet to it.
+            fs.writeFile('src/testlogger.json', json, 'utf-8', function(err) {
+                if(err){
+                    console.log(err);
+                }
+                else {
+                    console.log("Test update log saved.");
+                }
+            });
+        }
+    })
+    //A message pops up to let the user know the upload was successful.
+    window.alert("Thank you for submitting a test update.");
+                                
+    }
+
     
 }
 
@@ -215,3 +398,60 @@ if (document.URL.includes('vaccineRecords.html')) //code specific to vaccine rec
         }   
 });
 }
+
+if (document.URL.includes('src/userQrCode.html'))
+{
+    //displaying the user's QR code on the page
+    const UserQR = userID.QR;
+    var mainContainer = document.getElementById("QRcodeBox");
+    var div = document.createElement("div");
+    if(UserQR == "0"){
+        div.innerHTML = "There is no QR code assigned to you.";
+    }
+    //Prints QR code
+    else if(UserQR == 1){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR1.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 2){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR2.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 3){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR3.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 4){
+        div.innerHTMLL = "<img id='qrcodeimage' src=\"images/QRcodes/QR4.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 5){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR5.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 6){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR6.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 7){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR7.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 8){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR8.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 9){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR9.png\">";
+        mainContainer.appendChild(div);
+    }
+    else if(UserQR == 10){
+        div.innerHTML = "<img id='qrcodeimage' src=\"images/QRcodes/QR10.png\">";
+        mainContainer.appendChild(div);yy
+    }
+    else {
+        div.innerHTML = "Error.";
+    }
+
+} 
+

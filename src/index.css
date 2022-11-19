@@ -69,12 +69,14 @@ body {
 #subtitle {
   top: 13rem;
   text-align: center;
+  font-size: 1.6em;
+  font-family: 'Roboto', sans-serif;
 }
 
 #box {
   border-style: solid;
-  width: 18.75rem;
-  height: 20.875rem;
+  width: 24.75rem;
+  height: 29.875rem;
   list-style-position: inside;
   position: relative;
   left: 1em;
@@ -84,6 +86,8 @@ body {
 
 #box ul{
   padding: 1rem;
+  font-size: 1.4em;
+  font-family: 'Roboto', sans-serif;
 }
 
 #box li {
@@ -94,53 +98,77 @@ body {
 
 .buttonGroup {
   position: fixed;
-  left: 40%;
+  left: 43%;
   top: 18rem;
   margin: auto;
 }
 
 #loginBtn {
   background-color: #A6F5FF;
-  border: 3px solid #89CFF0;
-  color: #000000;
-  font-size: 20px;
-  width: 10.438rem;
-  height: 3.563rem;
+  border: 2px solid #89CFF0;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6em;
+  transition-duration: 0.4s;
+  width: 11.938rem;
+  height: 4.563rem;
   border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
+  margin: 1.2rem;
+  box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  font-family: 'Roboto', sans-serif;
+}
+
+#loginBtn:hover {
+  background-color: aliceblue;
+  color: black;
 }
 
 #signUpBtn {
   background-color: #A6F5FF;
-  border: 3px solid #89CFF0;
-  color: #000000;
-  font-size: 20px;
-  width: 10.438rem;
-  height: 3.563rem;
+  border: 2px solid #89CFF0;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6em;
+  transition-duration: 0.4s;
+  width: 11.938rem;
+  height: 4.563rem;
   border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
+  margin: 1.2rem;
+  box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  font-family: 'Roboto', sans-serif;
+}
+
+#signUpBtn:hover {
+  background-color: aliceblue;
+  color: black;
 }
 
 #exit {
   background-color: #A6F5FF;
-  border: 3px solid #89CFF0;
-  color: #000000;
-  font-size: 20px;
-  width: 10.438rem;
-  height: 3.563rem;
+  border: 2px solid #89CFF0;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.6em;
+  transition-duration: 0.4s;
+  width: 11.938rem;
+  height: 4.563rem;
   border-radius: 10px;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
+  margin: 1.2rem;
+  box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  font-family: 'Roboto', sans-serif;
+}
+
+#exit:hover {
+  background-color: aliceblue;
+  color: black;
 }
 
 .images {
   border-radius: 50%;
-  width: 250px;
+  width: 450px;
   height: auto;
   position: fixed;
   top: 11rem;
@@ -149,54 +177,9 @@ body {
 
 #img1 {
   border-radius: 50%;
-  width: 250px;
+  width: 450px;
   height: auto;
   right: 2.5em;
 
 }
 
-#img2 {
-  border-radius: 50%;
-  width: 270px;
-  height: auto;
-  right: 2.5em;
-}
-
-#img3 {
-  border-radius: 50%;
-  width: 250px;
-  height: auto;
-  right: 2.5em;
-}
-
-/*Bug Report sizing and positioning*/
-#bugreport{
-  margin-top: 15rem;
-  text-align: center;
-  left: 40%;
-}
-
-/*Bug Report input box sizing*/
-#bugreportinput{
- width: 600px;
- height: 230px; 
- font-size: 15px;
-}
-
-table, td {
-  border: 1px solid black;
-  padding: 6px;
-}
-
-#testtablediv{
-  margin-top: 18rem;
-}
-
-#testtable{
-  margin-left: auto;
-  margin-right: auto;
-}
-
-#generatedbugreport{
-  border: 1px solid black;
-}

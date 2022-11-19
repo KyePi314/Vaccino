@@ -65,6 +65,17 @@ body {
     position: fixed;
     -webkit-app-region: no-drag;
   }
+
+  .Header #homebutton:hover {
+    background-color: aliceblue;
+    color: black;
+  }
+
+  .Header #signout:hover {
+    background-color: aliceblue;
+    color: black;
+  }
+
   .Header h1 { /*Styling the vaccino title*/
     text-align: center;
     font-size: 3em;
@@ -74,26 +85,29 @@ body {
     text-align: center;
     font-size: 1.25em;
   }
+  
 .buttonGroupHome {
     position: absolute;
     display: flex;
     flex-direction: column;
     top: 16rem;
-    left: 10%;
+    left: 15%;
   }
+
 #vaccineRecords, #testResults, #qrCode, #details {
   background-color: #A6F5FF;
   border: 2px solid #89CFF0;
-  color: white;
+  color: black;
   text-align: center;
   text-decoration: none;
-  font-size: 1.2em;
+  font-size: 1.6em;
   transition-duration: 0.4s;
-  width: 10.438rem;
-  height: 3.563rem;
+  width: 15.938rem;
+  height: 5.563rem;
   border-radius: 10px;
   margin: 0.8rem;
   box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  font-family: 'Roboto', sans-serif;
 }
 
 #vaccineRecords:hover, #testResults:hover, #qrCode:hover, #details:hover {
@@ -142,12 +156,12 @@ body {
 }
 
 #covidNum {
-  top: 41.5rem;
+  top: 40.6rem;
   color:#000000;
   font-family: 'Roboto', sans-serif;
   position: absolute;
   font-weight: bold;
-  right: 12rem;
+  right: 8rem;
   font-size: 1.1em;
 }
 
@@ -179,10 +193,10 @@ a:hover {
 }
 
 #table {
-  top: 15rem;
+  top: 20rem;
   font-family: 'Roboto', sans-serif;
   position: absolute;
-  right: 40%;
+  left: 40%;
 }
 
 #TrafficChange{
@@ -200,3 +214,193 @@ a:hover {
   top: 12.5rem;
 } 
 
+/*Bug Report sizing and positioning*/
+#bugreport{
+  margin-top: 15rem;
+  text-align: center;
+  left: 40%;
+}
+
+/*Bug Report input box sizing*/
+#bugreportinput{
+ width: 600px;
+ height: 230px; 
+ font-size: 15px;
+}
+
+table, td {
+  border: 1px solid black;
+  padding: 6px;
+}
+
+#testtablediv{
+  margin-top: 18rem;
+}
+
+#testtable{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#generatedbugreport{
+  border: 1px solid black;
+}
+
+/*USER PROFILE STYLING */
+
+.profileBox {
+  position: absolute;
+  top: 12rem;
+  width: 100%;
+}
+
+#top {
+  margin-top:2rem;
+  width:100%;
+  text-align: center;
+}
+
+#top h1 {
+  font-size: 1.6em;
+  font-family: "Signika Negative SC", Verdana, sans-serif;
+  font-weight:800;
+}
+#QRcodeBox {
+  float: left;
+  position: relative;
+  left: 5rem;
+  background-color: #89CFF0;
+  width: 32rem;
+  height: 30rem;
+  margin-left: 33%;
+  margin-top: 15rem; 
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+}
+
+#QRcodeBox2 {
+  float: left;
+  position: relative;
+  left: 5rem;
+  background-color: #89CFF0;
+  width: 32rem;
+  height: 30rem;
+  margin-left: 1rem;
+  margin-top: 5rem; 
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+}
+
+#qrcodeimage{
+  position: fixed;
+  padding: 30px;
+  margin-top: 5px;
+  margin-left: 25px;
+  width: 25rem;
+  height: 25rem;
+}
+
+#detailsBox {
+  position: relative;
+  float: right;
+  right: 5rem;
+  background-color: #89CFF0;
+  width: 32rem;
+  height: 30rem;
+  margin-left: 1rem;
+  margin-top: 5rem; 
+  border-style: solid;
+  border-color: #000000;
+  border-width: 1px;
+}
+
+#detailsBox h2 {
+  float: left;
+  margin-left: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5em;
+  font-family: "Signika Negative SC", Verdana, sans-serif;
+  font-weight:700;
+}
+#detailsBox h3 {
+  float: right;
+  margin-right: 1rem;
+  font-size: 1.5em;
+  margin-bottom: 1.5rem;
+  font-family: "Signika Negative SC", Verdana, sans-serif;
+  font-weight:700;
+}
+
+#detailsBox #detailContent {
+  display: flex;
+  float: left;
+  margin-top: 3rem;
+  flex-direction: column;
+  margin-left: 1rem;
+  position: absolute;
+}
+
+#detailContent p {
+  font-size: 1.3em;
+  color: #000000;
+  font-family: 'Roboto', sans-serif;
+}
+/* EDIT PROFILE CSS */
+.editProfile {
+  position: fixed;
+top: 15rem;
+left: 33.5%;
+right: 33.5%;
+border: 3px solid #f1f1f1;
+}
+.editProfile input {
+width: 100%;
+padding: 15px;
+box-sizing: border-box;
+margin: 5px 0 22px 0;
+border: none;
+background: #f1f1f1;
+}
+.editProfile button {
+background-color: #A6F5FF;
+color: black;
+padding: 16px 20px;
+border: none;
+cursor: pointer;
+width: 100%;
+margin-bottom:10px;
+opacity: 0.8;
+}
+
+#bugreporttext {
+  font-size: 1.7em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#bugreportinput {
+  font-size: 1.8em;
+  font-family: 'Roboto', sans-serif;
+}
+
+#BugSubmit {
+  background-color: #A6F5FF;
+  border: 2px solid #89CFF0;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.4em;
+  transition-duration: 0.4s;
+  width: 11.438rem;
+  height: 4.563rem;
+  border-radius: 10px;
+  margin: 0.8rem;
+  box-shadow: 0 8px 10px 0 rgba(166, 245, 255, 1);
+  font-family: 'Roboto', sans-serif;
+}
+
+#BugSubmit:hover {
+  background-color: aliceblue;
+  color: black;
+}
