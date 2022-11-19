@@ -12,12 +12,10 @@ class user { //Created the user class
     NHINumber
     password;
     street;
-    City;
+    city;
     phone;
-    country = "New Zealand";
     authLvl;
     QRcode;
-    
     constructor(userName, email, password, firstName, lastName, middleName, NHINumber, city, street, phone, qrcode) { //constructor sets all the variables data
         this.userName = userName;
         this.email = email;
@@ -26,11 +24,11 @@ class user { //Created the user class
         this.lastName = lastName;
         this.middleName = middleName;
         this.NHINumber = NHINumber;
-        this.City = city;
+        this.city = city;
         this.street = street;
         this.phone = phone;
         this.userLevel(this.authLvl);   
-        this.QRcode = qrcode;
+        this.qrcode = qrcode;
     }
     userLevel() //set if user or admin
     {
