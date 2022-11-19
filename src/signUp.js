@@ -14,6 +14,7 @@ class user { //Created the user class
     street;
     city;
     phone;
+    country;
     authLvl;
     QRcode;
     constructor(userName, email, password, firstName, lastName, middleName, NHINumber, city, street, phone, qrcode) { //constructor sets all the variables data

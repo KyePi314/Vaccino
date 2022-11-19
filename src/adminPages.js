@@ -1,6 +1,7 @@
 var fs = require('fs');
 
-class Log {
+//Create the class for vaccine logs.
+class vacLog {
     Date;
     Time;
     Type;
@@ -17,8 +18,10 @@ var fs=require('fs');
 let $ = require('jquery');
 const { Module } = require('module');
 
+//If the current page opened is Admin.
 if (document.URL.includes('admin.html'))
 {
+    //Creates variables for each of the buttons and creates onclick features for each to get to certain pages.
     const profile = document.getElementById('profile');
     const reports = document.getElementById('bugReports');
     const alerts = document.getElementById('alert');
@@ -50,6 +53,7 @@ logout.addEventListener('click', () =>
         window.location.replace('index.html');
     });
 
+    //If the current page is admin add tests.
 if (document.URL.includes('adminAddTests.html'))
 {
     const submission = document.getElementById("uploadResult");
@@ -62,7 +66,7 @@ if (document.URL.includes('adminAddTests.html'))
             const l = document.getElementById('location').value;
             const r = document.getElementById('result').value;
             
-                fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){ //this function will add new rat test to user profile
+                fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){ //This function will add new rat test to user profile
                     if (err) {
                         console.log(err);
                         }
@@ -70,11 +74,11 @@ if (document.URL.includes('adminAddTests.html'))
                             const file = JSON.parse(userD);
                             for (var k = 0; k < file.length; k++)
                             {    
-                                if (file[k].userProfile.nhiNumber == nhi) //finds the correct user profile depending on whos logged in
+                                if (file[k].userProfile.nhiNumber == nhi) //Finds the correct user profile depending on who is logged in.
                                 {
                                     console.log(file[k].userProfile);
                                     var testData = file[k].userProfile.tests;
-                                    testData.push({test: t, date: d, locat: l, result: r}); //adds the new rat test result
+                                    testData.push({test: t, date: d, locat: l, result: r}); //Adds the new rat test result
                                     const json =  JSON.stringify(file, null, '\t');
                                 
                                     fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) 
@@ -96,6 +100,8 @@ if (document.URL.includes('adminAddTests.html'))
                 })
         }
 }
+
+//If the current page is admin add vaccine.
 if (document.URL.includes('adminAddVaccine.html'))
 {
     const submission = document.getElementById("upload");
@@ -109,7 +115,7 @@ if (document.URL.includes('adminAddVaccine.html'))
             const b = document.getElementById('batch').value;
             const m = document.getElementById('manufact').value;
             
-                fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){ //this function will add new rat test to user profile
+                fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){ //this function will add new vaccine to the user profile
                     if (err) {
                         console.log(err);
                         }
@@ -121,7 +127,7 @@ if (document.URL.includes('adminAddVaccine.html'))
                                 {
                                     console.log(file[k].userProfile);
                                     var vaxData = file[k].userProfile.vaccines;
-                                    vaxData.push({type: t, Manufacturer: m, BatchNo : b, DoseNo : d, date : da}); //adds the new rat test result
+                                    vaxData.push({type: t, Manufacturer: m, BatchNo : b, DoseNo : d, date : da}); //adds the new vaccine
                                     const json =  JSON.stringify(file, null, '\t');
                                 
                                     fs.writeFile('src/userInfo.json', json, 'utf-8', function(err) 
@@ -142,8 +148,10 @@ if (document.URL.includes('adminAddVaccine.html'))
                         }
                 })
 
-                    //Logging the time of the submission and type.
+    //Logging the time of the submission and type.
 
+
+    //Create variables by gathering real world data from the person's computer (time and date)
     var today = new Date();
 
     var time = today.getHours() + ":" + today.getMinutes();
@@ -152,16 +160,17 @@ if (document.URL.includes('adminAddVaccine.html'))
 
     const Type = "Vaccine Upload";
 
-    const BugLog = new Log(date, time, Type)
+    //Creates a new object from the log class.
+    const VacLog = new vacLog(date, time, Type)
 
-
+    //Reads and writes to the vaclogger json file.
     fs.readFile('src/vaclogger.json', 'utf-8', function(err, data){
         if (err) {
             console.log(err);
         }
         else {
             const file = JSON.parse(data);
-            file.push({BugLog});
+            file.push({VacLog});
             const json =  JSON.stringify(file, null, '\t');
 
             fs.writeFile('src/vaclogger.json', json, 'utf-8', function(err) {
