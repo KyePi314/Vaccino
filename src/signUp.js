@@ -28,7 +28,7 @@ class user { //Created the user class
         this.street = street;
         this.phone = phone;
         this.userLevel(this.authLvl);   
-        this.qrcode = qrcode;
+        this.QRcode = qrcode;
     }
     userLevel() //set if user or admin
     {

@@ -97,7 +97,7 @@
 			"city": "",
 			"phone": "",
 			"authLvl": "User",
-			"QRcode": 0
+			"QRcode": 7
 		}
 	},
 	{
@@ -113,7 +113,7 @@
 			"city": "",
 			"phone": "",
 			"authLvl": "User",
-			"qrcode": 0
+			"QRcode": 8
 		}
 	}
 ]
