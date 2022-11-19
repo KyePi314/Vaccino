@@ -17,7 +17,7 @@ class user { //Created the user class
     country;
     authLvl;
     QRcode;
-    constructor(userName, email, password, firstName, lastName, middleName, NHINumber, city, street, phone, qrcode) { //constructor sets all the variables data
+    constructor(userName, email, password, firstName, lastName, middleName, NHINumber, city, street, phone, country, qrcode) { //constructor sets all the variables data
         this.userName = userName;
         this.email = email;
         this.password = password;
@@ -28,6 +28,7 @@ class user { //Created the user class
         this.city = city;
         this.street = street;
         this.phone = phone;
+        this.country = country;
         this.userLevel(this.authLvl);   
         this.qrcode = qrcode;
     }
@@ -64,11 +65,11 @@ function submitEvent()
         checkData: u + e + p + fN + lN
     }
     const qr = 0;
-    const userData = new user(u, e, p, fN, lN, mN, num, "", "", "", qr); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
+    const userData = new user(u, e, p, fN, lN, mN, num, "", "", "", "", qr); //creating a new object from the class and passing the form's data through the constructor in order to set the variables values
     const userProfile = {
         nhiNumber: num,
-        tests: [{}],
-        vaccines: [{}]
+        tests: [],
+        vaccines: []
     }
     if (checker.checkData != "") //uses the checker in order to prevent the user from submitting a blank user
     {
@@ -92,7 +93,7 @@ function submitEvent()
                     }
                 });
             }
-        });
+        })
         fs.readFile('src/userInfo.json', 'utf-8', function(err, userD){//adds the user's NHI number to the info system that handles their test results, vaccine records etc
             if (err) {
                 console.log(err);
