@@ -1,4 +1,17 @@
 module.exports = {
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'KyePi314',
+          name: 'Vaccino',
+        },
+        prerelease: false,
+        draft: true,
+      },
+    },
+  ],
   packagerConfig: {},
   rebuildConfig: {},
   makers: [
