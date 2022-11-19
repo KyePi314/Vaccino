@@ -1,6 +1,7 @@
 var fs = require('fs'); //allows program to write to file
 
-class Log {
+//Create the testLog class for use with bug report logging.
+class bugLog {
     Date;
     Time;
     Type;
@@ -59,7 +60,7 @@ function submitEvent()
 
     const Type = "Bug Report";
 
-    const BugLog = new Log(date, time, Type)
+    const BugLog = new bugLog(date, time, Type)
 
 
     fs.readFile('src/buglogger.json', 'utf-8', function(err, data){
