@@ -263,7 +263,6 @@ if(document.URL.includes('admineditprofile.html')){
                         preventloop = file[i].userData.NHINumber;
                         document.getElementById('emailTxt').innerHTML =  file[i].userData.email;
                         document.getElementById('cellNumTxt').innerHTML = file[i].userData.phone;
-                        window.alert(file[i].userData.phone);
                         document.getElementById('streetTxt').innerHTML = file[i].userData.street;
                         document.getElementById('cityTxt').innerHTML = file[i].userData.City;
                         document.getElementById('country').innerHTML = file[i].userData.country;
