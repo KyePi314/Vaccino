@@ -60,6 +60,12 @@
 					"date": "2021-03-02",
 					"locat": "Christchurch",
 					"result": "Negative"
+				},
+				{
+					"test": "RAT",
+					"date": "2022-11-19",
+					"locat": "Christchurch",
+					"result": "Positive"
 				}
 			],
 			"vaccines": [
@@ -111,12 +117,22 @@
 	{
 		"userProfile": {
 			"nhiNumber": "10101010",
+			"tests": [],
+			"vaccines": []
+		}
+	},
+	{
+		"userProfile": {
+			"nhiNumber": "5435344",
 			"tests": [
-				{}
+				{
+					"test": "RAT",
+					"date": "2022-11-06",
+					"locat": "Dunedin",
+					"result": "Positive"
+				}
 			],
-			"vaccines": [
-				{}
-			]
+			"vaccines": []
 		}
 	}
 ]

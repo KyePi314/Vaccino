@@ -117,5 +117,23 @@
 			"authLvl": "User",
 			"QRcode": 8
 		}
+	},
+	{
+		"userData": {
+			"userName": "Nox",
+			"email": "musicMan@gmail.com",
+			"firstName": "Sam",
+			"middleName": "Nox",
+			"lastName": "Tamer",
+			"NHINumber": "5435344",
+			"password": "music",
+			"street": "34 Black Street",
+			"city": "",
+			"phone": "021445809",
+			"country": "New Zealand",
+			"authLvl": "User",
+			"qrcode": 0,
+			"City": "Dunedin"
+		}
 	}
 ]
