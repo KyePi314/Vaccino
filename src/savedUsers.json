@@ -81,7 +81,7 @@
 			"City": "Gore",
 			"phone": "021558609",
 			"country": "New Zealand",
-			"QRcode": 0
+			"QRcode": 9
 		}
 	},
 	{
@@ -94,10 +94,11 @@
 			"NHINumber": "5555555",
 			"password": "Johnistheman1",
 			"street": "",
-			"city": "",
+			"City": "",
 			"phone": "",
+			"country": "New Zealand",
 			"authLvl": "User",
-			"QRcode": 0
+			"QRcode": 7
 		}
 	},
 	{
@@ -110,11 +111,11 @@
 			"NHINumber": "10101010",
 			"password": "jj",
 			"street": "",
-			"city": "",
+			"City": "",
 			"phone": "",
+			"country": "New Zealand",
 			"authLvl": "User",
-			"qrcode": 0
+			"QRcode": 8
 		}
 	}
-	
 ]
