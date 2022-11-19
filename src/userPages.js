@@ -3,7 +3,8 @@ const { captureRejectionSymbol } = require('events');
 var fs = require('fs');
 let $ = require('jquery');
 
-class Log {
+//Create the testLog class for use with test logging.
+class testLog {
     Date;
     Time;
     Type;
@@ -181,7 +182,7 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
 
     const Type = "Test Update";
 
-    const BugLog = new Log(date, time, Type)
+    const TestLog = new testLog(date, time, Type)
 
     //First read the file.
     fs.readFile('src/testlogger.json', 'utf-8', function(err, data){
@@ -190,7 +191,7 @@ if (document.URL.includes('src/testResults.html')) //code specific to the test r
         }
         else {
             const file = JSON.parse(data);
-            file.push({BugLog});
+            file.push({TestLog});
             const json =  JSON.stringify(file, null, '\t');
             //Then we wriet to it.
             fs.writeFile('src/testlogger.json', json, 'utf-8', function(err) {

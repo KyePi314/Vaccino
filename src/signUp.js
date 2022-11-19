@@ -14,7 +14,7 @@ class user { //Created the user class
     street;
     City;
     phone;
-    country = "New Zealand";
+    country = "";
     authLvl;
     QRcode;
     
