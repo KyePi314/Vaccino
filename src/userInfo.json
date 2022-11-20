@@ -101,6 +101,12 @@
 					"date": "2022-08-04",
 					"locat": "Dunedin",
 					"result": "Negative"
+				},
+				{
+					"test": "RAT",
+					"date": "2022-11-20",
+					"locat": "Gore",
+					"result": "Negative"
 				}
 			],
 			"vaccines": [
