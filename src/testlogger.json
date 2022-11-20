@@ -47,5 +47,12 @@
 			"Time": "19:01",
 			"Type": "Test Update"
 		}
+	},
+	{
+		"TestLog": {
+			"Date": "20.11.2022",
+			"Time": "14:21",
+			"Type": "Test Update"
+		}
 	}
 ]
